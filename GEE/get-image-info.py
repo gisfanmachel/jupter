@@ -12,8 +12,11 @@ import ee
 from IPython.display import Image
 import os
 
-os.environ['HTTP_PROXY'] = 'http://127.0.0.1:1080'
-os.environ['HTTPS_PROXY'] = 'http://127.0.0.1:1080'
+
+os.environ['HTTP_PROXY'] = 'http://127.0.0.1:19180'
+os.environ['HTTPS_PROXY'] = 'http://127.0.0.1:19180'
 
 ee.Initialize()
 print(ee.Image('USGS/SRTMGL1_003').getInfo())
+
+
