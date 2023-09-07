@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "ee-gisfanmachel",
+  "private_key_id": "86bee1721e069d6f16db7e82f43b514a292d74f4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCd208YQPyi1aA0\nPzZdp0JEECtGaM1nNbxyaf+fnBtz1SUzWD/hiwsJz/OyuEoypOnRzX7772aHdOLC\nNhj1Gg1x1e3BiEoF+6ZuUwFHHHjLtiz1syspO8Psiz0Z9Yf0nCofD4ozGsgJJ2eu\neKtnhIjNLHhhInnJ23/YNWL36aSAGswX+GhsOUY02LSk5TOi+NjpT4xJmyt9pUhz\nZ+Ll4pxsV6jk8Krq+8zivPbxZ6hv+CVyiN1FHaOR6AnhyCpdQbTfZsrANrQBap8Z\nMvO9FIcvQ+KSbElksllft4f07Hy/0ehrEdWw/Vzqf+9t2K1pQkeSk31guKfpQf2L\ngRoqAdMNAgMBAAECggEAFfMWeKwipN64/8LRY6zb7zxjVA9DDmifqzYXfAFYJN9c\npJrPCSTNFGB0xaNP9+JL++cL0uq7Mjcbx77/ceddOrixLmGtz06qWflTOmjYWBUd\nA84VwI5FpDjJNniYXrgvODHwOMJu0a0HwvAW/1YjsonONE13q0yI5o6n1AqKG+DG\nBnvc+zHOcSIcwDc1EXOxl4s5wqnhfyyK7VRq4cj+272+31Bbbjr9BM5PVkFn98OH\nIbV7iadJN/rM+EXk7/mdQe1VqlZRJjROgVXnFkGJsbK9EWhFnSDCDS6s9G1/WsCS\nENXfnjNDKtRSjYvp2By1KFI1inlyhYZy6Ag3Q68xiQKBgQDUYTm2XsX0v8wz8bE+\nDf8PeQziTpkHk7Ibu2DFyljGVkdvPN9Qm4dz7lrT8dCXb5hEnkSko8WYnTb3WbAH\nDQaxUDOHvGCbgMxsWUz2MLSt7n+c9+jknVw7oI8v/XxSXXG8MEQqupt3URP3MktN\n2K5pNK/ALFdX1Djdbs0mADr1uQKBgQC+R0xL+g79Lm/R7WQIGr6xa3Yyux1xE07Y\nP460CTDAOwe7J374SwvWGwIiMigk1kcsfygy86VXydQ5fKEccQGJgNemRmi1/Qit\nUC8hplepPHwGR2nAa1KvEihVLrfw5mYFaJMnBh4ZbWpF+3ljeAmPxvPKcfArnKHK\nAIlp0w5x9QKBgEZHciimTg2C1pkt1sA5M3k0To4pAjzepCbHJ+vr3NqtPHBUDXYI\nMZesfYP7VlJ2jEXQtdhhlYa+J61MkZKTve45IwQ80x9CTONh3bTuQyv3a2VPKFNW\nu2nD5P41fMlowLVMp5IYNFAUlW3Mx9yX4odP9wS556FZygOEogB8PQaJAoGAINiL\n6h2bUsceVF2nQ+LiAhxrxewY8/kCRkAKcTeY68YE2qDBwTirLWVyI9cGqP04Qg0d\nMlZut03Gzbme0hsLyeGs2C4VSz0Hr2tFB4kAXt1rB2Zycd3U4xW+Up4C8JnFCK/5\nnuXmcjs5+iSj2rDQ7bnJQawTamPaZdVb4yGkv7UCgYBATc7S1jsG5tAzV19TBXY2\ndynkbgLXSxtZK10jMQ9am5/MywGSsFhUBzYSMf40CHCFERYLlG+cUTyj2OVJTVd1\n70tpK9J6TvINBVpXhI6y6i4UgS9UaDoVev3QV0XoTj5pa+Gz8DL0r2qXW4hZMwHA\nu6fjbEhUUNSM6u45CTaM4Q==\n-----END PRIVATE KEY-----\n",
+  "client_email": "gisfanmachel@ee-gisfanmachel.iam.gserviceaccount.com",
+  "client_id": "117983840433413785881",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gisfanmachel%40ee-gisfanmachel.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
