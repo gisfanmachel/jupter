@@ -12,6 +12,8 @@ import ee
 from IPython.display import Image
 import os
 
+# 如果本地是通过代理上网，这里代码设置代理
+# 如果直接通过vpn上网，不用设置代理
 os.environ['HTTP_PROXY'] = 'http://127.0.0.1:1080'
 os.environ['HTTPS_PROXY'] = 'http://127.0.0.1:1080'
 
