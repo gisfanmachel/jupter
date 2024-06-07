@@ -1,0 +1,32 @@
+//https://code.earthengine.google.com/f4c4b8c574e8a780455d9af52a832633
+
+var roi = /* color: #0b4a8b */ee.Geometry.Polygon(
+        [[[115.22447911987308, 38.97207826950874],
+          [117.64147130737308, 39.07450027191289],
+          [117.55358068237308, 40.67633196985795],
+          [114.91686193237308, 40.576272152256934]]]);
+Map.centerObject(roi, 7);
+
+function rmCloud(image) {
+  var qa = image.select('QA60');
+  var cloudBitMask = 1 << 10;
+  var cirrusBitMask = 1 << 11;
+  var mask = qa.bitwiseAnd(cloudBitMask).eq(0)
+               .and(qa.bitwiseAnd(cirrusBitMask).eq(0));
+  return image.updateMask(mask);
+}
+
+var image = ee.ImageCollection('COPERNICUS/S2_SR')
+              .filterDate('2019-1-1', '2019-6-1')
+              .filterBounds(roi)
+              .map(rmCloud)
+              .median()
+              .clip(roi);
+var rgbVis = {
+  min: 0,
+  max: 3000,
+  bands: ['B4', 'B3', 'B2'],
+};
+
+Map.addLayer(image, rgbVis, 'RGB');
+
