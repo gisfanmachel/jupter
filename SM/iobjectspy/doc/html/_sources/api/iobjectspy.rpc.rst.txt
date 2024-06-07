@@ -1,0 +1,45 @@
+iobjectspy.rpc package
+======================
+
+Subpackages
+-----------
+
+.. toctree::
+
+    iobjectspy.rpc.protos
+
+Submodules
+----------
+
+iobjectspy.rpc.process module
+-----------------------------
+
+.. automodule:: iobjectspy.rpc.process
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+iobjectspy.rpc.serializes module
+--------------------------------
+
+.. automodule:: iobjectspy.rpc.serializes
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+iobjectspy.rpc.worker module
+----------------------------
+
+.. automodule:: iobjectspy.rpc.worker
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: iobjectspy.rpc
+    :members:
+    :undoc-members:
+    :show-inheritance:

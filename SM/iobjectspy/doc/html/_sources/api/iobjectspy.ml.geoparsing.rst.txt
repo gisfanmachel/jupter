@@ -1,0 +1,10 @@
+iobjectspy.ml.geoparsing package
+================================
+
+Module contents
+---------------
+
+.. automodule:: iobjectspy.ml.geoparsing
+    :members:
+    :undoc-members:
+    :show-inheritance:

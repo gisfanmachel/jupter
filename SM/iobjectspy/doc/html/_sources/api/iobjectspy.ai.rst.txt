@@ -1,0 +1,53 @@
+iobjectspy.ai package
+=====================
+
+Subpackages
+-----------
+
+.. toctree::
+
+    iobjectspy.ai.toolkit
+
+Submodules
+----------
+
+iobjectspy.ai.geoparsing module
+-------------------------------
+
+.. automodule:: iobjectspy.ai.geoparsing
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+iobjectspy.ai.recognition module
+--------------------------------
+
+.. automodule:: iobjectspy.ai.recognition
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+iobjectspy.ai.utils module
+--------------------------
+
+.. automodule:: iobjectspy.ai.utils
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+iobjectspy.ai.vision module
+---------------------------
+
+.. automodule:: iobjectspy.ai.vision
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: iobjectspy.ai
+    :members:
+    :undoc-members:
+    :show-inheritance:

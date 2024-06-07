@@ -1,0 +1,23 @@
+iobjectspy
+======================================
+
+.. toctree::
+    :maxdepth: 6
+
+    概览 <guide>
+    安装说明 <install>
+    程序员参考 <./api/api>
+    版本更新 <changes>
+
+iobjectspy 是 SuperMap iObjects Python 组件的 Python 包名。通过 Python 脚本和命令可以快速的进行地理数据处理和分析。
+
+iobjectspy 提供了完整的接口用于操作 SuperMap 的工作空间和数据源，使用 iobjectspy 可以快速的进行数据导入导出，矢量数据处理和分析，栅格数据处理，以及
+投影转换等。同时，iobjectspy 还提供将矢量和栅格数据集读出为 numpy 多维数组以及将 numpy 多维数组快速写入到数据集的接口，极大的方便用户将 SuperMap
+数据使用第三方 Python 库进行数据分析和挖掘。
+
+
+反馈
+==================
+
+发现缺陷或者有新的需求，请发送邮件到 support@supermap.com
+

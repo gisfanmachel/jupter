@@ -1,0 +1,33 @@
+iobjectspy.ml package
+=====================
+
+Subpackages
+-----------
+
+.. toctree::
+
+    iobjectspy.ml.analyst
+    iobjectspy.ml.geoparsing
+    iobjectspy.ml.spacetime
+    iobjectspy.ml.toolkit
+    iobjectspy.ml.vision
+
+Submodules
+----------
+
+iobjectspy.ml.utils module
+--------------------------
+
+.. automodule:: iobjectspy.ml.utils
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: iobjectspy.ml
+    :members:
+    :undoc-members:
+    :show-inheritance:

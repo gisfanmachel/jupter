@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="zh"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>版本更新 &mdash; iobjectspy 10.1.0.0 文档</title>
+
+
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css"/>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css"/>
+    <link rel="index" title="索引" href="genindex.html"/>
+    <link rel="search" title="搜索" href="search.html"/>
+    <link rel="prev" title="iobjectspy.rpc.protos package" href="api/iobjectspy.rpc.protos.html"/>
+
+
+    <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+
+<div class="wy-grid-for-nav">
+
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+        <div class="wy-side-scroll">
+            <div class="wy-side-nav-search">
+
+
+                <a href="index.html" class="icon icon-home"> iobjectspy
+
+
+                </a>
+
+
+                <div class="version">
+                    10.1.0.0
+                </div>
+
+
+                <div role="search">
+                    <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+                        <input type="text" name="q" placeholder="Search docs"/>
+                        <input type="hidden" name="check_keywords" value="yes"/>
+                        <input type="hidden" name="area" value="default"/>
+                    </form>
+                </div>
+
+
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="guide.html">概览</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="install.html">安装 iobjectspy</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="install.html#supermap-iobjects-java">配置
+                        SuperMap iObjects Java</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="api/api.html">程序员参考</a></li>
+                    <li class="toctree-l1 current"><a class="current reference internal" href="#">版本更新</a></li>
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+        <nav class="wy-nav-top" aria-label="top navigation">
+
+            <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+            <a href="index.html">iobjectspy</a>
+
+        </nav>
+
+
+        <div class="wy-nav-content">
+
+            <div class="rst-content">
+
+
+                <div role="navigation" aria-label="breadcrumbs navigation">
+
+                    <ul class="wy-breadcrumbs">
+
+                        <li><a href="index.html">Docs</a> &raquo;</li>
+
+                        <li>版本更新</li>
+
+
+                        <li class="wy-breadcrumbs-aside">
+
+
+                            <a href="_sources/changes.rst.txt" rel="nofollow"> View page source</a>
+
+
+                        </li>
+
+                    </ul>
+
+
+                    <hr/>
+                </div>
+                <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                    <div itemprop="articleBody">
+
+                        <div class="section" id="id1">
+                            <h1>版本更新<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+                            <ul>
+                                <li>
+                                    <dl class="first docutils">
+                                        <dt>10.1.0</dt>
+                                        <dd>
+                                            <ul class="first last simple">
+                                                <li>新增二维网络分析、三维网络分析模块</li>
+                                                <li>新增地址匹配模块</li>
+                                                <li>新增多种栅格综合功能：包含众数滤波、扩展、收缩、蚕食、区域分组、边界清理、细化等</li>
+                                                <li>新增地理模拟功能，包含基于主成分分析（PCA）、人工神经网络（ANN）的元胞自动机</li>
+                                                <li>完善数据导入功能，新增支持导入文件目录功能</li>
+                                                <li>新增地图专题图功能</li>
+                                                <li>新增影像数据对象提取功能，涉及训练数据生成、模型训练、模型推理接口</li>
+                                                <li>新增影像数据二元分类功能FPN、DeepLab V3+模型支持</li>
+                                                <li>新增图片数据图片分类功能，涉及模型训练、模型推理</li>
+                                                <li>新增模型转换接口，支持图片分类训练结果模型转换为移动端模型</li>
+                                                <li>新增图片数据目标检测功能，涉及模型训练、模型推理接口</li>
+                                                <li>新增基于DCRNN的交通流量预测功能</li>
+                                                <li>新增基于梯度提升的结构化数据分类功能</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li><p class="first">10.0.1</p>
+                                    <blockquote>
+                                        <div>
+                                            <ul class="simple">
+                                                <li>不再支持 32 位 Python，只支持 64 位 Python</li>
+                                                <li>支持通过 log.conf 文件设置 python 端的日记信息</li>
+                                                <li>新增影像数据目标检测功能，涉及训练数据生成、模型训练、模型推理接口</li>
+                                                <li>新增影像数据二元分类功能，涉及训练数据生成、模型训练、模型推理接口</li>
+                                                <li>新增影像数据地物分类功能，涉及训练数据生成、模型训练、模型推理接口</li>
+                                                <li>新增影像数据场景分类功能，涉及训练数据生成、模型训练、模型推理接口</li>
+                                                <li>新增最小二乘法回归分析 ( <a class="reference internal"
+                                                                     href="api/iobjectspy.html#iobjectspy.analyst.ordinary_least_squares"
+                                                                     title="iobjectspy.analyst.ordinary_least_squares"><code
+                                                        class="xref py py-func docutils literal notranslate"><span
+                                                        class="pre">ordinary_least_squares()</span></code></a>)
+                                                </li>
+                                                <li>新增地理探测器分析 (<a class="reference internal"
+                                                                  href="api/iobjectspy.html#iobjectspy.analyst.geographical_detector"
+                                                                  title="iobjectspy.analyst.geographical_detector"><code
+                                                        class="xref py py-func docutils literal notranslate"><span
+                                                        class="pre">geographical_detector()</span></code></a>)
+                                                </li>
+                                                <li>新增计算数据集中几何对象矩形范围功能 ( <a class="reference internal"
+                                                                            href="api/iobjectspy.html#iobjectspy.analyst.compute_features_envelope"
+                                                                            title="iobjectspy.analyst.compute_features_envelope"><code
+                                                        class="xref py py-func docutils literal notranslate"><span
+                                                        class="pre">compute_features_envelope()</span></code></a>)
+                                                </li>
+                                                <li>新增填挖方分析 ( <a class="reference internal"
+                                                                 href="api/iobjectspy.html#iobjectspy.analyst.inverse_cut_fill"
+                                                                 title="iobjectspy.analyst.inverse_cut_fill"><code
+                                                        class="xref py py-func docutils literal notranslate"><span
+                                                        class="pre">inverse_cut_fill()</span></code></a> , <a
+                                                        class="reference internal"
+                                                        href="api/iobjectspy.html#iobjectspy.analyst.cut_fill_grid"
+                                                        title="iobjectspy.analyst.cut_fill_grid"><code
+                                                        class="xref py py-func docutils literal notranslate"><span
+                                                        class="pre">cut_fill_grid()</span></code></a> , <a
+                                                        class="reference internal"
+                                                        href="api/iobjectspy.html#iobjectspy.analyst.cut_fill_oblique"
+                                                        title="iobjectspy.analyst.cut_fill_oblique"><code
+                                                        class="xref py py-func docutils literal notranslate"><span
+                                                        class="pre">cut_fill_oblique()</span></code></a> , <a
+                                                        class="reference internal"
+                                                        href="api/iobjectspy.html#iobjectspy.analyst.cut_fill_region"
+                                                        title="iobjectspy.analyst.cut_fill_region"><code
+                                                        class="xref py py-func docutils literal notranslate"><span
+                                                        class="pre">cut_fill_region()</span></code></a> , <a
+                                                        class="reference internal"
+                                                        href="api/iobjectspy.html#iobjectspy.analyst.cut_fill_region3d"
+                                                        title="iobjectspy.analyst.cut_fill_region3d"><code
+                                                        class="xref py py-func docutils literal notranslate"><span
+                                                        class="pre">cut_fill_region3d()</span></code></a> )
+                                                </li>
+                                                <li>新建剖面分析 ( <a class="reference internal"
+                                                                href="api/iobjectspy.html#iobjectspy.analyst.calculate_profile"
+                                                                title="iobjectspy.analyst.calculate_profile"><code
+                                                        class="xref py py-func docutils literal notranslate"><span
+                                                        class="pre">calculate_profile()</span></code></a> )
+                                                </li>
+                                                <li>新增计算 DEM 栅格的淹没区域 ( <a class="reference internal"
+                                                                          href="api/iobjectspy.html#iobjectspy.analyst.flood"
+                                                                          title="iobjectspy.analyst.flood"><code
+                                                        class="xref py py-func docutils literal notranslate"><span
+                                                        class="pre">flood()</span></code></a> )
+                                                </li>
+                                                <li>新增二值栅格细化 ( <a class="reference internal"
+                                                                  href="api/iobjectspy.html#iobjectspy.analyst.thin_raster_bit"
+                                                                  title="iobjectspy.analyst.thin_raster_bit"><code
+                                                        class="xref py py-func docutils literal notranslate"><span
+                                                        class="pre">thin_raster_bit()</span></code></a> )
+                                                </li>
+                                                <li>新增归一化植被指数 ( <a class="reference internal"
+                                                                   href="api/iobjectspy.html#iobjectspy.analyst.NDVI"
+                                                                   title="iobjectspy.analyst.NDVI"><code
+                                                        class="xref py py-func docutils literal notranslate"><span
+                                                        class="pre">NDVI()</span></code></a> ) 和归一化水指数 ( <a
+                                                        class="reference internal"
+                                                        href="api/iobjectspy.html#iobjectspy.analyst.NDWI"
+                                                        title="iobjectspy.analyst.NDWI"><code
+                                                        class="xref py py-func docutils literal notranslate"><span
+                                                        class="pre">NDWI()</span></code></a> )
+                                                </li>
+                                                <li>新增可视域分析 ( <a class="reference internal"
+                                                                 href="api/iobjectspy.html#iobjectspy.analyst.calculate_view_shed"
+                                                                 title="iobjectspy.analyst.calculate_view_shed"><code
+                                                        class="xref py py-func docutils literal notranslate"><span
+                                                        class="pre">calculate_view_shed()</span></code></a> , <a
+                                                        class="reference internal"
+                                                        href="api/iobjectspy.html#iobjectspy.analyst.calculate_view_sheds"
+                                                        title="iobjectspy.analyst.calculate_view_sheds"><code
+                                                        class="xref py py-func docutils literal notranslate"><span
+                                                        class="pre">calculate_view_sheds()</span></code></a> , <a
+                                                        class="reference internal"
+                                                        href="api/iobjectspy.html#iobjectspy.analyst.is_point_visible"
+                                                        title="iobjectspy.analyst.is_point_visible"><code
+                                                        class="xref py py-func docutils literal notranslate"><span
+                                                        class="pre">is_point_visible()</span></code></a> , <a
+                                                        class="reference internal"
+                                                        href="api/iobjectspy.html#iobjectspy.analyst.are_points_visible"
+                                                        title="iobjectspy.analyst.are_points_visible"><code
+                                                        class="xref py py-func docutils literal notranslate"><span
+                                                        class="pre">are_points_visible()</span></code></a>, <a
+                                                        class="reference internal"
+                                                        href="api/iobjectspy.html#iobjectspy.analyst.line_of_sight"
+                                                        title="iobjectspy.analyst.line_of_sight"><code
+                                                        class="xref py py-func docutils literal notranslate"><span
+                                                        class="pre">line_of_sight()</span></code></a> , <a
+                                                        class="reference internal"
+                                                        href="api/iobjectspy.html#iobjectspy.analyst.radar_shield_angle"
+                                                        title="iobjectspy.analyst.radar_shield_angle"><code
+                                                        class="xref py py-func docutils literal notranslate"><span
+                                                        class="pre">radar_shield_angle()</span></code></a> )
+                                                </li>
+                                                <li>新增颜色对象（ <a class="reference internal"
+                                                               href="api/iobjectspy.html#iobjectspy.data.Color"
+                                                               title="iobjectspy.data.Color"><code
+                                                        class="xref py py-class docutils literal notranslate"><span
+                                                        class="pre">Color</span></code></a> ）和几何对象风格对象（ <a
+                                                        class="reference internal"
+                                                        href="api/iobjectspy.html#iobjectspy.data.GeoStyle"
+                                                        title="iobjectspy.data.GeoStyle"><code
+                                                        class="xref py py-class docutils literal notranslate"><span
+                                                        class="pre">GeoStyle</span></code></a> ）
+                                                </li>
+                                                <li>新增地图模块（ <a class="reference internal"
+                                                               href="api/iobjectspy.html#module-iobjectspy.mapping"
+                                                               title="iobjectspy.mapping"><code
+                                                        class="xref py py-mod docutils literal notranslate"><span
+                                                        class="pre">mapping</span></code></a> ），用于新增、管理地图对象 ( <a
+                                                        class="reference internal"
+                                                        href="api/iobjectspy.html#iobjectspy.mapping.Map"
+                                                        title="iobjectspy.mapping.Map"><code
+                                                        class="xref py py-class docutils literal notranslate"><span
+                                                        class="pre">Map</span></code></a> )
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </blockquote>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <footer>
+
+                    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+
+
+                        <a href="api/iobjectspy.rpc.protos.html" class="btn btn-neutral"
+                           title="iobjectspy.rpc.protos package" accesskey="p" rel="prev"><span
+                                class="fa fa-arrow-circle-left"></span> Previous</a>
+
+                    </div>
+
+
+                    <hr/>
+
+                    <div role="contentinfo">
+                        <p>
+                            &copy; Copyright 2020, SuperMap.
+
+                        </p>
+                    </div>
+                    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a
+                        href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a
+                        href="https://readthedocs.org">Read the Docs</a>.
+
+                </footer>
+
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+
+<script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT: './',
+        VERSION: '10.1.0.0',
+        LANGUAGE: 'zh',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE: true,
+        SOURCELINK_SUFFIX: '.txt'
+    };
+</script>
+<script type="text/javascript" src="_static/jquery.js"></script>
+<script type="text/javascript" src="_static/underscore.js"></script>
+<script type="text/javascript" src="_static/doctools.js"></script>
+
+
+<script type="text/javascript" src="_static/js/theme.js"></script>
+
+<script type="text/javascript">
+    jQuery(function () {
+        SphinxRtdTheme.Navigation.enable(true);
+    });
+</script>
+
+</body>
+</html>

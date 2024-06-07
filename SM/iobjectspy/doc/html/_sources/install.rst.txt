@@ -1,0 +1,73 @@
+安装 iobjectspy
+========================
+
+iobjectspy 支持 python 3.5 及以上版本(其中AI模块不支持python 3.7)，由于其基于 SuperMap iObjects Java 组件构建，所以在安装 iobjectspy 之前，需要下载 SuperMap iObjects Java 组件，并将Java组件的 Bin 目录设置到环境变量中。依赖的 Java 组件版本最低为 10.1.0.18027.76100
+
+
+可以通过以下方式进行安装:
+
+* 下载 iobjectspy 产品包，执行产品包内的 setup.py 脚本进行安装::
+
+    python setup.py install
+
+* 无需下载 iobjectspy 产品包，通过 pip 进行在线安装::
+
+    python -m pip install iobjectspy
+
+* 如需使用AI相关功能，还需要通过 pip（pip版本不低于10.0.0）在线安装相关依赖:
+
+  * 如需使用CPU进行深度学习（默认）::
+
+     python -m pip install -r requirement.txt
+
+  * 如需使用GPU进行深度学习（性能更优），需自行安装 CUDA 9.0 及对应 cuDNN，而后::
+
+     python -m pip install -r requirement_gpu.txt
+
+  * 如需开发者相关依赖（CPU）::
+
+     python -m pip install -r requirement_dev.txt
+
+* 也可通过conda建立虚拟环境，在线安装相关依赖:
+
+  * 如需使用CPU进行深度学习（默认）::
+
+     conda env create -f requirements-conda-cpu.yml
+
+  * 如需使用GPU进行深度学习（默认）::
+
+     conda env create -f requirements-conda-gpu.yml
+
+
+配置 SuperMap iObjects Java
+================================
+
+* Windows 用户，可以通过以下方式配置 SuperMap iObjects Python 使用的 SuperMap iObjects Java 组件:
+
+  1. 将 SuperMap iObjects Java 组件的 Bin 目录设置到 PATH 变量。
+
+  2. 在安装完 SuperMap iObjects Python 后，在 cmd 命令行中执行 "`iobjectspy set-iobjects-java E:/SuperMap/iObjects/Bin_x64`"，通过这种方式，必须确保 Python 的 Scripts 目录在 PATH 环境中，或者直接在 Scripts 目录下执行。
+
+  3. 启动 python 窗口，执行以下代码::
+
+     >>> import iobjectspy
+     >>> iobjectspy.set_iobjects_java_path('E:/SuperMap/iObjects/Bin_x64')
+
+  需要注意的是，通过方式 2 和 3 配置 SuperMap iObjects Java 组件，会将指定的 SuperMap iObjects Java 组件目录配置到 iobjectspy 库目录下的 evn.json 文件中，这样，用户无需多次设置，但在升级 SuperMap iObjects Java 组件版本时，需要再次通过 2 或 3 执行。
+
+* Linux 用户，可以通过以下方式配置 SuperMap iObjects Python 使用的 SuperMap iObjects Java 组件:
+
+  1. 将 SuperMap iObjects Java 组件的 Bin 直接设置到 `/opt/SuperMap/iobjects/1010/Bin` 。
+
+  2. 将 SuperMap iObjects Java 组件的 Bin 设置在环境变量中。
+
+    - export LD_LIBRARY_PATH=/home/user/iobjects-java/bin:$LD_LIBRARY_PATH
+
+  3. 在安装完 SuperMap iObjects Python 后，在 cmd 命令行中执行 `iobjectspy set-iobjects-java /home/user/iobjects-java/bin`。
+
+  4. 启动 python 窗口，执行以下代码::
+
+     >>> import iobjectspy
+     >>> iobjectspy.set_iobjects_java_path('/home/user/iobjects-java/bin')
+
+  需要注意的是，通过方式 3 和 4 配置 SuperMap iObjects Java 组件，会将指定的 SuperMap iObjects Java 组件目录配置到 iobjectspy 库目录下的 evn.json 文件中，这样，用户无需多次设置，但在升级 SuperMap iObjects Java 组件版本时，需要再次通过 3 或 4 执行。所以需要确保当前操作对 iobjectspy 安装目录有写入权限（可以通过使用 root 用户权限执行命令）。

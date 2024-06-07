@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="zh"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>概览 &mdash; iobjectspy 10.1.0.0 文档</title>
+
+
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css"/>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css"/>
+    <link rel="index" title="索引" href="genindex.html"/>
+    <link rel="search" title="搜索" href="search.html"/>
+    <link rel="next" title="安装 iobjectspy" href="install.html"/>
+    <link rel="prev" title="iobjectspy" href="index.html"/>
+
+
+    <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+
+<div class="wy-grid-for-nav">
+
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+        <div class="wy-side-scroll">
+            <div class="wy-side-nav-search">
+
+
+                <a href="index.html" class="icon icon-home"> iobjectspy
+
+
+                </a>
+
+
+                <div class="version">
+                    10.1.0.0
+                </div>
+
+
+                <div role="search">
+                    <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+                        <input type="text" name="q" placeholder="Search docs"/>
+                        <input type="hidden" name="check_keywords" value="yes"/>
+                        <input type="hidden" name="area" value="default"/>
+                    </form>
+                </div>
+
+
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="current reference internal" href="#">概览</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="install.html">安装 iobjectspy</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="install.html#supermap-iobjects-java">配置
+                        SuperMap iObjects Java</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="api/api.html">程序员参考</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="changes.html">版本更新</a></li>
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+        <nav class="wy-nav-top" aria-label="top navigation">
+
+            <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+            <a href="index.html">iobjectspy</a>
+
+        </nav>
+
+
+        <div class="wy-nav-content">
+
+            <div class="rst-content">
+
+
+                <div role="navigation" aria-label="breadcrumbs navigation">
+
+                    <ul class="wy-breadcrumbs">
+
+                        <li><a href="index.html">Docs</a> &raquo;</li>
+
+                        <li>概览</li>
+
+
+                        <li class="wy-breadcrumbs-aside">
+
+
+                            <a href="_sources/guide.rst.txt" rel="nofollow"> View page source</a>
+
+
+                        </li>
+
+                    </ul>
+
+
+                    <hr/>
+                </div>
+                <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                    <div itemprop="articleBody">
+
+                        <div class="section" id="id1">
+                            <h1>概览<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+                            <p>iobjectspy 主要有以下几个模块：</p>
+                            <ul class="simple">
+                                <li><code class="docutils literal notranslate"><span class="pre">data</span></code>
+                                    模块主要提供基础的数据模型，包括工作空间（<cite>Workspace</cite>）、数据源（<cite>Datasource</cite>）、数据集（<cite>Dataset</cite>）、记录集（<cite>Recordset</cite>）、要素对象（<cite>Feature</cite>）、
+                                    几何对象（<cite>Geometry</cite>）等对象的创建和管理，通过使用 data 模块，可以方便读写 SuperMap 数据源中的数据。
+                                </li>
+                                <li><code class="docutils literal notranslate"><span class="pre">enums</span></code>
+                                    模块提供基本的枚举对象，包括数据源引擎类型（<cite>EngineType</cite>）、数据集类型（<cite>DatasetType</cite>）等。
+                                </li>
+                                <li><code class="docutils literal notranslate"><span
+                                        class="pre">conversion</span></code> 模块提供导入矢量数据和栅格数据到 SuperMap 数据源，以及将 SuperMap
+                                    数据源导出为外部矢量数据或栅格数据等功能。
+                                </li>
+                                <li><code class="docutils literal notranslate"><span class="pre">analyst</span></code>
+                                    模块提供数据的处理和分析功能，包括缓冲区分析（<cite>create_buffer</cite>）、叠加分析（<cite>overlay</cite>）等矢量数据的分析，以及密度分析（<cite>kernel_density</cite>）、插值分析（<cite>interpolate</cite>)
+                                    等栅格分析功能。
+                                </li>
+                                <li><code class="docutils literal notranslate"><span class="pre">env</span></code>
+                                    模块提供全局参数设置，包括空间分析和数据处理使用大内存模式(<cite>set_analyst_memory_mode</cite>), 设置并行线程数(<cite>set_omp_num_threads</cite>)等。
+                                </li>
+                                <li><code class="docutils literal notranslate"><span class="pre">ml</span></code>
+                                    包提供AI+GIS相关功能，包括地址要素识别，倾斜摄影建筑物底面提取，影像数据目标检测和数据集（<cite>Dataset</cite>）与numpy、pandas的转换等。
+                                </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <footer>
+
+                    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+
+                        <a href="install.html" class="btn btn-neutral float-right" title="安装 iobjectspy" accesskey="n"
+                           rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+
+
+                        <a href="index.html" class="btn btn-neutral" title="iobjectspy" accesskey="p" rel="prev"><span
+                                class="fa fa-arrow-circle-left"></span> Previous</a>
+
+                    </div>
+
+
+                    <hr/>
+
+                    <div role="contentinfo">
+                        <p>
+                            &copy; Copyright 2020, SuperMap.
+
+                        </p>
+                    </div>
+                    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a
+                        href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a
+                        href="https://readthedocs.org">Read the Docs</a>.
+
+                </footer>
+
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+
+<script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT: './',
+        VERSION: '10.1.0.0',
+        LANGUAGE: 'zh',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE: true,
+        SOURCELINK_SUFFIX: '.txt'
+    };
+</script>
+<script type="text/javascript" src="_static/jquery.js"></script>
+<script type="text/javascript" src="_static/underscore.js"></script>
+<script type="text/javascript" src="_static/doctools.js"></script>
+
+
+<script type="text/javascript" src="_static/js/theme.js"></script>
+
+<script type="text/javascript">
+    jQuery(function () {
+        SphinxRtdTheme.Navigation.enable(true);
+    });
+</script>
+
+</body>
+</html>

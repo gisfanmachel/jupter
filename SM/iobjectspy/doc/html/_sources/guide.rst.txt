@@ -1,0 +1,24 @@
+概览
+======================
+
+iobjectspy 主要有以下几个模块：
+
+* ``data`` 模块主要提供基础的数据模型，包括工作空间（`Workspace`）、数据源（`Datasource`）、数据集（`Dataset`）、记录集（`Recordset`）、要素对象（`Feature`）、
+  几何对象（`Geometry`）等对象的创建和管理，通过使用 data 模块，可以方便读写 SuperMap 数据源中的数据。
+
+* ``enums`` 模块提供基本的枚举对象，包括数据源引擎类型（`EngineType`）、数据集类型（`DatasetType`）等。
+
+* ``conversion`` 模块提供导入矢量数据和栅格数据到 SuperMap 数据源，以及将 SuperMap 数据源导出为外部矢量数据或栅格数据等功能。
+
+* ``analyst`` 模块提供数据的处理和分析功能，包括缓冲区分析（`create_buffer`）、叠加分析（`overlay`）等矢量数据的分析，以及密度分析（`kernel_density`）、插值分析（`interpolate`)
+  等栅格分析功能。
+
+* ``env`` 模块提供全局参数设置，包括空间分析和数据处理使用大内存模式(`set_analyst_memory_mode`), 设置并行线程数(`set_omp_num_threads`)等。
+
+* ``ml`` 包提供AI+GIS相关功能，包括地址要素识别，倾斜摄影建筑物底面提取，影像数据目标检测和数据集（`Dataset`）与numpy、pandas的转换等。
+
+
+
+
+
+

@@ -1,0 +1,2093 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="zh"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>iobjectspy.rpc package &mdash; iobjectspy 10.1.0.0 文档</title>
+
+
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css"/>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css"/>
+    <link rel="index" title="索引" href="../genindex.html"/>
+    <link rel="search" title="搜索" href="../search.html"/>
+    <link rel="next" title="iobjectspy.rpc.protos package" href="iobjectspy.rpc.protos.html"/>
+    <link rel="prev" title="iobjectspy.ml.vision package" href="iobjectspy.ml.vision.html"/>
+
+
+    <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+
+<div class="wy-grid-for-nav">
+
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+        <div class="wy-side-scroll">
+            <div class="wy-side-nav-search">
+
+
+                <a href="../index.html" class="icon icon-home"> iobjectspy
+
+
+                </a>
+
+
+                <div class="version">
+                    10.1.0.0
+                </div>
+
+
+                <div role="search">
+                    <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+                        <input type="text" name="q" placeholder="Search docs"/>
+                        <input type="hidden" name="check_keywords" value="yes"/>
+                        <input type="hidden" name="area" value="default"/>
+                    </form>
+                </div>
+
+
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../guide.html">概览</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install.html">安装 iobjectspy</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install.html#supermap-iobjects-java">配置
+                        SuperMap iObjects Java</a></li>
+                    <li class="toctree-l1 current"><a class="reference internal" href="api.html">程序员参考</a>
+                        <ul class="current">
+                            <li class="toctree-l2"><a class="reference internal" href="classes.html"> 类列表</a></li>
+                            <li class="toctree-l2"><a class="reference internal" href="enums.html"> 枚举列表</a></li>
+                            <li class="toctree-l2"><a class="reference internal" href="functions.html"> 函数列表</a></li>
+                            <li class="toctree-l2 current"><a class="reference internal" href="modules.html"> API 参考</a>
+                                <ul class="current">
+                                    <li class="toctree-l3 current"><a class="reference internal" href="iobjectspy.html">iobjectspy
+                                        package</a>
+                                        <ul class="current">
+                                            <li class="toctree-l4 current"><a class="reference internal"
+                                                                              href="iobjectspy.html#subpackages">Subpackages</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#submodules">Submodules</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.analyst">iobjectspy.analyst
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.conversion">iobjectspy.conversion
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.data">iobjectspy.data
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.enums">iobjectspy.enums
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.env">iobjectspy.env
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.mapping">iobjectspy.mapping
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.threeddesigner">iobjectspy.threeddesigner
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy">Module
+                                                contents</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../changes.html">版本更新</a></li>
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+        <nav class="wy-nav-top" aria-label="top navigation">
+
+            <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+            <a href="../index.html">iobjectspy</a>
+
+        </nav>
+
+
+        <div class="wy-nav-content">
+
+            <div class="rst-content">
+
+
+                <div role="navigation" aria-label="breadcrumbs navigation">
+
+                    <ul class="wy-breadcrumbs">
+
+                        <li><a href="../index.html">Docs</a> &raquo;</li>
+
+                        <li><a href="api.html">api</a> &raquo;</li>
+
+                        <li><a href="modules.html">iobjectspy</a> &raquo;</li>
+
+                        <li><a href="iobjectspy.html">iobjectspy package</a> &raquo;</li>
+
+                        <li>iobjectspy.rpc package</li>
+
+
+                        <li class="wy-breadcrumbs-aside">
+
+
+                            <a href="../_sources/api/iobjectspy.rpc.rst.txt" rel="nofollow"> View page source</a>
+
+
+                        </li>
+
+                    </ul>
+
+
+                    <hr/>
+                </div>
+                <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                    <div itemprop="articleBody">
+
+                        <div class="section" id="iobjectspy-rpc-package">
+                            <h1>iobjectspy.rpc package<a class="headerlink" href="#iobjectspy-rpc-package"
+                                                         title="永久链接至标题">¶</a></h1>
+                            <div class="section" id="subpackages">
+                                <h2>Subpackages<a class="headerlink" href="#subpackages" title="永久链接至标题">¶</a></h2>
+                                <div class="toctree-wrapper compound">
+                                    <ul>
+                                        <li class="toctree-l1"><a class="reference internal"
+                                                                  href="iobjectspy.rpc.protos.html">iobjectspy.rpc.protos
+                                            package</a>
+                                            <ul>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="iobjectspy.rpc.protos.html#submodules">Submodules</a>
+                                                </li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="iobjectspy.rpc.protos.html#module-iobjectspy.rpc.protos.featureMessages_pb2">iobjectspy.rpc.protos.featureMessages_pb2
+                                                    module</a></li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="iobjectspy.rpc.protos.html#module-iobjectspy.rpc.protos.processInfoMessage_pb2">iobjectspy.rpc.protos.processInfoMessage_pb2
+                                                    module</a></li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="iobjectspy.rpc.protos.html#module-iobjectspy.rpc.protos.rectMessages_pb2">iobjectspy.rpc.protos.rectMessages_pb2
+                                                    module</a></li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="iobjectspy.rpc.protos.html#module-iobjectspy.rpc.protos.tileMessages_pb2">iobjectspy.rpc.protos.tileMessages_pb2
+                                                    module</a></li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="iobjectspy.rpc.protos.html#module-iobjectspy.rpc.protos">Module
+                                                    contents</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="section" id="submodules">
+                                <h2>Submodules<a class="headerlink" href="#submodules" title="永久链接至标题">¶</a></h2>
+                            </div>
+                            <div class="section" id="module-iobjectspy.rpc.process">
+                                <span id="iobjectspy-rpc-process-module"></span>
+                                <h2>iobjectspy.rpc.process module<a class="headerlink"
+                                                                    href="#module-iobjectspy.rpc.process"
+                                                                    title="永久链接至标题">¶</a></h2>
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.process.Tile">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.process.</code><code
+                                            class="descname">Tile</code><span class="sig-paren">(</span><em>values</em>,
+                                        <em>no_data_value=None</em>, <em>bands=1</em>, <em>pixel=None</em><span
+                                            class="sig-paren">)</span><a class="headerlink"
+                                                                         href="#iobjectspy.rpc.process.Tile"
+                                                                         title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span
+                                            class="pre">object</span></code></p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.process.Tile.cols">
+                                                <code class="descname">cols</code><span class="sig-paren">(</span><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.process.Tile.cols"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.process.Tile.rows">
+                                                <code class="descname">rows</code><span class="sig-paren">(</span><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.process.Tile.rows"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.process.ProcessInfo">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.process.</code><code
+                                            class="descname">ProcessInfo</code><span class="sig-paren">(</span><em>py_code</em>,
+                                        <em>entry_class</em>, <em>kvargs</em><span class="sig-paren">)</span><a
+                                            class="headerlink" href="#iobjectspy.rpc.process.ProcessInfo"
+                                            title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span
+                                            class="pre">object</span></code></p>
+                                    </dd>
+                                </dl>
+
+                            </div>
+                            <div class="section" id="module-iobjectspy.rpc.serializes">
+                                <span id="iobjectspy-rpc-serializes-module"></span>
+                                <h2>iobjectspy.rpc.serializes module<a class="headerlink"
+                                                                       href="#module-iobjectspy.rpc.serializes"
+                                                                       title="永久链接至标题">¶</a></h2>
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.BoolSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">BoolSerializer</code><a class="headerlink"
+                                                                                     href="#iobjectspy.rpc.serializes.BoolSerializer"
+                                                                                     title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.BoolSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.BoolSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.BoolSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.BoolSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.BoolSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.BoolSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.BoolSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.BoolSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.BoolsSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">BoolsSerializer</code><a class="headerlink"
+                                                                                      href="#iobjectspy.rpc.serializes.BoolsSerializer"
+                                                                                      title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.BoolsSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.BoolsSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.BoolsSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.BoolsSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.BoolsSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.BoolsSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.BoolsSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.BoolsSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.ByteSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">ByteSerializer</code><a class="headerlink"
+                                                                                     href="#iobjectspy.rpc.serializes.ByteSerializer"
+                                                                                     title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.ByteSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.ByteSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.ByteSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.ByteSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.ByteSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.ByteSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.ByteSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.ByteSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.BytesSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">BytesSerializer</code><a class="headerlink"
+                                                                                      href="#iobjectspy.rpc.serializes.BytesSerializer"
+                                                                                      title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.BytesSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.BytesSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.BytesSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.BytesSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.BytesSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.BytesSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.BytesSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.BytesSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.DataSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">DataSerializer</code><a class="headerlink"
+                                                                                     href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                                                     title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span
+                                            class="pre">object</span></code></p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.DataSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.DataSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="classmethod">
+                                            <dt id="iobjectspy.rpc.serializes.DataSerializer.deserialize">
+                                                <em class="property">classmethod </em><code
+                                                    class="descname">deserialize</code><span
+                                                    class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.DataSerializer.deserialize"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.DataSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.DataSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.DataSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.DataSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.DataSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.DataSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.DataSerializer.serialize">
+                                                <code class="descname">serialize</code><span
+                                                    class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.DataSerializer.serialize"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="staticmethod">
+                                            <dt id="iobjectspy.rpc.serializes.DataSerializer.serialize_null">
+                                                <em class="property">static </em><code
+                                                    class="descname">serialize_null</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.DataSerializer.serialize_null"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.DataSerializers">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">DataSerializers</code><a class="headerlink"
+                                                                                      href="#iobjectspy.rpc.serializes.DataSerializers"
+                                                                                      title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span
+                                            class="pre">object</span></code></p>
+                                        <dl class="staticmethod">
+                                            <dt id="iobjectspy.rpc.serializes.DataSerializers.decode">
+                                                <em class="property">static </em><code
+                                                    class="descname">decode</code><span class="sig-paren">(</span><em>type_name</em>,
+                                                <em>bys</em><span class="sig-paren">)</span><a class="headerlink"
+                                                                                               href="#iobjectspy.rpc.serializes.DataSerializers.decode"
+                                                                                               title="永久链接至目标">¶</a>
+                                            </dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="staticmethod">
+                                            <dt id="iobjectspy.rpc.serializes.DataSerializers.deserialize">
+                                                <em class="property">static </em><code
+                                                    class="descname">deserialize</code><span
+                                                    class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.DataSerializers.deserialize"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="staticmethod">
+                                            <dt id="iobjectspy.rpc.serializes.DataSerializers.encode">
+                                                <em class="property">static </em><code
+                                                    class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.DataSerializers.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="classmethod">
+                                            <dt id="iobjectspy.rpc.serializes.DataSerializers.find">
+                                                <em class="property">classmethod </em><code class="descname">find</code><span
+                                                    class="sig-paren">(</span><em>key</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.DataSerializers.find"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="classmethod">
+                                            <dt id="iobjectspy.rpc.serializes.DataSerializers.register">
+                                                <em class="property">classmethod </em><code
+                                                    class="descname">register</code><span class="sig-paren">(</span><em>ser</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.DataSerializers.register"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="classmethod">
+                                            <dt id="iobjectspy.rpc.serializes.DataSerializers.register_default_serializer">
+                                                <em class="property">classmethod </em><code class="descname">register_default_serializer</code><span
+                                                    class="sig-paren">(</span><em>value_type</em>, <em>ser</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.DataSerializers.register_default_serializer"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="staticmethod">
+                                            <dt id="iobjectspy.rpc.serializes.DataSerializers.serialize">
+                                                <em class="property">static </em><code class="descname">serialize</code><span
+                                                    class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.DataSerializers.serialize"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.DateSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">DateSerializer</code><a class="headerlink"
+                                                                                     href="#iobjectspy.rpc.serializes.DateSerializer"
+                                                                                     title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.DateSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.DateSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.DateSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.DateSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.DateSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.DateSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.DateSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.DateSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.DoubleSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">DoubleSerializer</code><a class="headerlink"
+                                                                                       href="#iobjectspy.rpc.serializes.DoubleSerializer"
+                                                                                       title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.DoubleSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.DoubleSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.DoubleSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.DoubleSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.DoubleSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.DoubleSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.DoubleSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.DoubleSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.DoublesSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">DoublesSerializer</code><a class="headerlink"
+                                                                                        href="#iobjectspy.rpc.serializes.DoublesSerializer"
+                                                                                        title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.DoublesSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.DoublesSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.DoublesSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.DoublesSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.DoublesSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.DoublesSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.DoublesSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.DoublesSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.EnumSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">EnumSerializer</code><span class="sig-paren">(</span><em>enum_type</em><span
+                                            class="sig-paren">)</span><a class="headerlink"
+                                                                         href="#iobjectspy.rpc.serializes.EnumSerializer"
+                                                                         title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.EnumSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.EnumSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.EnumSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.EnumSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.EnumSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.EnumSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.EnumSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.EnumSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.FeatureSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">FeatureSerializer</code><a class="headerlink"
+                                                                                        href="#iobjectspy.rpc.serializes.FeatureSerializer"
+                                                                                        title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.FeatureSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.FeatureSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.FeatureSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.FeatureSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.FeatureSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.FeatureSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.FeatureSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.FeatureSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.FieldInfoSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">FieldInfoSerializer</code><a class="headerlink"
+                                                                                          href="#iobjectspy.rpc.serializes.FieldInfoSerializer"
+                                                                                          title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.FieldInfoSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.FieldInfoSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.FieldInfoSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.FieldInfoSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.FieldInfoSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.FieldInfoSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.FieldInfoSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.FieldInfoSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.FloatSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">FloatSerializer</code><a class="headerlink"
+                                                                                      href="#iobjectspy.rpc.serializes.FloatSerializer"
+                                                                                      title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.FloatSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.FloatSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.FloatSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.FloatSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.FloatSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.FloatSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.FloatSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.FloatSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.FloatsSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">FloatsSerializer</code><a class="headerlink"
+                                                                                       href="#iobjectspy.rpc.serializes.FloatsSerializer"
+                                                                                       title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.FloatsSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.FloatsSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.FloatsSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.FloatsSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.FloatsSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.FloatsSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.FloatsSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.FloatsSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.GeometrySerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">GeometrySerializer</code><a class="headerlink"
+                                                                                         href="#iobjectspy.rpc.serializes.GeometrySerializer"
+                                                                                         title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.GeometrySerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.GeometrySerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.GeometrySerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.GeometrySerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.GeometrySerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.GeometrySerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.GeometrySerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.GeometrySerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.IntSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">IntSerializer</code><a class="headerlink"
+                                                                                    href="#iobjectspy.rpc.serializes.IntSerializer"
+                                                                                    title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.IntSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.IntSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.IntSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.IntSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.IntSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.IntSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.IntSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.IntSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.IntsSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">IntsSerializer</code><a class="headerlink"
+                                                                                     href="#iobjectspy.rpc.serializes.IntsSerializer"
+                                                                                     title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.IntsSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.IntsSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.IntsSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.IntsSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.IntsSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.IntsSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.IntsSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.IntsSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.ListSerializers">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">ListSerializers</code><a class="headerlink"
+                                                                                      href="#iobjectspy.rpc.serializes.ListSerializers"
+                                                                                      title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.ListSerializers.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.ListSerializers.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.ListSerializers.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.ListSerializers.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.ListSerializers.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.ListSerializers.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.ListSerializers.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.ListSerializers.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.LongSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">LongSerializer</code><a class="headerlink"
+                                                                                     href="#iobjectspy.rpc.serializes.LongSerializer"
+                                                                                     title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.LongSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.LongSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.LongSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.LongSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.LongSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.LongSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.LongSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.LongSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.LongsSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">LongsSerializer</code><a class="headerlink"
+                                                                                      href="#iobjectspy.rpc.serializes.LongsSerializer"
+                                                                                      title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.LongsSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.LongsSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.LongsSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.LongsSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.LongsSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.LongsSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.LongsSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.LongsSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.MapSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">MapSerializer</code><a class="headerlink"
+                                                                                    href="#iobjectspy.rpc.serializes.MapSerializer"
+                                                                                    title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.MapSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.MapSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.MapSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.MapSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.MapSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.MapSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.MapSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.MapSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.NoneSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">NoneSerializer</code><a class="headerlink"
+                                                                                     href="#iobjectspy.rpc.serializes.NoneSerializer"
+                                                                                     title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.NoneSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.NoneSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.NoneSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.NoneSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.NoneSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.NoneSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.NoneSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.NoneSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.Point2DSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">Point2DSerializer</code><a class="headerlink"
+                                                                                        href="#iobjectspy.rpc.serializes.Point2DSerializer"
+                                                                                        title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.Point2DSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.Point2DSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.Point2DSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.Point2DSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.Point2DSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.Point2DSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.Point2DSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.Point2DSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.Point2DsSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">Point2DsSerializer</code><a class="headerlink"
+                                                                                         href="#iobjectspy.rpc.serializes.Point2DsSerializer"
+                                                                                         title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.Point2DsSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.Point2DsSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.Point2DsSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.Point2DsSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.Point2DsSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.Point2DsSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.Point2DsSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.Point2DsSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.ProcessInfoSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">ProcessInfoSerializer</code><a class="headerlink"
+                                                                                            href="#iobjectspy.rpc.serializes.ProcessInfoSerializer"
+                                                                                            title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.ProcessInfoSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.ProcessInfoSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.ProcessInfoSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.ProcessInfoSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.ProcessInfoSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.ProcessInfoSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.ProcessInfoSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.ProcessInfoSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.Rect2DSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">Rect2DSerializer</code><a class="headerlink"
+                                                                                       href="#iobjectspy.rpc.serializes.Rect2DSerializer"
+                                                                                       title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.Rect2DSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.Rect2DSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.Rect2DSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.Rect2DSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.Rect2DSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.Rect2DSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.Rect2DSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.Rect2DSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.ShortSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">ShortSerializer</code><a class="headerlink"
+                                                                                      href="#iobjectspy.rpc.serializes.ShortSerializer"
+                                                                                      title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.ShortSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.ShortSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.ShortSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.ShortSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.ShortSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.ShortSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.ShortSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.ShortSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.ShortsSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">ShortsSerializer</code><a class="headerlink"
+                                                                                       href="#iobjectspy.rpc.serializes.ShortsSerializer"
+                                                                                       title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.ShortsSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.ShortsSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.ShortsSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.ShortsSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.ShortsSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.ShortsSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.ShortsSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.ShortsSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.StrSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">StrSerializer</code><a class="headerlink"
+                                                                                    href="#iobjectspy.rpc.serializes.StrSerializer"
+                                                                                    title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.StrSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.StrSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.StrSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.StrSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.StrSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.StrSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.StrSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.StrSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.StrsSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">StrsSerializer</code><a class="headerlink"
+                                                                                     href="#iobjectspy.rpc.serializes.StrsSerializer"
+                                                                                     title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.StrsSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.StrsSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.StrsSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.StrsSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.StrsSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.StrsSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.StrsSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.StrsSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.TileSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">TileSerializer</code><a class="headerlink"
+                                                                                     href="#iobjectspy.rpc.serializes.TileSerializer"
+                                                                                     title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.TileSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.TileSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.TileSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.TileSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.TileSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.TileSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.TileSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.TileSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.rpc.serializes.TimestampSerializer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.rpc.serializes.</code><code
+                                            class="descname">TimestampSerializer</code><a class="headerlink"
+                                                                                          href="#iobjectspy.rpc.serializes.TimestampSerializer"
+                                                                                          title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<a class="reference internal"
+                                                 href="#iobjectspy.rpc.serializes.DataSerializer"
+                                                 title="iobjectspy.rpc.serializes.DataSerializer"><code
+                                            class="xref py py-class docutils literal notranslate"><span class="pre">iobjectspy.rpc.serializes.DataSerializer</span></code></a>
+                                    </p>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.TimestampSerializer.decode">
+                                                <code class="descname">decode</code><span class="sig-paren">(</span><em>bys</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.TimestampSerializer.decode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.TimestampSerializer.encode">
+                                                <code class="descname">encode</code><span class="sig-paren">(</span><em>value</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.rpc.serializes.TimestampSerializer.encode"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.TimestampSerializer.get_type_name">
+                                                <code class="descname">get_type_name</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.TimestampSerializer.get_type_name"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.rpc.serializes.TimestampSerializer.get_value_class">
+                                                <code class="descname">get_value_class</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.rpc.serializes.TimestampSerializer.get_value_class"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd></dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                            </div>
+                            <div class="section" id="module-iobjectspy.rpc.worker">
+                                <span id="iobjectspy-rpc-worker-module"></span>
+                                <h2>iobjectspy.rpc.worker module<a class="headerlink"
+                                                                   href="#module-iobjectspy.rpc.worker" title="永久链接至标题">¶</a>
+                                </h2>
+                                <dl class="function">
+                                    <dt id="iobjectspy.rpc.worker.execute_process_gt">
+                                        <code class="descclassname">iobjectspy.rpc.worker.</code><code class="descname">execute_process_gt</code><span
+                                            class="sig-paren">(</span><em>infile</em>, <em>outfile</em><span
+                                            class="sig-paren">)</span><a class="headerlink"
+                                                                         href="#iobjectspy.rpc.worker.execute_process_gt"
+                                                                         title="永久链接至目标">¶</a></dt>
+                                    <dd></dd>
+                                </dl>
+
+                                <dl class="function">
+                                    <dt id="iobjectspy.rpc.worker.execute_process_pipe">
+                                        <code class="descclassname">iobjectspy.rpc.worker.</code><code class="descname">execute_process_pipe</code><span
+                                            class="sig-paren">(</span><em>infile</em>, <em>outfile</em><span
+                                            class="sig-paren">)</span><a class="headerlink"
+                                                                         href="#iobjectspy.rpc.worker.execute_process_pipe"
+                                                                         title="永久链接至目标">¶</a></dt>
+                                    <dd></dd>
+                                </dl>
+
+                                <dl class="function">
+                                    <dt id="iobjectspy.rpc.worker.execute_process_tiles">
+                                        <code class="descclassname">iobjectspy.rpc.worker.</code><code class="descname">execute_process_tiles</code><span
+                                            class="sig-paren">(</span><em>infile</em>, <em>outfile</em><span
+                                            class="sig-paren">)</span><a class="headerlink"
+                                                                         href="#iobjectspy.rpc.worker.execute_process_tiles"
+                                                                         title="永久链接至目标">¶</a></dt>
+                                    <dd></dd>
+                                </dl>
+
+                            </div>
+                            <div class="section" id="module-iobjectspy.rpc">
+                                <span id="module-contents"></span>
+                                <h2>Module contents<a class="headerlink" href="#module-iobjectspy.rpc"
+                                                      title="永久链接至标题">¶</a></h2>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <footer>
+
+                    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+
+                        <a href="iobjectspy.rpc.protos.html" class="btn btn-neutral float-right"
+                           title="iobjectspy.rpc.protos package" accesskey="n" rel="next">Next <span
+                                class="fa fa-arrow-circle-right"></span></a>
+
+
+                        <a href="iobjectspy.ml.vision.html" class="btn btn-neutral" title="iobjectspy.ml.vision package"
+                           accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+
+                    </div>
+
+
+                    <hr/>
+
+                    <div role="contentinfo">
+                        <p>
+                            &copy; Copyright 2020, SuperMap.
+
+                        </p>
+                    </div>
+                    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a
+                        href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a
+                        href="https://readthedocs.org">Read the Docs</a>.
+
+                </footer>
+
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+
+<script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT: '../',
+        VERSION: '10.1.0.0',
+        LANGUAGE: 'zh',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE: true,
+        SOURCELINK_SUFFIX: '.txt'
+    };
+</script>
+<script type="text/javascript" src="../_static/jquery.js"></script>
+<script type="text/javascript" src="../_static/underscore.js"></script>
+<script type="text/javascript" src="../_static/doctools.js"></script>
+
+
+<script type="text/javascript" src="../_static/js/theme.js"></script>
+
+<script type="text/javascript">
+    jQuery(function () {
+        SphinxRtdTheme.Navigation.enable(true);
+    });
+</script>
+
+</body>
+</html>

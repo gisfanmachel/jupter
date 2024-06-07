@@ -1,0 +1,7 @@
+Enums
+==============================================
+
+.. toctree::
+    :maxdepth: 2
+
+.. include:: ../enums.txt

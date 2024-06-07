@@ -1,0 +1,37 @@
+版本更新
+================================================
+
+* 10.1.0
+    - 新增二维网络分析、三维网络分析模块
+    - 新增地址匹配模块
+    - 新增多种栅格综合功能：包含众数滤波、扩展、收缩、蚕食、区域分组、边界清理、细化等
+    - 新增地理模拟功能，包含基于主成分分析（PCA）、人工神经网络（ANN）的元胞自动机
+    - 完善数据导入功能，新增支持导入文件目录功能
+    - 新增地图专题图功能
+    - 新增影像数据对象提取功能，涉及训练数据生成、模型训练、模型推理接口
+    - 新增影像数据二元分类功能FPN、DeepLab V3+模型支持
+    - 新增图片数据图片分类功能，涉及模型训练、模型推理
+    - 新增模型转换接口，支持图片分类训练结果模型转换为移动端模型
+    - 新增图片数据目标检测功能，涉及模型训练、模型推理接口
+    - 新增基于DCRNN的交通流量预测功能
+    - 新增基于梯度提升的结构化数据分类功能
+
+* 10.0.1
+
+    - 不再支持 32 位 Python，只支持 64 位 Python
+    - 支持通过 log.conf 文件设置 python 端的日记信息
+    - 新增影像数据目标检测功能，涉及训练数据生成、模型训练、模型推理接口
+    - 新增影像数据二元分类功能，涉及训练数据生成、模型训练、模型推理接口
+    - 新增影像数据地物分类功能，涉及训练数据生成、模型训练、模型推理接口
+    - 新增影像数据场景分类功能，涉及训练数据生成、模型训练、模型推理接口
+    - 新增最小二乘法回归分析 ( :py:func:`.ordinary_least_squares`)
+    - 新增地理探测器分析 (:py:func:`.geographical_detector`)
+    - 新增计算数据集中几何对象矩形范围功能 ( :py:func:`.compute_features_envelope`)
+    - 新增填挖方分析 ( :py:func:`.inverse_cut_fill` , :py:func:`.cut_fill_grid` , :py:func:`.cut_fill_oblique` , :py:func:`.cut_fill_region` , :py:func:`.cut_fill_region3d` )
+    - 新建剖面分析 ( :py:func:`.calculate_profile` )
+    - 新增计算 DEM 栅格的淹没区域 ( :py:func:`.flood` )
+    - 新增二值栅格细化 ( :py:func:`.thin_raster_bit` )
+    - 新增归一化植被指数 ( :py:func:`.NDVI` ) 和归一化水指数 ( :py:func:`.NDWI` )
+    - 新增可视域分析 ( :py:func:`.calculate_view_shed` , :py:func:`.calculate_view_sheds` , :py:func:`.is_point_visible` , :py:func:`.are_points_visible`, :py:func:`.line_of_sight` , :py:func:`.radar_shield_angle` )
+    - 新增颜色对象（ :py:class:`.Color` ）和几何对象风格对象（ :py:class:`.GeoStyle` ）
+    - 新增地图模块（ :py:mod:`.mapping` ），用于新增、管理地图对象 ( :py:class:`.Map`  )

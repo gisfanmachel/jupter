@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="zh"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>iobjectspy.ml.analyst package &mdash; iobjectspy 10.1.0.0 文档</title>
+
+
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css"/>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css"/>
+    <link rel="index" title="索引" href="../genindex.html"/>
+    <link rel="search" title="搜索" href="../search.html"/>
+    <link rel="next" title="iobjectspy.ml.geoparsing package" href="iobjectspy.ml.geoparsing.html"/>
+    <link rel="prev" title="iobjectspy.ml package" href="iobjectspy.ml.html"/>
+
+
+    <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+
+<div class="wy-grid-for-nav">
+
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+        <div class="wy-side-scroll">
+            <div class="wy-side-nav-search">
+
+
+                <a href="../index.html" class="icon icon-home"> iobjectspy
+
+
+                </a>
+
+
+                <div class="version">
+                    10.1.0.0
+                </div>
+
+
+                <div role="search">
+                    <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+                        <input type="text" name="q" placeholder="Search docs"/>
+                        <input type="hidden" name="check_keywords" value="yes"/>
+                        <input type="hidden" name="area" value="default"/>
+                    </form>
+                </div>
+
+
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../guide.html">概览</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install.html">安装 iobjectspy</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install.html#supermap-iobjects-java">配置
+                        SuperMap iObjects Java</a></li>
+                    <li class="toctree-l1 current"><a class="reference internal" href="api.html">程序员参考</a>
+                        <ul class="current">
+                            <li class="toctree-l2"><a class="reference internal" href="classes.html"> 类列表</a></li>
+                            <li class="toctree-l2"><a class="reference internal" href="enums.html"> 枚举列表</a></li>
+                            <li class="toctree-l2"><a class="reference internal" href="functions.html"> 函数列表</a></li>
+                            <li class="toctree-l2 current"><a class="reference internal" href="modules.html"> API 参考</a>
+                                <ul class="current">
+                                    <li class="toctree-l3 current"><a class="reference internal" href="iobjectspy.html">iobjectspy
+                                        package</a>
+                                        <ul class="current">
+                                            <li class="toctree-l4 current"><a class="reference internal"
+                                                                              href="iobjectspy.html#subpackages">Subpackages</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#submodules">Submodules</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.analyst">iobjectspy.analyst
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.conversion">iobjectspy.conversion
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.data">iobjectspy.data
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.enums">iobjectspy.enums
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.env">iobjectspy.env
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.mapping">iobjectspy.mapping
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.threeddesigner">iobjectspy.threeddesigner
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy">Module
+                                                contents</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../changes.html">版本更新</a></li>
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+        <nav class="wy-nav-top" aria-label="top navigation">
+
+            <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+            <a href="../index.html">iobjectspy</a>
+
+        </nav>
+
+
+        <div class="wy-nav-content">
+
+            <div class="rst-content">
+
+
+                <div role="navigation" aria-label="breadcrumbs navigation">
+
+                    <ul class="wy-breadcrumbs">
+
+                        <li><a href="../index.html">Docs</a> &raquo;</li>
+
+                        <li><a href="api.html">api</a> &raquo;</li>
+
+                        <li><a href="modules.html">iobjectspy</a> &raquo;</li>
+
+                        <li><a href="iobjectspy.html">iobjectspy package</a> &raquo;</li>
+
+                        <li><a href="iobjectspy.ml.html">iobjectspy.ml package</a> &raquo;</li>
+
+                        <li>iobjectspy.ml.analyst package</li>
+
+
+                        <li class="wy-breadcrumbs-aside">
+
+
+                            <a href="../_sources/api/iobjectspy.ml.analyst.rst.txt" rel="nofollow"> View page source</a>
+
+
+                        </li>
+
+                    </ul>
+
+
+                    <hr/>
+                </div>
+                <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                    <div itemprop="articleBody">
+
+                        <div class="section" id="iobjectspy-ml-analyst-package">
+                            <h1>iobjectspy.ml.analyst package<a class="headerlink" href="#iobjectspy-ml-analyst-package"
+                                                                title="永久链接至标题">¶</a></h1>
+                            <div class="section" id="module-iobjectspy.ml.analyst">
+                                <span id="module-contents"></span>
+                                <h2>Module contents<a class="headerlink" href="#module-iobjectspy.ml.analyst"
+                                                      title="永久链接至标题">¶</a></h2>
+                                <dl class="class">
+                                    <dt id="iobjectspy.ml.analyst.DataPreparation">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.ml.analyst.</code><code
+                                            class="descname">DataPreparation</code><a class="headerlink"
+                                                                                      href="#iobjectspy.ml.analyst.DataPreparation"
+                                                                                      title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span
+                                            class="pre">object</span></code></p>
+                                        <p>表格数据准备流程入口</p>
+                                        <dl class="staticmethod">
+                                            <dt id="iobjectspy.ml.analyst.DataPreparation.create_training_data">
+                                                <em class="property">static </em><code class="descname">create_training_data</code><span
+                                                    class="sig-paren">(</span><em>input_data</em>,
+                                                <em>label_class_field</em>, <em>output_path</em>, <em>output_name</em>,
+                                                <em>training_data_format</em>, <em>**kwargs</em><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.ml.analyst.DataPreparation.create_training_data"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd><p>表格数据创建训练数据集</p>
+                                                <table class="docutils field-list" frame="void" rules="none">
+                                                    <col class="field-name"/>
+                                                    <col class="field-body"/>
+                                                    <tbody valign="top">
+                                                    <tr class="field-odd field">
+                                                        <th class="field-name">参数:</th>
+                                                        <td class="field-body">
+                                                            <ul class="first simple">
+                                                                <li><strong>input_data</strong> -- 输入数据路径，暂时只支持csv</li>
+                                                                <li><strong>label_class_field</strong> -- 数据标签所在列名</li>
+                                                                <li><strong>output_path</strong> -- 输出路径</li>
+                                                                <li><strong>output_name</strong> -- 输出文件名</li>
+                                                                <li><strong>training_data_format</strong> -- 要制作的训练数据格式
+                                                                </li>
+                                                                <li><strong>kwargs</strong> -- 其他附加参数</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="field-even field">
+                                                        <th class="field-name">返回:</th>
+                                                        <td class="field-body"><p class="first last"></p>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.ml.analyst.Trainer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.ml.analyst.</code><code
+                                            class="descname">Trainer</code><span class="sig-paren">(</span><em>train_data_path</em>,
+                                        <em>config</em>, <em>lr</em>, <em>output_model_path</em>,
+                                        <em>output_model_name</em>, <em>model_kwargs=None</em>, <em>**kwargs</em><span
+                                            class="sig-paren">)</span><a class="headerlink"
+                                                                         href="#iobjectspy.ml.analyst.Trainer"
+                                                                         title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span
+                                            class="pre">object</span></code></p>
+                                        <p>表格数据训练入口</p>
+                                        <table class="docutils field-list" frame="void" rules="none">
+                                            <col class="field-name"/>
+                                            <col class="field-body"/>
+                                            <tbody valign="top">
+                                            <tr class="field-odd field">
+                                                <th class="field-name">参数:</th>
+                                                <td class="field-body">
+                                                    <ul class="first last simple">
+                                                        <li><strong>train_data_path</strong> -- 训练数据路径</li>
+                                                        <li><strong>config</strong> -- 训练配置文件</li>
+                                                        <li><strong>lr</strong> -- 学习率</li>
+                                                        <li><strong>output_model_path</strong> -- 输出模型路径</li>
+                                                        <li><strong>output_model_name</strong> -- 输出模型名字</li>
+                                                        <li><strong>model_kwargs</strong> -- 模型附加参数</li>
+                                                        <li><strong>kwargs</strong> -- 其他参数</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.ml.analyst.Trainer.tabular_cls_train">
+                                                <code class="descname">tabular_cls_train</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.ml.analyst.Trainer.tabular_cls_train"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd><p>表格数据分类模型训练功能</p>
+                                                <p>生成模型将存储在输入的 ‘output_model_path’ 路径下</p>
+                                                <table class="docutils field-list" frame="void" rules="none">
+                                                    <col class="field-name"/>
+                                                    <col class="field-body"/>
+                                                    <tbody valign="top">
+                                                    <tr class="field-odd field">
+                                                        <th class="field-name">返回:</th>
+                                                        <td class="field-body">None</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.ml.analyst.Inference">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.ml.analyst.</code><code
+                                            class="descname">Inference</code><span class="sig-paren">(</span><em>model_path</em>,
+                                        <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink"
+                                                                                            href="#iobjectspy.ml.analyst.Inference"
+                                                                                            title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span
+                                            class="pre">object</span></code></p>
+                                        <p>表格数据模型推理初始化入口</p>
+                                        <table class="docutils field-list" frame="void" rules="none">
+                                            <col class="field-name"/>
+                                            <col class="field-body"/>
+                                            <tbody valign="top">
+                                            <tr class="field-odd field">
+                                                <th class="field-name">参数:</th>
+                                                <td class="field-body"><strong>model_path</strong> (<em>str</em>) --
+                                                    模型存储路径
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.ml.analyst.Inference.cls_tabular_infer">
+                                                <code class="descname">cls_tabular_infer</code><span
+                                                    class="sig-paren">(</span><em>input_data</em>, <em>out_data</em>,
+                                                <em>out_dataset_name=None</em>, <em>**kwargs</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.ml.analyst.Inference.cls_tabular_infer"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd><p>表格数据模型推理功能入口</p>
+                                                <table class="docutils field-list" frame="void" rules="none">
+                                                    <col class="field-name"/>
+                                                    <col class="field-body"/>
+                                                    <tbody valign="top">
+                                                    <tr class="field-odd field">
+                                                        <th class="field-name">参数:</th>
+                                                        <td class="field-body">
+                                                            <ul class="first simple">
+                                                                <li><strong>input_data</strong> -- 输入数据路径，暂时支持csv</li>
+                                                                <li><strong>out_data</strong> -- 输出数据路径，暂时支持csv</li>
+                                                                <li><strong>out_dataset_name</strong> -- 输出文件名</li>
+                                                                <li><strong>kwargs</strong> -- 其他参数</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="field-even field">
+                                                        <th class="field-name">返回:</th>
+                                                        <td class="field-body"><p class="first last">（预测结果 ，输出数据路径）</p>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <footer>
+
+                    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+
+                        <a href="iobjectspy.ml.geoparsing.html" class="btn btn-neutral float-right"
+                           title="iobjectspy.ml.geoparsing package" accesskey="n" rel="next">Next <span
+                                class="fa fa-arrow-circle-right"></span></a>
+
+
+                        <a href="iobjectspy.ml.html" class="btn btn-neutral" title="iobjectspy.ml package" accesskey="p"
+                           rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+
+                    </div>
+
+
+                    <hr/>
+
+                    <div role="contentinfo">
+                        <p>
+                            &copy; Copyright 2020, SuperMap.
+
+                        </p>
+                    </div>
+                    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a
+                        href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a
+                        href="https://readthedocs.org">Read the Docs</a>.
+
+                </footer>
+
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+
+<script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT: '../',
+        VERSION: '10.1.0.0',
+        LANGUAGE: 'zh',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE: true,
+        SOURCELINK_SUFFIX: '.txt'
+    };
+</script>
+<script type="text/javascript" src="../_static/jquery.js"></script>
+<script type="text/javascript" src="../_static/underscore.js"></script>
+<script type="text/javascript" src="../_static/doctools.js"></script>
+
+
+<script type="text/javascript" src="../_static/js/theme.js"></script>
+
+<script type="text/javascript">
+    jQuery(function () {
+        SphinxRtdTheme.Navigation.enable(true);
+    });
+</script>
+
+</body>
+</html>

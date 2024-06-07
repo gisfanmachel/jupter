@@ -1,0 +1,78 @@
+iobjectspy package
+==================
+
+Subpackages
+-----------
+
+.. toctree::
+
+    iobjectspy.ml
+    iobjectspy.rpc
+
+Submodules
+----------
+
+iobjectspy.analyst module
+-------------------------
+
+.. automodule:: iobjectspy.analyst
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+iobjectspy.conversion module
+----------------------------
+
+.. automodule:: iobjectspy.conversion
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+iobjectspy.data module
+----------------------
+
+.. automodule:: iobjectspy.data
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+iobjectspy.enums module
+-----------------------
+
+.. automodule:: iobjectspy.enums
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+iobjectspy.env module
+---------------------
+
+.. automodule:: iobjectspy.env
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+iobjectspy.mapping module
+-------------------------
+
+.. automodule:: iobjectspy.mapping
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+iobjectspy.threeddesigner module
+--------------------------------
+
+.. automodule:: iobjectspy.threeddesigner
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: iobjectspy
+    :members:
+    :undoc-members:
+    :show-inheritance:

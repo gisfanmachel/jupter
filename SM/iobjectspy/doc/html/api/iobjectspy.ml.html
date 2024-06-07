@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="zh"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>iobjectspy.ml package &mdash; iobjectspy 10.1.0.0 文档</title>
+
+
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css"/>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css"/>
+    <link rel="index" title="索引" href="../genindex.html"/>
+    <link rel="search" title="搜索" href="../search.html"/>
+    <link rel="next" title="iobjectspy.ml.analyst package" href="iobjectspy.ml.analyst.html"/>
+    <link rel="prev" title="iobjectspy package" href="iobjectspy.html"/>
+
+
+    <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+
+<div class="wy-grid-for-nav">
+
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+        <div class="wy-side-scroll">
+            <div class="wy-side-nav-search">
+
+
+                <a href="../index.html" class="icon icon-home"> iobjectspy
+
+
+                </a>
+
+
+                <div class="version">
+                    10.1.0.0
+                </div>
+
+
+                <div role="search">
+                    <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+                        <input type="text" name="q" placeholder="Search docs"/>
+                        <input type="hidden" name="check_keywords" value="yes"/>
+                        <input type="hidden" name="area" value="default"/>
+                    </form>
+                </div>
+
+
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../guide.html">概览</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install.html">安装 iobjectspy</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install.html#supermap-iobjects-java">配置
+                        SuperMap iObjects Java</a></li>
+                    <li class="toctree-l1 current"><a class="reference internal" href="api.html">程序员参考</a>
+                        <ul class="current">
+                            <li class="toctree-l2"><a class="reference internal" href="classes.html"> 类列表</a></li>
+                            <li class="toctree-l2"><a class="reference internal" href="enums.html"> 枚举列表</a></li>
+                            <li class="toctree-l2"><a class="reference internal" href="functions.html"> 函数列表</a></li>
+                            <li class="toctree-l2 current"><a class="reference internal" href="modules.html"> API 参考</a>
+                                <ul class="current">
+                                    <li class="toctree-l3 current"><a class="reference internal" href="iobjectspy.html">iobjectspy
+                                        package</a>
+                                        <ul class="current">
+                                            <li class="toctree-l4 current"><a class="reference internal"
+                                                                              href="iobjectspy.html#subpackages">Subpackages</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#submodules">Submodules</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.analyst">iobjectspy.analyst
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.conversion">iobjectspy.conversion
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.data">iobjectspy.data
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.enums">iobjectspy.enums
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.env">iobjectspy.env
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.mapping">iobjectspy.mapping
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.threeddesigner">iobjectspy.threeddesigner
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy">Module
+                                                contents</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../changes.html">版本更新</a></li>
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+        <nav class="wy-nav-top" aria-label="top navigation">
+
+            <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+            <a href="../index.html">iobjectspy</a>
+
+        </nav>
+
+
+        <div class="wy-nav-content">
+
+            <div class="rst-content">
+
+
+                <div role="navigation" aria-label="breadcrumbs navigation">
+
+                    <ul class="wy-breadcrumbs">
+
+                        <li><a href="../index.html">Docs</a> &raquo;</li>
+
+                        <li><a href="api.html">api</a> &raquo;</li>
+
+                        <li><a href="modules.html">iobjectspy</a> &raquo;</li>
+
+                        <li><a href="iobjectspy.html">iobjectspy package</a> &raquo;</li>
+
+                        <li>iobjectspy.ml package</li>
+
+
+                        <li class="wy-breadcrumbs-aside">
+
+
+                            <a href="../_sources/api/iobjectspy.ml.rst.txt" rel="nofollow"> View page source</a>
+
+
+                        </li>
+
+                    </ul>
+
+
+                    <hr/>
+                </div>
+                <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                    <div itemprop="articleBody">
+
+                        <div class="section" id="iobjectspy-ml-package">
+                            <h1>iobjectspy.ml package<a class="headerlink" href="#iobjectspy-ml-package"
+                                                        title="永久链接至标题">¶</a></h1>
+                            <div class="section" id="subpackages">
+                                <h2>Subpackages<a class="headerlink" href="#subpackages" title="永久链接至标题">¶</a></h2>
+                                <div class="toctree-wrapper compound">
+                                    <ul>
+                                        <li class="toctree-l1"><a class="reference internal"
+                                                                  href="iobjectspy.ml.analyst.html">iobjectspy.ml.analyst
+                                            package</a>
+                                            <ul>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="iobjectspy.ml.analyst.html#module-iobjectspy.ml.analyst">Module
+                                                    contents</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="toctree-l1"><a class="reference internal"
+                                                                  href="iobjectspy.ml.geoparsing.html">iobjectspy.ml.geoparsing
+                                            package</a>
+                                            <ul>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="iobjectspy.ml.geoparsing.html#module-iobjectspy.ml.geoparsing">Module
+                                                    contents</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="toctree-l1"><a class="reference internal"
+                                                                  href="iobjectspy.ml.spacetime.html">iobjectspy.ml.spacetime
+                                            package</a>
+                                            <ul>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="iobjectspy.ml.spacetime.html#module-iobjectspy.ml.spacetime">Module
+                                                    contents</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="toctree-l1"><a class="reference internal"
+                                                                  href="iobjectspy.ml.toolkit.html">iobjectspy.ml.toolkit
+                                            package</a>
+                                            <ul>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="iobjectspy.ml.toolkit.html#submodules">Submodules</a>
+                                                </li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="iobjectspy.ml.toolkit.html#module-iobjectspy.ml.toolkit.model_converter">iobjectspy.ml.toolkit.model_converter
+                                                    module</a></li>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="iobjectspy.ml.toolkit.html#module-iobjectspy.ml.toolkit">Module
+                                                    contents</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="toctree-l1"><a class="reference internal"
+                                                                  href="iobjectspy.ml.vision.html">iobjectspy.ml.vision
+                                            package</a>
+                                            <ul>
+                                                <li class="toctree-l2"><a class="reference internal"
+                                                                          href="iobjectspy.ml.vision.html#module-iobjectspy.ml.vision">Module
+                                                    contents</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="section" id="submodules">
+                                <h2>Submodules<a class="headerlink" href="#submodules" title="永久链接至标题">¶</a></h2>
+                            </div>
+                            <div class="section" id="module-iobjectspy.ml.utils">
+                                <span id="iobjectspy-ml-utils-module"></span>
+                                <h2>iobjectspy.ml.utils module<a class="headerlink" href="#module-iobjectspy.ml.utils"
+                                                                 title="永久链接至标题">¶</a></h2>
+                                <p>utils模块负责数据处理中的一些常用小功能</p>
+                                <dl class="function">
+                                    <dt id="iobjectspy.ml.utils.datasetraster_to_df_or_xarray">
+                                        <code class="descclassname">iobjectspy.ml.utils.</code><code class="descname">datasetraster_to_df_or_xarray</code><span
+                                            class="sig-paren">(</span><em>source</em>, <em>no_value=None</em>, <em>origin_is_left_up=True</em><span
+                                            class="sig-paren">)</span><a class="headerlink"
+                                                                         href="#iobjectspy.ml.utils.datasetraster_to_df_or_xarray"
+                                                                         title="永久链接至目标">¶</a></dt>
+                                    <dd><p>从栅格数据集 (DatasetGrid) 或影像数据集 (DatasetImage) 中读取数据到 pandas.DataFrame 或
+                                        xarray.DataArray。数组的列的数
+                                        目为数据集的宽度(width)，行的数目为数据集的高度(height)。</p>
+                                        <blockquote>
+                                            <div>
+                                                <ul class="simple">
+                                                    <li>如果是单波段数据集，且不是 RGB 和 RGBA
+                                                        像素格式的数据集，返回一个二维数组，数组的第一维度为行，第二维度为列，即返回一个 DataFrame
+                                                    </li>
+                                                    <li>如果是 RGB 和 RGBA 的单波段数据集，返回一个三维数组，数组的第一维度为波段，第一维度的大小为 3（RGB）或
+                                                        4（RGBA），数组的第二维度为行，第三维度为列，即返回 DataArray
+                                                    </li>
+                                                    <li>如果是多波段数据集，返回一个三维数组，数组的第一维度为波段。第一维度的大小为波段的数目，数组的第二维度为行，第三维度为列。即返回
+                                                        DataArray
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </blockquote>
+                                        <table class="docutils field-list" frame="void" rules="none">
+                                            <col class="field-name"/>
+                                            <col class="field-body"/>
+                                            <tbody valign="top">
+                                            <tr class="field-odd field">
+                                                <th class="field-name">参数:</th>
+                                                <td class="field-body">
+                                                    <ul class="first simple">
+                                                        <li><strong>source</strong> (<a class="reference internal"
+                                                                                        href="iobjectspy.html#iobjectspy.data.DatasetGrid"
+                                                                                        title="iobjectspy.data.DatasetGrid"><em>DatasetGrid</em></a><em>
+                                                            or </em><a class="reference internal"
+                                                                       href="iobjectspy.html#iobjectspy.data.DatasetImage"
+                                                                       title="iobjectspy.data.DatasetImage"><em>DatasetImage</em></a><em>
+                                                            or </em><em>str</em>) -- 需要读取数据的栅格数据集或影像数据集对象。如果输入为 str,
+                                                            则可以使用数据源信息加数据集名称方式表示数据集，
+                                                            例如，使用数据源别名'alias/imagedataset',也可以使用数据源的连接信息（udb文件路径，
+                                                            dcf文件路径，或者数据
+                                                            源连接信息的xml字符串表示），例如使用udb文件，'/home/data/test.udb/imagedataset'。当使用数据源连接信息时，
+                                                            如果工作空间中已经有相同的数据源信息的数据源存在，则会直接获取已存在的数据源对象，否则会打开一个新的数据源对象。
+                                                        </li>
+                                                        <li><strong>no_value</strong> (<em>float</em>) -- SuerpMap
+                                                            的栅格数据集和影像数据集均有无值，用户可以设定一个新的无值来表示数据集的无值，如果 noValue
+                                                            不为 None，在返回的 DataFrame 中会使用用户设定的 noValue 来替换无值的栅格或像素。默认为
+                                                            None，即返回
+                                                            的数组的无值不改变。
+                                                        </li>
+                                                        <li><strong>origin_is_left_up</strong> (<em>bool</em>) -- 在返回的
+                                                            DataFrame 或 DataArray 中，(0,0) 位置的值是数据集的左上角还是左下角，如果为 True，
+                                                            则表示数组的（0,0）的值为数据集的左上角的值， DataFrame[i][j] 对应数据集中 第i行j列的数值，
+                                                            如果为 False，则数组的 (0,0) 的值为数据集的左下角的值，即 DataFrame[i][j] 对应数据集中
+                                                            第(height-i)行j列的
+                                                            数值。在 SuperMap 的栅格数据集或影像数据集中，数据集的 (0,0) 位置为左上角。默认为 True。
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="field-even field">
+                                                <th class="field-name">返回:</th>
+                                                <td class="field-body"><p class="first">但读取数据集为一个二维数组时返回一个
+                                                    DataFrame，如果读取的数据集是一个三维数组，则返回一个 xarray.DataArray</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="field-odd field">
+                                                <th class="field-name">返回类型:</th>
+                                                <td class="field-body"><p class="first last">pandas.DataFrame or
+                                                    xarray.DataArray</p>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </dd>
+                                </dl>
+
+                                <dl class="function">
+                                    <dt id="iobjectspy.ml.utils.datasetraster_to_numpy_array">
+                                        <code class="descclassname">iobjectspy.ml.utils.</code><code class="descname">datasetraster_to_numpy_array</code><span
+                                            class="sig-paren">(</span><em>source</em>, <em>no_value=None</em>, <em>origin_is_left_up=True</em><span
+                                            class="sig-paren">)</span><a class="headerlink"
+                                                                         href="#iobjectspy.ml.utils.datasetraster_to_numpy_array"
+                                                                         title="永久链接至目标">¶</a></dt>
+                                    <dd><p>从栅格数据集 (DatasetGrid) 或影像数据集 (DatasetImage) 中读取数据到 numpy
+                                        数组中。数组的列的数目为数据集的宽度(width)，行的数目为数据集的高度(height)。
+                                        如果是单波段数据集，且不是 RGB 和 RGBA 像素格式的数据集，返回一个二维数组，数组的第一维度为行，第二维度为列。如果是 RGB 和 RGBA 的单波段
+                                        数据集，返回一个三维数组，数组的第一维度为波段，第一维度的大小为 3（RGB）或 4（RGBA），数组的第二维度为行，第三维度为列。
+                                        如果是多波段数据集，返回一个三维数组，数组的第一维度为波段。第一维度的大小为波段的数目，数组的第二维度为行，第三维度为列。</p>
+                                        <p><a class="reference internal"
+                                              href="#iobjectspy.ml.utils.datasetraster_to_numpy_array"
+                                              title="iobjectspy.ml.utils.datasetraster_to_numpy_array"><code
+                                                class="xref py py-meth docutils literal notranslate"><span class="pre">datasetraster_to_numpy_array()</span></code></a>
+                                            支持将影像数据集和栅格数据集写出到 numpy 的 ndarray，影像数据集支持多波段影像。在写出影像数据集时:</p>
+                                        <blockquote>
+                                            <div>
+                                                <ul class="simple">
+                                                    <li>如果是 RGB 或 RGBA
+                                                        像素格式的影像数据集，将会写出为为维度为3的数组，地中第一个维度的大小为3（RGB）或4（RGBA），第二维度为为行，第三维度为列；
+                                                    </li>
+                                                    <li>如果是单波段数据集，将会写出为一个维度为2的数组第一维度为行，第二维度为列；</li>
+                                                    <li>如果波段数目大于1，将会写出一个维度为3的数组，其中第一维度为波段，第二维度为为行，第三维度为列；</li>
+                                                </ul>
+                                            </div>
+                                        </blockquote>
+                                        <p>如果写出为栅格数据集，因为栅格数据集不支持多波段，所以将会写出为一个维度为2的数组。</p>
+                                        <blockquote>
+                                            <div>
+                                                <ul>
+                                                    <li><p class="first">写出一个 RGB 影像数据集:</p>
+                                                        <div class="highlight-default notranslate">
+                                                            <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span
+                                                                    class="n">datasetraster_to_numpy_array</span><span
+                                                                    class="p">(</span><span
+                                                                    class="n">data_dir</span> <span
+                                                                    class="o">+</span> <span class="s1">&#39;example_data.udb/seaport&#39;</span><span
+                                                                    class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">k_array</span><span
+                                                                        class="o">.</span><span
+                                                                        class="n">ndim</span><span class="p">)</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">k_array</span><span
+                                                                        class="o">.</span><span
+                                                                        class="n">shape</span><span class="p">)</span>
+<span class="go">(3, 1537, 1728)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">k_array</span><span
+                                                                        class="o">.</span><span
+                                                                        class="n">dtype</span><span class="p">)</span>
+<span class="go">uint8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">k_array</span><span
+                                                                        class="p">)</span>
+<span class="go">[[[ 21  21  21 ... 192 194 191]</span>
+<span class="go">  [ 21  21  21 ... 191 192 190]</span>
+<span class="go">  [ 21  21  21 ... 190 192 193]</span>
+<span class="go">  ...</span>
+<span class="go">  [ 98  94  91 ...  31  31  29]</span>
+<span class="go">  [101  97  94 ...  30  30  29]</span>
+<span class="go">  [116 114 110 ...  24  24  24]]</span>
+
+<span class="go"> [[ 56  56  56 ... 196 198 195]</span>
+<span class="go">  [ 56  56  56 ... 195 196 194]</span>
+<span class="go">  [ 56  56  56 ... 194 196 197]</span>
+<span class="go">  ...</span>
+<span class="go">  [119 115 111 ...  25  25  26]</span>
+<span class="go">  [125 121 114 ...  24  24  26]</span>
+<span class="go">  [116 114 110 ...  24  24  24]]</span>
+
+<span class="go"> [[ 75  75  75 ... 179 181 181]</span>
+<span class="go">  [ 75  75  75 ... 178 179 180]</span>
+<span class="go">  [ 75  75  75 ... 177 179 183]</span>
+<span class="go">  ...</span>
+<span class="go">  [110 106 102 ...  35  35  33]</span>
+<span class="go">  [112 108 105 ...  34  34  33]</span>
+<span class="go">  [116 114 110 ...  24  24  24]]]</span>
+</pre>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li><p class="first">写出一个像素格式为 BIT16 的栅格数据集:</p>
+                                                        <div class="highlight-default notranslate">
+                                                            <div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span
+                                                                    class="n">datasetraster_to_numpy_array</span><span
+                                                                    class="p">(</span><span
+                                                                    class="n">data_dir</span> <span
+                                                                    class="o">+</span> <span class="s1">&#39;example_data.udb/DEM&#39;</span><span
+                                                                    class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">k_array</span><span
+                                                                        class="o">.</span><span
+                                                                        class="n">ndim</span><span class="p">)</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">k_array</span><span
+                                                                        class="o">.</span><span
+                                                                        class="n">shape</span><span class="p">)</span>
+<span class="go">(4849, 5892)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">k_array</span><span
+                                                                        class="o">.</span><span
+                                                                        class="n">dtype</span><span class="p">)</span>
+<span class="go">int16</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">k_array</span><span
+                                                                        class="p">)</span>
+<span class="go">[[-32768 -32768 -32768 ... -32768 -32768 -32768]</span>
+<span class="go"> [-32768 -32768 -32768 ... -32768 -32768 -32768]</span>
+<span class="go"> [-32768 -32768 -32768 ... -32768 -32768 -32768]</span>
+<span class="go"> ...</span>
+<span class="go"> [-32768 -32768 -32768 ... -32768 -32768 -32768]</span>
+<span class="go"> [-32768 -32768 -32768 ... -32768 -32768 -32768]</span>
+<span class="go"> [-32768 -32768 -32768 ... -32768 -32768 -32768]]</span>
+</pre>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </blockquote>
+                                        <ul>
+                                            <li><p class="first">另外，需要注意的是 origin_is_left 可以指定生成的数组原点（第0行第0列）对应在
+                                                SuperMap 栅格数据集或影像数据集中的左上角还是左下角。在SuperMap的栅格数据集和影像数据集中
+                                                第0行和第0列位于左上角，往下则行递增，往右则列递增</p>
+                                                <div class="highlight-default notranslate">
+                                                    <div class="highlight"><pre><span></span><span
+                                                            class="p">[[(</span><span class="mi">0</span><span
+                                                            class="p">,</span><span class="mi">0</span><span class="p">),</span>       <span
+                                                            class="p">(</span><span class="mi">0</span><span
+                                                            class="p">,</span><span class="mi">1</span><span class="p">),</span>        <span
+                                                            class="p">(</span><span class="mi">0</span><span
+                                                            class="p">,</span><span class="mi">2</span><span class="p">),</span> <span
+                                                            class="o">...</span>        <span class="p">(</span><span
+                                                            class="mi">0</span><span class="p">,</span> <span class="n">width</span><span
+                                                            class="o">-</span><span class="mi">2</span><span class="p">),</span>       <span
+                                                            class="p">(</span><span class="mi">0</span><span
+                                                            class="p">,</span> <span class="n">width</span><span
+                                                            class="o">-</span><span class="mi">1</span><span class="p">)]</span>
+ <span class="p">[(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span
+                                                                class="p">),</span>        <span class="p">(</span><span
+                                                                class="mi">1</span><span class="p">,</span><span
+                                                                class="mi">1</span><span
+                                                                class="p">),</span>        <span class="p">(</span><span
+                                                                class="mi">1</span><span class="p">,</span><span
+                                                                class="mi">2</span><span class="p">),</span> <span
+                                                                class="o">...</span>        <span
+                                                                class="p">(</span><span class="mi">1</span><span
+                                                                class="p">,</span> <span class="n">width</span><span
+                                                                class="o">-</span><span class="mi">2</span><span
+                                                                class="p">),</span>       <span class="p">(</span><span
+                                                                class="mi">1</span><span class="p">,</span> <span
+                                                                class="n">width</span><span class="o">-</span><span
+                                                                class="mi">1</span><span class="p">)]</span>
+ <span class="p">[(</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span
+                                                                class="p">),</span>        <span class="p">(</span><span
+                                                                class="mi">2</span><span class="p">,</span><span
+                                                                class="mi">1</span><span
+                                                                class="p">),</span>        <span class="p">(</span><span
+                                                                class="mi">0</span><span class="p">,</span><span
+                                                                class="mi">2</span><span class="p">),</span> <span
+                                                                class="o">...</span>        <span
+                                                                class="p">(</span><span class="mi">2</span><span
+                                                                class="p">,</span> <span class="n">width</span><span
+                                                                class="o">-</span><span class="mi">2</span><span
+                                                                class="p">),</span>       <span class="p">(</span><span
+                                                                class="mi">2</span><span class="p">,</span> <span
+                                                                class="n">width</span><span class="o">-</span><span
+                                                                class="mi">1</span><span class="p">)]</span>
+ <span class="o">...</span>                                 <span class="o">...</span>                             <span
+                                                                class="o">...</span>
+ <span class="p">[(</span><span class="n">height</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span
+                                                                class="mi">0</span><span class="p">),</span> <span
+                                                                class="p">(</span><span class="n">height</span><span
+                                                                class="o">-</span><span class="mi">2</span><span
+                                                                class="p">,</span><span class="mi">1</span><span
+                                                                class="p">),</span> <span class="p">(</span><span
+                                                                class="n">height</span><span class="o">-</span><span
+                                                                class="mi">2</span><span class="p">,</span><span
+                                                                class="mi">2</span><span class="p">),</span> <span
+                                                                class="o">...</span> <span class="p">(</span><span
+                                                                class="n">height</span><span class="o">-</span><span
+                                                                class="mi">2</span><span class="p">,</span> <span
+                                                                class="n">width</span><span class="o">-</span><span
+                                                                class="mi">2</span><span class="p">),</span> <span
+                                                                class="p">(</span><span class="n">height</span><span
+                                                                class="o">-</span><span class="mi">2</span><span
+                                                                class="p">,</span> <span class="n">width</span><span
+                                                                class="o">-</span><span class="mi">1</span><span
+                                                                class="p">)]</span>
+ <span class="p">[(</span><span class="n">height</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span
+                                                                class="mi">0</span><span class="p">),</span> <span
+                                                                class="p">(</span><span class="n">height</span><span
+                                                                class="o">-</span><span class="mi">1</span><span
+                                                                class="p">,</span><span class="mi">1</span><span
+                                                                class="p">),</span> <span class="p">(</span><span
+                                                                class="n">height</span><span class="o">-</span><span
+                                                                class="mi">1</span><span class="p">,</span><span
+                                                                class="mi">2</span><span class="p">),</span> <span
+                                                                class="o">...</span> <span class="p">(</span><span
+                                                                class="n">height</span><span class="o">-</span><span
+                                                                class="mi">1</span><span class="p">,</span> <span
+                                                                class="n">width</span><span class="o">-</span><span
+                                                                class="mi">2</span><span class="p">),</span> <span
+                                                                class="p">(</span><span class="n">height</span><span
+                                                                class="o">-</span><span class="mi">1</span><span
+                                                                class="p">,</span> <span class="n">width</span><span
+                                                                class="o">-</span><span class="mi">1</span><span
+                                                                class="p">)]]</span>
+</pre>
+                                                    </div>
+                                                </div>
+                                                <p>但在其他软件中可能第0行和第0列位于左下角，往上则行递增，往右则列递增</p>
+                                                <div class="highlight-default notranslate">
+                                                    <div class="highlight"><pre><span></span><span
+                                                            class="p">[(</span><span class="n">height</span><span
+                                                            class="o">-</span><span class="mi">1</span><span
+                                                            class="p">,</span><span class="mi">0</span><span class="p">),</span> <span
+                                                            class="p">(</span><span class="n">height</span><span
+                                                            class="o">-</span><span class="mi">1</span><span
+                                                            class="p">,</span><span class="mi">1</span><span class="p">),</span> <span
+                                                            class="p">(</span><span class="n">height</span><span
+                                                            class="o">-</span><span class="mi">1</span><span
+                                                            class="p">,</span><span class="mi">2</span><span class="p">),</span> <span
+                                                            class="o">...</span> <span class="p">(</span><span
+                                                            class="n">height</span><span class="o">-</span><span
+                                                            class="mi">1</span><span class="p">,</span> <span class="n">width</span><span
+                                                            class="o">-</span><span class="mi">2</span><span class="p">),</span> <span
+                                                            class="p">(</span><span class="n">height</span><span
+                                                            class="o">-</span><span class="mi">1</span><span
+                                                            class="p">,</span> <span class="n">width</span><span
+                                                            class="o">-</span><span class="mi">1</span><span class="p">)]]</span>
+<span class="p">[(</span><span class="n">height</span><span class="o">-</span><span class="mi">2</span><span
+                                                                class="p">,</span><span class="mi">0</span><span
+                                                                class="p">),</span> <span class="p">(</span><span
+                                                                class="n">height</span><span class="o">-</span><span
+                                                                class="mi">2</span><span class="p">,</span><span
+                                                                class="mi">1</span><span class="p">),</span> <span
+                                                                class="p">(</span><span class="n">height</span><span
+                                                                class="o">-</span><span class="mi">2</span><span
+                                                                class="p">,</span><span class="mi">2</span><span
+                                                                class="p">),</span> <span class="o">...</span> <span
+                                                                class="p">(</span><span class="n">height</span><span
+                                                                class="o">-</span><span class="mi">2</span><span
+                                                                class="p">,</span> <span class="n">width</span><span
+                                                                class="o">-</span><span class="mi">2</span><span
+                                                                class="p">),</span> <span class="p">(</span><span
+                                                                class="n">height</span><span class="o">-</span><span
+                                                                class="mi">2</span><span class="p">,</span> <span
+                                                                class="n">width</span><span class="o">-</span><span
+                                                                class="mi">1</span><span class="p">)]</span>
+<span class="o">...</span>                                 <span class="o">...</span>                            <span
+                                                                class="o">...</span>
+<span class="p">[(</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span
+                                                                class="p">),</span>        <span class="p">(</span><span
+                                                                class="mi">2</span><span class="p">,</span><span
+                                                                class="mi">1</span><span
+                                                                class="p">),</span>        <span class="p">(</span><span
+                                                                class="mi">0</span><span class="p">,</span><span
+                                                                class="mi">2</span><span class="p">),</span> <span
+                                                                class="o">...</span>        <span
+                                                                class="p">(</span><span class="mi">2</span><span
+                                                                class="p">,</span> <span class="n">width</span><span
+                                                                class="o">-</span><span class="mi">2</span><span
+                                                                class="p">),</span>       <span class="p">(</span><span
+                                                                class="mi">2</span><span class="p">,</span> <span
+                                                                class="n">width</span><span class="o">-</span><span
+                                                                class="mi">1</span><span class="p">)]</span>
+<span class="p">[(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span
+                                                                class="p">),</span>        <span class="p">(</span><span
+                                                                class="mi">1</span><span class="p">,</span><span
+                                                                class="mi">1</span><span
+                                                                class="p">),</span>        <span class="p">(</span><span
+                                                                class="mi">1</span><span class="p">,</span><span
+                                                                class="mi">2</span><span class="p">),</span> <span
+                                                                class="o">...</span>        <span
+                                                                class="p">(</span><span class="mi">1</span><span
+                                                                class="p">,</span> <span class="n">width</span><span
+                                                                class="o">-</span><span class="mi">2</span><span
+                                                                class="p">),</span>       <span class="p">(</span><span
+                                                                class="mi">1</span><span class="p">,</span> <span
+                                                                class="n">width</span><span class="o">-</span><span
+                                                                class="mi">1</span><span class="p">)]</span>
+<span class="p">[(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span
+                                                                class="p">),</span>       <span class="p">(</span><span
+                                                                class="mi">0</span><span class="p">,</span><span
+                                                                class="mi">1</span><span
+                                                                class="p">),</span>         <span
+                                                                class="p">(</span><span class="mi">0</span><span
+                                                                class="p">,</span><span class="mi">2</span><span
+                                                                class="p">),</span> <span
+                                                                class="o">...</span>        <span
+                                                                class="p">(</span><span class="mi">0</span><span
+                                                                class="p">,</span> <span class="n">width</span><span
+                                                                class="o">-</span><span class="mi">2</span><span
+                                                                class="p">),</span>       <span class="p">(</span><span
+                                                                class="mi">0</span><span class="p">,</span> <span
+                                                                class="n">width</span><span class="o">-</span><span
+                                                                class="mi">1</span><span class="p">)]</span>
+</pre>
+                                                    </div>
+                                                </div>
+                                                <p>所以用户可以根据具体使用情况，选择将左上角还是左下角作为数组的原点。</p>
+                                            </li>
+                                        </ul>
+                                        <table class="docutils field-list" frame="void" rules="none">
+                                            <col class="field-name"/>
+                                            <col class="field-body"/>
+                                            <tbody valign="top">
+                                            <tr class="field-odd field">
+                                                <th class="field-name">参数:</th>
+                                                <td class="field-body">
+                                                    <ul class="first simple">
+                                                        <li><strong>source</strong> (<a class="reference internal"
+                                                                                        href="iobjectspy.html#iobjectspy.data.DatasetGrid"
+                                                                                        title="iobjectspy.data.DatasetGrid"><em>DatasetGrid</em></a><em>
+                                                            or </em><a class="reference internal"
+                                                                       href="iobjectspy.html#iobjectspy.data.DatasetImage"
+                                                                       title="iobjectspy.data.DatasetImage"><em>DatasetImage</em></a><em>
+                                                            or </em><em>str</em>) -- 需要读取数据的栅格数据集或影像数据集对象。如果输入为 str,
+                                                            则可以使用数据源信息加数据集名称方式表示数据集，
+                                                            例如，使用数据源别名'alias/imagedataset',也可以使用数据源的连接信息（udb文件路径，
+                                                            dcf文件路径，或者数据
+                                                            源连接信息的xml字符串表示），例如使用udb文件，'/home/data/test.udb/imagedataset'。当使用数据源连接信息时，
+                                                            如果工作空间中已经有相同的数据源信息的数据源存在，则会直接获取已存在的数据源对象，否则会打开一个新的数据源对象。
+                                                        </li>
+                                                        <li><strong>no_value</strong> (<em>float</em>) -- SuerpMap
+                                                            的栅格数据集和影像数据集均有无值，用户可以设定一个新的无值来表示数据集的无值，如果 noValue
+                                                            不为 None，在返回的 numpy 数组中会使用用户设定的 noValue 来替换无值的栅格或像素。默认为
+                                                            None，即返回
+                                                            的数组的无值不改变。
+                                                        </li>
+                                                        <li><strong>origin_is_left_up</strong> (<em>bool</em>) -- 在返回的
+                                                            numpy 数组中，(0,0) 位置的值是数据集的左上角还是左下角，如果为 True，则表示数组的
+                                                            （0,0）的值为数据集的左上角的值， ndarray[i][j] 对应数据集中 第i行j列的数值，如果为 False，
+                                                            则数组的 (0,0) 的值为数据集的左下角的值，即 ndarray[i][j] 对应数据集中
+                                                            第(height-i)行j列的
+                                                            数值。在 SuperMap 的栅格数据集或影像数据集中，数据集的 (0,0) 位置为左上角。默认为 True。
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="field-even field">
+                                                <th class="field-name">返回:</th>
+                                                <td class="field-body"><p class="first">numpy 多维数组</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="field-odd field">
+                                                <th class="field-name">返回类型:</th>
+                                                <td class="field-body"><p class="first last">numpy.ndarray</p>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </dd>
+                                </dl>
+
+                                <dl class="function">
+                                    <dt id="iobjectspy.ml.utils.datasetvector_to_df">
+                                        <code class="descclassname">iobjectspy.ml.utils.</code><code class="descname">datasetvector_to_df</code><span
+                                            class="sig-paren">(</span><em>source</em>, <em>attr_filter=None</em>, <em>fields=None</em>,
+                                        <em>export_spatial=False</em>, <em>skip_null_value=True</em>, <em>null_values=None</em><span
+                                            class="sig-paren">)</span><a class="headerlink"
+                                                                         href="#iobjectspy.ml.utils.datasetvector_to_df"
+                                                                         title="永久链接至目标">¶</a></dt>
+                                    <dd><p>将矢量数据集写出到 pandas.DataFrame 中</p>
+                                        <table class="docutils field-list" frame="void" rules="none">
+                                            <col class="field-name"/>
+                                            <col class="field-body"/>
+                                            <tbody valign="top">
+                                            <tr class="field-odd field">
+                                                <th class="field-name">参数:</th>
+                                                <td class="field-body">
+                                                    <ul class="first simple">
+                                                        <li><strong>source</strong> (<a class="reference internal"
+                                                                                        href="iobjectspy.html#iobjectspy.data.DatasetVector"
+                                                                                        title="iobjectspy.data.DatasetVector"><em>DatasetVector</em></a><em>
+                                                            or </em><em>str</em>) --
+                                                            被写出的矢量数据集，支持点、线、面和属性表数据集。支持输入数据集对象以及数据源信息和数据集名称的组合形式，例如
+                                                            ’alias|point'
+                                                        </li>
+                                                        <li><strong>attr_filter</strong> (<em>str</em>) -- 属性过滤条件</li>
+                                                        <li><strong>fields</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>)
+                                                            -- 需要写出的字段，如果为None，将写出所有的非系统字段
+                                                        </li>
+                                                        <li><strong>skip_null_value</strong> (<em>is</em>) --
+                                                            是否跳过含有空值的记录。numpy数组中，不支持整型类型的值为空值，如果列的类型为整型类型但又是空值，会将整型值转为浮点型存储。所以，如果数据集中字段含有空值，需要填入一个空值。对于浮点型的字段，空值为
+                                                            numpy.nan，对于文本型（TEXT，WTEXT，CHAR，JSONB）为空字符串，布尔类型、二进制类型和时间类型字段的空值为
+                                                            None。
+                                                        </li>
+                                                        <li><strong>null_values</strong> (<em>dict</em>) --
+                                                            指定的字段对应的空值，key 值为字段名称或字段序号，value 为指定的空值，value
+                                                            的值的类型需要与字段的类型匹配。例如，需要指定字段整型字段 ID 的空值为 -9999，则 null_values =
+                                                            {'ID': -9999}
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="field-even field">
+                                                <th class="field-name">返回:</th>
+                                                <td class="field-body"><p class="first">返回一个 DataFrame 对象。</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="field-odd field">
+                                                <th class="field-name">返回类型:</th>
+                                                <td class="field-body"><p class="first last">pandas.DataFrame</p>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </dd>
+                                </dl>
+
+                                <dl class="function">
+                                    <dt id="iobjectspy.ml.utils.datasetvector_to_numpy_array">
+                                        <code class="descclassname">iobjectspy.ml.utils.</code><code class="descname">datasetvector_to_numpy_array</code><span
+                                            class="sig-paren">(</span><em>source</em>, <em>attr_filter=None</em>, <em>fields=None</em>,
+                                        <em>export_spatial=False</em>, <em>skip_null_value=True</em>, <em>null_values=None</em><span
+                                            class="sig-paren">)</span><a class="headerlink"
+                                                                         href="#iobjectspy.ml.utils.datasetvector_to_numpy_array"
+                                                                         title="永久链接至目标">¶</a></dt>
+                                    <dd><p>将矢量数据集写出到 numpy 的数组中</p>
+                                        <table class="docutils field-list" frame="void" rules="none">
+                                            <col class="field-name"/>
+                                            <col class="field-body"/>
+                                            <tbody valign="top">
+                                            <tr class="field-odd field">
+                                                <th class="field-name">参数:</th>
+                                                <td class="field-body">
+                                                    <ul class="first simple">
+                                                        <li><strong>source</strong> (<a class="reference internal"
+                                                                                        href="iobjectspy.html#iobjectspy.data.DatasetVector"
+                                                                                        title="iobjectspy.data.DatasetVector"><em>DatasetVector</em></a><em>
+                                                            or </em><em>str</em>) --
+                                                            被写出的矢量数据集，支持点、线、面和属性表数据集。支持输入数据集对象以及数据源信息和数据集名称的组合形式，例如
+                                                            ’alias|point'
+                                                        </li>
+                                                        <li><strong>attr_filter</strong> (<em>str</em>) -- 属性过滤条件</li>
+                                                        <li><strong>fields</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>)
+                                                            -- 需要写出的字段，如果为None，将写出所有的非系统字段
+                                                        </li>
+                                                        <li><strong>export_spatial</strong> (<em>bool</em>) --
+                                                            是否导出空间几何对象。对点对象，将直接写出点的 X 和 Y 值到 ‘SmX’ 和 ‘SmY’
+                                                            列中。对于线面对象，将写出线和面对象的内点，并输出到 ‘SmX’ 和 ‘SmY’ 列中，同时，线将写出
+                                                            ‘SmLength’字段，面将写出 ‘SmPerimeter’ 和 ‘SmArea 字段。
+                                                        </li>
+                                                        <li><strong>skip_null_value</strong> (<em>is</em>) --
+                                                            是否跳过含有空值的记录。numpy数组中，不支持整型类型的值为空值，如果列的类型为整型类型但又是空值，可能会写出失败。所以，如果数据集中字段含有空值，需要填入一个空值。对于浮点型的字段，空值为
+                                                            numpy.nan，对于文本型（TEXT，WTEXT，CHAR，JSONB）为空字符串，布尔类型、二进制类型和时间类型字段的空值为
+                                                            None。
+                                                        </li>
+                                                        <li><strong>null_values</strong> (<em>dict</em>) --
+                                                            指定的字段对应的空值，key 值为字段名称或字段序号，value 为指定的空值，value
+                                                            的值的类型需要与字段的类型匹配。例如，需要指定字段整型字段 ID 的空值为 -9999，则 null_values =
+                                                            {'ID': -9999}
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="field-even field">
+                                                <th class="field-name">返回:</th>
+                                                <td class="field-body"><p class="first">numpy 数组，将返回一个维度为1的数组。</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="field-odd field">
+                                                <th class="field-name">返回类型:</th>
+                                                <td class="field-body"><p class="first last">numpy.ndarray</p>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </dd>
+                                </dl>
+
+                                <dl class="function">
+                                    <dt id="iobjectspy.ml.utils.df_or_xarray_to_datasetraster">
+                                        <code class="descclassname">iobjectspy.ml.utils.</code><code class="descname">df_or_xarray_to_datasetraster</code><span
+                                            class="sig-paren">(</span><em>data</em>, <em>x_resolution</em>, <em>y_resolution</em>,
+                                        <em>output</em>, <em>x_start=0</em>, <em>y_start=0</em>, <em>out_dataset_name=None</em>,
+                                        <em>no_value=None</em>, <em>origin_is_left_up=True</em>,
+                                        <em>as_grid=False</em><span class="sig-paren">)</span><a class="headerlink"
+                                                                                                 href="#iobjectspy.ml.utils.df_or_xarray_to_datasetraster"
+                                                                                                 title="永久链接至目标">¶</a>
+                                    </dt>
+                                    <dd><p>将 pandas.DataFrame， xarray.DataArray 或 xarray.Dataset 写入到 SuperMap
+                                        的栅格或影像数据集中。如果是 xarray.DataArray
+                                        或 xarray.Dataset 请先安装 xarray。</p>
+                                        <table class="docutils field-list" frame="void" rules="none">
+                                            <col class="field-name"/>
+                                            <col class="field-body"/>
+                                            <tbody valign="top">
+                                            <tr class="field-odd field">
+                                                <th class="field-name">参数:</th>
+                                                <td class="field-body">
+                                                    <ul class="first simple">
+                                                        <li><strong>data</strong> (<em>DataFrame</em>) -- 被写入的 或
+                                                            xarray.DataArray 或 xarray.Dataset, 支持二维数值型数组或
+                                                            三维数值型数组。对于三维数组，只能写入为影像数据集。
+                                                        </li>
+                                                        <li><strong>x_resolution</strong> (<em>float</em>) -- 结果数据集的 x
+                                                            方向的分辨率
+                                                        </li>
+                                                        <li><strong>y_resolution</strong> (<em>float</em>) -- 结果数据集的 y
+                                                            方向的分辨率
+                                                        </li>
+                                                        <li><strong>output</strong> (<a class="reference internal"
+                                                                                        href="iobjectspy.html#iobjectspy.data.Datasource"
+                                                                                        title="iobjectspy.data.Datasource"><em>Datasource</em></a><em>
+                                                            or </em><a class="reference internal"
+                                                                       href="iobjectspy.html#iobjectspy.data.DatasourceConnectionInfo"
+                                                                       title="iobjectspy.data.DatasourceConnectionInfo"><em>DatasourceConnectionInfo</em></a><em>
+                                                            or </em><em>str</em>) -- 结果数据源对象
+                                                        </li>
+                                                        <li><strong>x_start</strong> (<em>float</em>) -- 右下角 x 的坐标值</li>
+                                                        <li><strong>y_start</strong> (<em>float</em>) -- 右下角 y 的坐标值</li>
+                                                        <li><strong>out_dataset_name</strong> (<em>str</em>) -- 结果数据集名称
+                                                        </li>
+                                                        <li><strong>no_value</strong> (<em>float</em>) --
+                                                            指定的无值。默认情形下，栅格数据集的无值为 -9999.
+                                                        </li>
+                                                        <li><strong>origin_is_left_up</strong> (<em>bool</em>) -- 指定
+                                                            DataFrame 第0行第0列为栅格数据集或影像数据集的左上角还是左下角。
+                                                        </li>
+                                                        <li><strong>as_grid</strong> (<em>bool</em>) -- 是否写入为 <code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">DatasetGrid</span></code> 数据集
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="field-even field">
+                                                <th class="field-name">返回:</th>
+                                                <td class="field-body"><p class="first">结果数据集对象或数据集名称。</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="field-odd field">
+                                                <th class="field-name">返回类型:</th>
+                                                <td class="field-body"><p class="first last"><a
+                                                        class="reference internal"
+                                                        href="iobjectspy.html#iobjectspy.data.DatasetGrid"
+                                                        title="iobjectspy.data.DatasetGrid">DatasetGrid</a> or <a
+                                                        class="reference internal"
+                                                        href="iobjectspy.html#iobjectspy.data.DatasetImage"
+                                                        title="iobjectspy.data.DatasetImage">DatasetImage</a> or str</p>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </dd>
+                                </dl>
+
+                                <dl class="function">
+                                    <dt id="iobjectspy.ml.utils.df_to_datasetvector">
+                                        <code class="descclassname">iobjectspy.ml.utils.</code><code class="descname">df_to_datasetvector</code><span
+                                            class="sig-paren">(</span><em>df</em>, <em>output</em>, <em>out_dataset_name=None</em>,
+                                        <em>x_col=None</em>, <em>y_col=None</em><span class="sig-paren">)</span><a
+                                            class="headerlink" href="#iobjectspy.ml.utils.df_to_datasetvector"
+                                            title="永久链接至目标">¶</a></dt>
+                                    <dd><p>将 pandas DataFrame 对象写入为矢量数据集</p>
+                                        <table class="docutils field-list" frame="void" rules="none">
+                                            <col class="field-name"/>
+                                            <col class="field-body"/>
+                                            <tbody valign="top">
+                                            <tr class="field-odd field">
+                                                <th class="field-name">参数:</th>
+                                                <td class="field-body">
+                                                    <ul class="first simple">
+                                                        <li><strong>df</strong> (<em>pandas.DataFrame</em>) -- 待写入的数据集
+                                                            pandas DataFrame 对象
+                                                        </li>
+                                                        <li><strong>output</strong> (<a class="reference internal"
+                                                                                        href="iobjectspy.html#iobjectspy.data.Datasource"
+                                                                                        title="iobjectspy.data.Datasource"><em>Datasource</em></a><em>
+                                                            or </em><a class="reference internal"
+                                                                       href="iobjectspy.html#iobjectspy.data.DatasourceConnectionInfo"
+                                                                       title="iobjectspy.data.DatasourceConnectionInfo"><em>DatasourceConnectionInfo</em></a><em>
+                                                            or </em><em>str</em>) -- 结果数据源对象
+                                                        </li>
+                                                        <li><strong>out_dataset_name</strong> (<em>str</em>) -- 结果数据集名称
+                                                        </li>
+                                                        <li><strong>x_col</strong> (<em>str</em>) -- 写入为点数据集时，点对象 X
+                                                            值所在的列。如果为空，则写入为属性表数据集。
+                                                        </li>
+                                                        <li><strong>y_col</strong> (<em>str</em>) -- 写入为点数据集时，点对象 Y
+                                                            值所在的列。如果为空，则写入为属性表数据集。
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="field-even field">
+                                                <th class="field-name">返回:</th>
+                                                <td class="field-body"><p class="first">结果数据集对象或数据集名称。</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="field-odd field">
+                                                <th class="field-name">返回类型:</th>
+                                                <td class="field-body"><p class="first last"><a
+                                                        class="reference internal"
+                                                        href="iobjectspy.html#iobjectspy.data.DatasetVector"
+                                                        title="iobjectspy.data.DatasetVector">DatasetVector</a> or str
+                                                </p>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </dd>
+                                </dl>
+
+                                <dl class="function">
+                                    <dt id="iobjectspy.ml.utils.numpy_array_to_datasetraster">
+                                        <code class="descclassname">iobjectspy.ml.utils.</code><code class="descname">numpy_array_to_datasetraster</code><span
+                                            class="sig-paren">(</span><em>narray</em>, <em>x_resolution</em>, <em>y_resolution</em>,
+                                        <em>output</em>, <em>x_start=0</em>, <em>y_start=0</em>, <em>out_dataset_name=None</em>,
+                                        <em>no_value=None</em>, <em>origin_is_left_up=True</em>,
+                                        <em>as_grid=False</em><span class="sig-paren">)</span><a class="headerlink"
+                                                                                                 href="#iobjectspy.ml.utils.numpy_array_to_datasetraster"
+                                                                                                 title="永久链接至目标">¶</a>
+                                    </dt>
+                                    <dd><p>将 numpy 的数组写入到 SuperMap 的栅格或影像数据集中。</p>
+                                        <p>支持将一个二维数组或三维数组写入到影像数据集或栅格数据集中，如果选择写入到栅格数据集，则只能是二维数组，如果写入到影像数据
+                                            集，数组为三维数组时，第一个维度必须为波段信息，同时第二维度和第三维度必须为行和列:</p>
+                                        <div class="highlight-default notranslate">
+                                            <div class="highlight"><pre><span></span><span
+                                                    class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span
+                                                    class="o">=</span> <span class="n">numpy</span><span
+                                                    class="o">.</span><span class="n">empty</span><span
+                                                    class="p">((</span><span class="mi">100</span><span
+                                                    class="p">,</span> <span class="mi">100</span><span
+                                                    class="p">),</span> <span class="n">dtype</span><span
+                                                    class="o">=</span><span class="s1">&#39;float32&#39;</span><span
+                                                    class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span
+                                                        class="ow">in</span> <span class="nb">range</span><span
+                                                        class="p">(</span><span class="mi">100</span><span
+                                                        class="p">):</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span
+                                                        class="nb">range</span><span class="p">(</span><span class="mi">100</span><span
+                                                        class="p">):</span>
+<span class="gp">... </span>    <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span
+                                                        class="n">j</span><span class="p">]</span> <span
+                                                        class="o">=</span> <span class="n">i</span> <span
+                                                        class="o">*</span> <span class="n">j</span> <span
+                                                        class="o">+</span> <span class="n">i</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">iobjects</span><span class="o">.</span><span class="n">numpy_array_to_datasetraster</span><span
+                                                        class="p">(</span><span class="n">d</span><span
+                                                        class="p">,</span> <span class="mf">0.1</span><span
+                                                        class="p">,</span> <span class="mf">0.1</span><span
+                                                        class="p">,</span> <span class="n">out_dir</span> <span
+                                                        class="o">+</span> <span
+                                                        class="s1">&#39;narray_out.udb&#39;</span><span
+                                                        class="p">,</span> <span class="n">as_grid</span><span
+                                                        class="o">=</span><span class="kc">True</span><span
+                                                        class="p">)</span>
+</pre>
+                                            </div>
+                                        </div>
+                                        <table class="docutils field-list" frame="void" rules="none">
+                                            <col class="field-name"/>
+                                            <col class="field-body"/>
+                                            <tbody valign="top">
+                                            <tr class="field-odd field">
+                                                <th class="field-name">参数:</th>
+                                                <td class="field-body">
+                                                    <ul class="first simple">
+                                                        <li><strong>narray</strong> (<em>numpy.ndarray</em>) -- 被写入的
+                                                            numpy 数组，支持二维数值型数组或 三维数值型数组。对于三维数组，只能写入为影像数据集。
+                                                        </li>
+                                                        <li><strong>x_resolution</strong> (<em>float</em>) -- 结果数据集的 x
+                                                            方向的分辨率
+                                                        </li>
+                                                        <li><strong>y_resolution</strong> (<em>float</em>) -- 结果数据集的 y
+                                                            方向的分辨率
+                                                        </li>
+                                                        <li><strong>output</strong> (<a class="reference internal"
+                                                                                        href="iobjectspy.html#iobjectspy.data.Datasource"
+                                                                                        title="iobjectspy.data.Datasource"><em>Datasource</em></a><em>
+                                                            or </em><a class="reference internal"
+                                                                       href="iobjectspy.html#iobjectspy.data.DatasourceConnectionInfo"
+                                                                       title="iobjectspy.data.DatasourceConnectionInfo"><em>DatasourceConnectionInfo</em></a><em>
+                                                            or </em><em>str</em>) -- 结果数据源对象
+                                                        </li>
+                                                        <li><strong>x_start</strong> (<em>float</em>) -- 右下角 x 的坐标值</li>
+                                                        <li><strong>y_start</strong> (<em>float</em>) -- 右下角 y 的坐标值</li>
+                                                        <li><strong>out_dataset_name</strong> (<em>str</em>) -- 结果数据集名称
+                                                        </li>
+                                                        <li><strong>no_value</strong> (<em>float</em>) --
+                                                            指定的无值。默认情形下，栅格数据集的无值为 -9999.
+                                                        </li>
+                                                        <li><strong>origin_is_left_up</strong> (<em>bool</em>) -- 指定
+                                                            numpy 数组的第0行第0列为栅格数据集或影像数据集的左上角还是左下角。
+                                                        </li>
+                                                        <li><strong>as_grid</strong> (<em>bool</em>) -- 是否写入为 <code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">DatasetGrid</span></code> 数据集
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="field-even field">
+                                                <th class="field-name">返回:</th>
+                                                <td class="field-body"><p class="first">结果数据集对象或数据集名称。</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="field-odd field">
+                                                <th class="field-name">返回类型:</th>
+                                                <td class="field-body"><p class="first last"><a
+                                                        class="reference internal"
+                                                        href="iobjectspy.html#iobjectspy.data.DatasetGrid"
+                                                        title="iobjectspy.data.DatasetGrid">DatasetGrid</a> or <a
+                                                        class="reference internal"
+                                                        href="iobjectspy.html#iobjectspy.data.DatasetImage"
+                                                        title="iobjectspy.data.DatasetImage">DatasetImage</a> or str</p>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </dd>
+                                </dl>
+
+                                <dl class="function">
+                                    <dt id="iobjectspy.ml.utils.numpy_array_to_datasetvector">
+                                        <code class="descclassname">iobjectspy.ml.utils.</code><code class="descname">numpy_array_to_datasetvector</code><span
+                                            class="sig-paren">(</span><em>narray</em>, <em>output</em>, <em>out_dataset_name=None</em>,
+                                        <em>x_col=None</em>, <em>y_col=None</em><span class="sig-paren">)</span><a
+                                            class="headerlink" href="#iobjectspy.ml.utils.numpy_array_to_datasetvector"
+                                            title="永久链接至目标">¶</a></dt>
+                                    <dd><p>将 numpy 的数组写入到 SuperMap 的矢量数据集中</p>
+                                        <p>支持将一个含有 dtype 信息和列名称的 ndarray 数组写入到 SuperMap 的矢量数据集中，如果指定了 X 和 Y 字段值的列名称，将会写
+                                            入为点数据集，否则，将写入为属性表数据集。注意的是，ndarray 必须含有列名称才可能写入:</p>
+                                        <div class="highlight-default notranslate">
+                                            <div class="highlight"><pre><span></span><span
+                                                    class="gp">&gt;&gt;&gt; </span><span class="n">narray</span> <span
+                                                    class="o">=</span> <span class="n">np</span><span class="o">.</span><span
+                                                    class="n">empty</span><span class="p">(</span><span
+                                                    class="mi">10</span><span class="p">,</span> <span
+                                                    class="n">dtype</span><span class="o">=</span><span
+                                                    class="p">[(</span><span class="s1">&#39;ID&#39;</span><span
+                                                    class="p">,</span> <span class="s1">&#39;int32&#39;</span><span
+                                                    class="p">),</span> <span class="p">(</span><span class="s1">&#39;X&#39;</span><span
+                                                    class="p">,</span> <span class="s1">&#39;float64&#39;</span><span
+                                                    class="p">),</span> <span class="p">(</span><span class="s1">&#39;Y&#39;</span><span
+                                                    class="p">,</span> <span class="s1">&#39;float64&#39;</span><span
+                                                    class="p">),</span> <span class="p">(</span><span class="s1">&#39;NAME&#39;</span><span
+                                                    class="p">,</span> <span class="s1">&#39;U10&#39;</span><span
+                                                    class="p">),</span> <span class="p">(</span><span class="s1">&#39;COUNT&#39;</span><span
+                                                    class="p">,</span> <span class="s1">&#39;int32&#39;</span><span
+                                                    class="p">)])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">narray</span><span class="p">[</span><span class="mi">0</span><span
+                                                        class="p">]</span> <span class="o">=</span> <span
+                                                        class="mi">1</span><span class="p">,</span> <span class="mf">116.380351</span><span
+                                                        class="p">,</span> <span class="mf">39.93393099</span><span
+                                                        class="p">,</span> <span class="s1">&#39;什刹海&#39;</span><span
+                                                        class="p">,</span> <span class="mi">1023</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">narray</span><span class="p">[</span><span class="mi">1</span><span
+                                                        class="p">]</span> <span class="o">=</span> <span
+                                                        class="mi">2</span><span class="p">,</span> <span class="mf">116.365305</span><span
+                                                        class="p">,</span> <span class="mf">39.89622499</span><span
+                                                        class="p">,</span> <span class="s1">&#39;广安门内&#39;</span><span
+                                                        class="p">,</span> <span class="mi">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">narray</span><span class="p">[</span><span class="mi">2</span><span
+                                                        class="p">]</span> <span class="o">=</span> <span
+                                                        class="mi">3</span><span class="p">,</span> <span class="mf">116.427342</span><span
+                                                        class="p">,</span> <span class="mf">39.89467499</span><span
+                                                        class="p">,</span> <span class="s1">&#39;崇文门外&#39;</span><span
+                                                        class="p">,</span> <span class="mi">238</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">narray</span><span class="p">[</span><span class="mi">3</span><span
+                                                        class="p">]</span> <span class="o">=</span> <span
+                                                        class="mi">4</span><span class="p">,</span> <span class="mf">116.490881</span><span
+                                                        class="p">,</span> <span class="mf">39.96567299</span><span
+                                                        class="p">,</span> <span class="s1">&#39;酒仙桥&#39;</span><span
+                                                        class="p">,</span> <span class="mi">1788</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">narray</span><span class="p">[</span><span class="mi">4</span><span
+                                                        class="p">]</span> <span class="o">=</span> <span
+                                                        class="mi">5</span><span class="p">,</span> <span class="mf">116.447486</span><span
+                                                        class="p">,</span> <span class="mf">39.93767799</span><span
+                                                        class="p">,</span> <span class="s1">&#39;三里屯&#39;</span><span
+                                                        class="p">,</span> <span class="mi">8902</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">narray</span><span class="p">[</span><span class="mi">5</span><span
+                                                        class="p">]</span> <span class="o">=</span> <span
+                                                        class="mi">6</span><span class="p">,</span> <span class="mf">116.347435</span><span
+                                                        class="p">,</span> <span class="mf">40.08078599</span><span
+                                                        class="p">,</span> <span class="s1">&#39;回龙观&#39;</span><span
+                                                        class="p">,</span> <span class="mi">903</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">narray</span><span class="p">[</span><span class="mi">6</span><span
+                                                        class="p">]</span> <span class="o">=</span> <span
+                                                        class="mi">7</span><span class="p">,</span> <span class="mf">116.407196</span><span
+                                                        class="p">,</span> <span class="mf">39.83895899</span><span
+                                                        class="p">,</span> <span class="s1">&#39;大红门&#39;</span><span
+                                                        class="p">,</span> <span class="mi">88</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">narray</span><span class="p">[</span><span class="mi">7</span><span
+                                                        class="p">]</span> <span class="o">=</span> <span
+                                                        class="mi">8</span><span class="p">,</span> <span class="mf">116.396915</span><span
+                                                        class="p">,</span> <span class="mf">39.88371499</span><span
+                                                        class="p">,</span> <span class="s1">&#39;天桥&#39;</span><span
+                                                        class="p">,</span> <span class="mi">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">narray</span><span class="p">[</span><span class="mi">8</span><span
+                                                        class="p">]</span> <span class="o">=</span> <span
+                                                        class="mi">9</span><span class="p">,</span> <span class="mf">116.334522</span><span
+                                                        class="p">,</span> <span class="mf">40.03594199</span><span
+                                                        class="p">,</span> <span class="s1">&#39;清河&#39;</span><span
+                                                        class="p">,</span> <span class="mi">77</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">narray</span><span class="p">[</span><span class="mi">9</span><span
+                                                        class="p">]</span> <span class="o">=</span> <span
+                                                        class="mi">10</span><span class="p">,</span> <span class="mf">116.03008</span><span
+                                                        class="p">,</span> <span class="mf">39.87852799</span><span
+                                                        class="p">,</span> <span class="s1">&#39;潭柘寺&#39;</span><span
+                                                        class="p">,</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">numpy_array_to_datasetvector</span><span
+                                                        class="p">(</span><span class="n">narray</span><span
+                                                        class="p">,</span> <span class="n">out_dir</span> <span
+                                                        class="o">+</span> <span
+                                                        class="s1">&#39;narray_out.udb&#39;</span><span
+                                                        class="p">,</span> <span class="n">x_col</span><span
+                                                        class="o">=</span><span class="s1">&#39;X&#39;</span><span
+                                                        class="p">,</span> <span class="n">y_col</span><span
+                                                        class="o">=</span><span class="s1">&#39;Y&#39;</span><span
+                                                        class="p">)</span>
+</pre>
+                                            </div>
+                                        </div>
+                                        <table class="docutils field-list" frame="void" rules="none">
+                                            <col class="field-name"/>
+                                            <col class="field-body"/>
+                                            <tbody valign="top">
+                                            <tr class="field-odd field">
+                                                <th class="field-name">参数:</th>
+                                                <td class="field-body">
+                                                    <ul class="first simple">
+                                                        <li><strong>narray</strong> (<em>numpy.ndarray</em>) -- 被写入的
+                                                            numpy 数组
+                                                        </li>
+                                                        <li><strong>output</strong> (<a class="reference internal"
+                                                                                        href="iobjectspy.html#iobjectspy.data.Datasource"
+                                                                                        title="iobjectspy.data.Datasource"><em>Datasource</em></a><em>
+                                                            or </em><a class="reference internal"
+                                                                       href="iobjectspy.html#iobjectspy.data.DatasourceConnectionInfo"
+                                                                       title="iobjectspy.data.DatasourceConnectionInfo"><em>DatasourceConnectionInfo</em></a><em>
+                                                            or </em><em>str</em>) -- 结果数据源对象
+                                                        </li>
+                                                        <li><strong>out_dataset_name</strong> (<em>str</em>) -- 结果数据集名称
+                                                        </li>
+                                                        <li><strong>x_col</strong> (<em>str</em>) -- 写入为点数据集时，点对象 X
+                                                            值所在的列。如果为空，则写入为属性表数据集。
+                                                        </li>
+                                                        <li><strong>y_col</strong> (<em>str</em>) -- 写入为点数据集时，点对象 Y
+                                                            值所在的列。如果为空，则写入为属性表数据集。
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="field-even field">
+                                                <th class="field-name">返回:</th>
+                                                <td class="field-body"><p class="first">结果数据集对象或数据集名称。</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="field-odd field">
+                                                <th class="field-name">返回类型:</th>
+                                                <td class="field-body"><p class="first last"><a
+                                                        class="reference internal"
+                                                        href="iobjectspy.html#iobjectspy.data.DatasetVector"
+                                                        title="iobjectspy.data.DatasetVector">DatasetVector</a> or str
+                                                </p>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </dd>
+                                </dl>
+
+                                <dl class="function">
+                                    <dt id="iobjectspy.ml.utils.recordset_to_df">
+                                        <code class="descclassname">iobjectspy.ml.utils.</code><code class="descname">recordset_to_df</code><span
+                                            class="sig-paren">(</span><em>recordset</em>, <em>fields=None</em>, <em>export_spatial=False</em>,
+                                        <em>skip_null_value=True</em>, <em>null_values=None</em><span class="sig-paren">)</span><a
+                                            class="headerlink" href="#iobjectspy.ml.utils.recordset_to_df"
+                                            title="永久链接至目标">¶</a></dt>
+                                    <dd><p>将一个记录集写出到 pandas.DataFrame 中，支持将点数据集、线数据集、面数据集和属性表数据集的记录集写出。</p>
+                                        <table class="docutils field-list" frame="void" rules="none">
+                                            <col class="field-name"/>
+                                            <col class="field-body"/>
+                                            <tbody valign="top">
+                                            <tr class="field-odd field">
+                                                <th class="field-name">参数:</th>
+                                                <td class="field-body">
+                                                    <ul class="first simple">
+                                                        <li><strong>recordset</strong> (<a class="reference internal"
+                                                                                           href="iobjectspy.html#iobjectspy.data.Recordset"
+                                                                                           title="iobjectspy.data.Recordset"><em>Recordset</em></a>)
+                                                            -- 被写出数据集的记录集
+                                                        </li>
+                                                        <li><strong>fields</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>)
+                                                            -- 需要写出的字段名称，如果为 None，则将全部非系统字段都写出
+                                                        </li>
+                                                        <li><strong>export_spatial</strong> (<em>bool</em>) --
+                                                            是否写出空间几何信息，对点对象，将直接写出点的 X 和 Y 值到 ‘SmX’ 和 ‘SmY’
+                                                            列中。对于线面对象，将写出线和面对象的内点，并输出到 ‘SmX’ 和 ‘SmY’ 列中，同时，线将写出
+                                                            ‘SmLength’字段，面将写出 ‘SmPerimeter’ 和 ‘SmArea 字段。
+                                                        </li>
+                                                        <li><strong>skip_null_value</strong> (<em>is</em>) --
+                                                            是否跳过含有空值的记录。由于 DataFrame
+                                                            中，不支持整型类型的值为空值，如果列的类型为整型类型但又是空值，会将整型值转为浮点型存储。所以，如果数据集中字段含有空值，需要填入一个空值。对于浮点型的字段，空值为
+                                                            numpy.nan，对于文本型（TEXT，WTEXT，CHAR，JSONB）为空字符串，布尔类型、二进制类型和时间类型字段的空值为
+                                                            None。
+                                                        </li>
+                                                        <li><strong>null_values</strong> (<em>dict</em>) --
+                                                            指定的字段对应的空值，key 值为字段名称或字段序号，value 为指定的空值，value
+                                                            的值的类型需要与字段的类型匹配。例如，需要指定字段整型字段 ID 的空值为 -9999，则 null_values =
+                                                            {'ID': -9999}
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="field-even field">
+                                                <th class="field-name">返回:</th>
+                                                <td class="field-body"><p class="first">返回一个 DataFrame 对象。</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="field-odd field">
+                                                <th class="field-name">返回类型:</th>
+                                                <td class="field-body"><p class="first last">pandas.DataFrame</p>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </dd>
+                                </dl>
+
+                                <dl class="function">
+                                    <dt id="iobjectspy.ml.utils.recordset_to_numpy_array">
+                                        <code class="descclassname">iobjectspy.ml.utils.</code><code class="descname">recordset_to_numpy_array</code><span
+                                            class="sig-paren">(</span><em>recordset</em>, <em>fields=None</em>, <em>export_spatial=False</em>,
+                                        <em>skip_null_value=True</em>, <em>null_values=None</em><span class="sig-paren">)</span><a
+                                            class="headerlink" href="#iobjectspy.ml.utils.recordset_to_numpy_array"
+                                            title="永久链接至目标">¶</a></dt>
+                                    <dd><p>将一个记录集写出到 numpy.ndarray 中，支持将点数据集、线数据集、面数据集和属性表数据集的记录集写出。</p>
+                                        <p><a class="reference internal"
+                                              href="#iobjectspy.ml.utils.recordset_to_numpy_array"
+                                              title="iobjectspy.ml.utils.recordset_to_numpy_array"><code
+                                                class="xref py py-meth docutils literal notranslate"><span class="pre">recordset_to_numpy_array()</span></code></a>
+                                            和 <a class="reference internal"
+                                                 href="#iobjectspy.ml.utils.datasetvector_to_numpy_array"
+                                                 title="iobjectspy.ml.utils.datasetvector_to_numpy_array"><code
+                                                    class="xref py py-meth docutils literal notranslate"><span
+                                                    class="pre">datasetvector_to_numpy_array()</span></code></a>
+                                            用于将矢量数据写出为 ndarray。写出的
+                                            ndarray 为一维数组，数组的每项元素均含有多个子元素，可以直接使用列名称获取子项所在的列，例如，通过下面的代码可以直接读取矢量数据：</p>
+                                        <div class="highlight-default notranslate">
+                                            <div class="highlight"><pre><span></span><span
+                                                    class="gp">&gt;&gt;&gt; </span><span class="n">narray</span> <span
+                                                    class="o">=</span> <span
+                                                    class="n">datasetvector_to_numpy_array</span><span
+                                                    class="p">(</span><span class="n">data_dir</span> <span
+                                                    class="o">+</span> <span class="s1">&#39;example_data.udb/Town_P&#39;</span><span
+                                                    class="p">,</span> <span class="n">export_spatial</span><span
+                                                    class="o">=</span><span class="kc">True</span><span
+                                                    class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ndarray.ndim : &#39;</span> <span
+                                                        class="o">+</span> <span class="nb">str</span><span
+                                                        class="p">(</span><span class="n">narray</span><span
+                                                        class="o">.</span><span class="n">ndim</span><span
+                                                        class="p">))</span>
+<span class="go">ndarray.ndim : 1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ndarray.dtype : &#39;</span> <span
+                                                        class="o">+</span> <span class="nb">str</span><span
+                                                        class="p">(</span><span class="n">narray</span><span
+                                                        class="o">.</span><span class="n">dtype</span><span
+                                                        class="p">))</span>
+<span class="go">ndarray.dtype : [(&#39;NAME&#39;, &#39;&lt;U9&#39;), (&#39;SmX&#39;, &#39;&lt;f8&#39;), (&#39;SmY&#39;, &#39;&lt;f8&#39;)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span
+                                                        class="n">narray</span><span class="p">[:</span><span
+                                                        class="mi">10</span><span class="p">])</span>
+<span class="go">[(&#39;百尺竿乡&#39;, 115.917748, 39.53525099) (&#39;什刹海&#39;, 116.380351, 39.93393099)</span>
+<span class="go"> (&#39;月坛&#39;, 116.344828, 39.91476099) (&#39;广安门内&#39;, 116.365305, 39.89622499)</span>
+<span class="go"> (&#39;牛街&#39;, 116.36388 , 39.88680299) (&#39;崇文门外&#39;, 116.427342, 39.89467499)</span>
+<span class="go"> (&#39;永定门外&#39;, 116.402249, 39.86559299) (&#39;崔各庄&#39;, 116.515447, 39.99966499)</span>
+<span class="go"> (&#39;小关&#39;, 116.411727, 39.97737199) (&#39;潘家园&#39;, 116.467911, 39.87179299)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span
+                                                        class="n">narray</span><span class="p">[</span><span class="s1">&#39;SmX&#39;</span><span
+                                                        class="p">][:</span><span class="mi">10</span><span
+                                                        class="p">])</span>
+<span class="go">[115.917748 116.380351 116.344828 116.365305 116.36388  116.427342</span>
+<span class="go"> 116.402249 116.515447 116.411727 116.467911]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xy_array</span> <span class="o">=</span> <span
+                                                        class="n">np</span><span class="o">.</span><span
+                                                        class="n">c_</span><span class="p">[</span><span class="n">narray</span><span
+                                                        class="p">[</span><span class="s1">&#39;SmX&#39;</span><span
+                                                        class="p">],</span> <span class="n">narray</span><span
+                                                        class="p">[</span><span class="s1">&#39;SmY&#39;</span><span
+                                                        class="p">]][:</span><span class="mi">10</span><span
+                                                        class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span
+                                                        class="n">xy_array</span><span class="o">.</span><span
+                                                        class="n">ndim</span><span class="p">)</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span
+                                                        class="n">xy_array</span><span class="o">.</span><span
+                                                        class="n">dtype</span><span class="p">)</span>
+<span class="go">float64</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span
+                                                        class="n">xy_array</span><span class="p">)</span>
+<span class="go">[[115.917748    39.53525099]</span>
+<span class="go"> [116.380351    39.93393099]</span>
+<span class="go"> [116.344828    39.91476099]</span>
+<span class="go"> [116.365305    39.89622499]</span>
+<span class="go"> [116.36388     39.88680299]</span>
+<span class="go"> [116.427342    39.89467499]</span>
+<span class="go"> [116.402249    39.86559299]</span>
+<span class="go"> [116.515447    39.99966499]</span>
+<span class="go"> [116.411727    39.97737199]</span>
+<span class="go"> [116.467911    39.87179299]]</span>
+</pre>
+                                            </div>
+                                        </div>
+                                        <p>写出矢量数据时，可以选择是否写出空间信息，对于点对象，将写出点的 X 和 Y 值到 SmX 列和 SmY 列中，对线对象，将写出线的内点 <code
+                                                class="xref py py-meth docutils literal notranslate"><span class="pre">GeoLine.get_inner_point()</span></code>
+                                            到 SmX 列和 SmY列，并将线
+                                            的长度字段值 <cite>SmLength</cite> 写出为 <cite>SmLength</cite> 列。对于面对象，将写出面的内点 <code
+                                                    class="xref py py-meth docutils literal notranslate"><span
+                                                    class="pre">GeoRegion.get_inner_point()</span></code> 到 SmX 列和
+                                            SmY列，并将面的周长字段值 <cite>SmPerimeter</cite> 写出为 <cite>SmPerimeter</cite> 列，
+                                            面的面积字段值 <cite>SmArea</cite> 写出为 <cite>SmArea</cite> 列。</p>
+                                        <div class="highlight-default notranslate">
+                                            <div class="highlight"><pre><span></span><span
+                                                    class="gp">&gt;&gt;&gt; </span><span class="n">narray</span> <span
+                                                    class="o">=</span> <span
+                                                    class="n">datasetvector_to_numpy_array</span><span
+                                                    class="p">(</span><span class="n">data_dir</span> <span
+                                                    class="o">+</span> <span class="s1">&#39;example_data.udb/Landuse_R&#39;</span><span
+                                                    class="p">,</span> <span class="n">export_spatial</span><span
+                                                    class="o">=</span><span class="kc">True</span><span
+                                                    class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span
+                                                        class="n">narray</span><span class="o">.</span><span class="n">dtype</span><span
+                                                        class="p">)</span>
+<span class="go">[(&#39;LANDTYPE&#39;, &#39;&lt;U4&#39;), (&#39;Area&#39;, &#39;&lt;f4&#39;), (&#39;Area_1&#39;, &#39;&lt;i2&#39;), (&#39;SmX&#39;, &#39;&lt;f8&#39;), (&#39;SmY&#39;, &#39;&lt;f8&#39;), (&#39;SmPerimeter&#39;, &#39;&lt;f8&#39;), (&#39;SmArea&#39;, &#39;&lt;f8&#39;)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span
+                                                        class="n">narray</span><span class="p">[:</span><span
+                                                        class="mi">10</span><span class="p">])</span>
+<span class="go">[(&#39;用材林&#39;, 132., 132, 116.47779337, 40.87251703, 0.75917921, 1.40894401e-02)</span>
+<span class="go"> (&#39;用材林&#39;,  97.,  97, 116.6540059 , 40.94696274, 0.4945153 , 1.03534475e-02)</span>
+<span class="go"> (&#39;灌丛&#39;,  36.,  36, 116.58451795, 40.98712283, 0.25655489, 3.89923745e-03)</span>
+<span class="go"> (&#39;灌丛&#39;,  36.,  36, 116.89611418, 40.76792703, 0.59237713, 3.81791878e-03)</span>
+<span class="go"> (&#39;用材林&#39;,   1.,   1, 116.37943683, 40.91435429, 0.03874328, 7.08450886e-05)</span>
+<span class="go"> (&#39;灌丛&#39;, 126., 126, 116.49117083, 40.78302383, 0.53664074, 1.34577856e-02)</span>
+<span class="go"> (&#39;用材林&#39;,  83.,  83, 116.69943237, 40.74456848, 0.39696365, 8.83225363e-03)</span>
+<span class="go"> (&#39;用材林&#39;, 128., 128, 116.8129727 , 40.69116153, 0.56949408, 1.35877743e-02)</span>
+<span class="go"> (&#39;用材林&#39;,  29.,  29, 116.24543769, 40.71076092, 0.30082509, 3.07221559e-03)</span>
+<span class="go"> (&#39;灌丛&#39;, 467., 467, 116.43290772, 40.50875567, 1.91745792, 4.95537433e-02)]</span>
+</pre>
+                                            </div>
+                                        </div>
+                                        <table class="docutils field-list" frame="void" rules="none">
+                                            <col class="field-name"/>
+                                            <col class="field-body"/>
+                                            <tbody valign="top">
+                                            <tr class="field-odd field">
+                                                <th class="field-name">参数:</th>
+                                                <td class="field-body">
+                                                    <ul class="first simple">
+                                                        <li><strong>recordset</strong> (<a class="reference internal"
+                                                                                           href="iobjectspy.html#iobjectspy.data.Recordset"
+                                                                                           title="iobjectspy.data.Recordset"><em>Recordset</em></a>)
+                                                            -- 被写出数据集的记录集
+                                                        </li>
+                                                        <li><strong>fields</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>)
+                                                            -- 需要写出的字段名称，如果为 None，则将全部非系统字段都写出
+                                                        </li>
+                                                        <li><strong>export_spatial</strong> (<em>bool</em>) --
+                                                            是否写出空间几何信息，对点对象，将直接写出点的 X 和 Y 值到 ‘SmX’ 和 ‘SmY’
+                                                            列中。对于线面对象，将写出线和面对象的内点，并输出到 ‘SmX’ 和 ‘SmY’ 列中，同时，线将写出
+                                                            ‘SmLength’字段，面将写出 ‘SmPerimeter’ 和 ‘SmArea 字段。
+                                                        </li>
+                                                        <li><strong>skip_null_value</strong> (<em>is</em>) --
+                                                            是否跳过含有空值的记录。numpy数组中，不支持整型类型的值为空值，如果列的类型为整型类型但又是空值，可能会写出失败。所以，如果数据集中字段含有空值，需要填入一个空值。对于浮点型的字段，空值为
+                                                            numpy.nan，对于文本型（TEXT，WTEXT，CHAR，JSONB）为空字符串，布尔类型、二进制类型和时间类型字段的空值为
+                                                            None。
+                                                        </li>
+                                                        <li><strong>null_values</strong> (<em>dict</em>) --
+                                                            指定的字段对应的空值，key 值为字段名称或字段序号，value 为指定的空值，value
+                                                            的值的类型需要与字段的类型匹配。例如，需要指定字段整型字段 ID 的空值为 -9999，则 null_values =
+                                                            {'ID': -9999}
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="field-even field">
+                                                <th class="field-name">返回:</th>
+                                                <td class="field-body"><p class="first">numpy 数组，将返回一个维度为1的数组。</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="field-odd field">
+                                                <th class="field-name">返回类型:</th>
+                                                <td class="field-body"><p class="first last">numpy.ndarray</p>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </dd>
+                                </dl>
+
+                            </div>
+                            <div class="section" id="module-iobjectspy.ml">
+                                <span id="module-contents"></span>
+                                <h2>Module contents<a class="headerlink" href="#module-iobjectspy.ml"
+                                                      title="永久链接至标题">¶</a></h2>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <footer>
+
+                    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+
+                        <a href="iobjectspy.ml.analyst.html" class="btn btn-neutral float-right"
+                           title="iobjectspy.ml.analyst package" accesskey="n" rel="next">Next <span
+                                class="fa fa-arrow-circle-right"></span></a>
+
+
+                        <a href="iobjectspy.html" class="btn btn-neutral" title="iobjectspy package" accesskey="p"
+                           rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+
+                    </div>
+
+
+                    <hr/>
+
+                    <div role="contentinfo">
+                        <p>
+                            &copy; Copyright 2020, SuperMap.
+
+                        </p>
+                    </div>
+                    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a
+                        href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a
+                        href="https://readthedocs.org">Read the Docs</a>.
+
+                </footer>
+
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+
+<script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT: '../',
+        VERSION: '10.1.0.0',
+        LANGUAGE: 'zh',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE: true,
+        SOURCELINK_SUFFIX: '.txt'
+    };
+</script>
+<script type="text/javascript" src="../_static/jquery.js"></script>
+<script type="text/javascript" src="../_static/underscore.js"></script>
+<script type="text/javascript" src="../_static/doctools.js"></script>
+
+
+<script type="text/javascript" src="../_static/js/theme.js"></script>
+
+<script type="text/javascript">
+    jQuery(function () {
+        SphinxRtdTheme.Navigation.enable(true);
+    });
+</script>
+
+</body>
+</html>

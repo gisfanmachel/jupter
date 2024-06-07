@@ -1,0 +1,10 @@
+iobjectspy.ml.analyst package
+=============================
+
+Module contents
+---------------
+
+.. automodule:: iobjectspy.ml.analyst
+    :members:
+    :undoc-members:
+    :show-inheritance:

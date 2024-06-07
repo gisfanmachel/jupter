@@ -1,0 +1,7 @@
+iobjectspy
+==========
+
+.. toctree::
+   :maxdepth: 4
+
+   iobjectspy

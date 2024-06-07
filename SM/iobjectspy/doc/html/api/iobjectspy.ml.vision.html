@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="zh"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>iobjectspy.ml.vision package &mdash; iobjectspy 10.1.0.0 文档</title>
+
+
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css"/>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css"/>
+    <link rel="index" title="索引" href="../genindex.html"/>
+    <link rel="search" title="搜索" href="../search.html"/>
+    <link rel="next" title="iobjectspy.rpc package" href="iobjectspy.rpc.html"/>
+    <link rel="prev" title="iobjectspy.ml.toolkit package" href="iobjectspy.ml.toolkit.html"/>
+
+
+    <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+
+<div class="wy-grid-for-nav">
+
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+        <div class="wy-side-scroll">
+            <div class="wy-side-nav-search">
+
+
+                <a href="../index.html" class="icon icon-home"> iobjectspy
+
+
+                </a>
+
+
+                <div class="version">
+                    10.1.0.0
+                </div>
+
+
+                <div role="search">
+                    <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+                        <input type="text" name="q" placeholder="Search docs"/>
+                        <input type="hidden" name="check_keywords" value="yes"/>
+                        <input type="hidden" name="area" value="default"/>
+                    </form>
+                </div>
+
+
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../guide.html">概览</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install.html">安装 iobjectspy</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="../install.html#supermap-iobjects-java">配置
+                        SuperMap iObjects Java</a></li>
+                    <li class="toctree-l1 current"><a class="reference internal" href="api.html">程序员参考</a>
+                        <ul class="current">
+                            <li class="toctree-l2"><a class="reference internal" href="classes.html"> 类列表</a></li>
+                            <li class="toctree-l2"><a class="reference internal" href="enums.html"> 枚举列表</a></li>
+                            <li class="toctree-l2"><a class="reference internal" href="functions.html"> 函数列表</a></li>
+                            <li class="toctree-l2 current"><a class="reference internal" href="modules.html"> API 参考</a>
+                                <ul class="current">
+                                    <li class="toctree-l3 current"><a class="reference internal" href="iobjectspy.html">iobjectspy
+                                        package</a>
+                                        <ul class="current">
+                                            <li class="toctree-l4 current"><a class="reference internal"
+                                                                              href="iobjectspy.html#subpackages">Subpackages</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#submodules">Submodules</a>
+                                            </li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.analyst">iobjectspy.analyst
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.conversion">iobjectspy.conversion
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.data">iobjectspy.data
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.enums">iobjectspy.enums
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.env">iobjectspy.env
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.mapping">iobjectspy.mapping
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy.threeddesigner">iobjectspy.threeddesigner
+                                                module</a></li>
+                                            <li class="toctree-l4"><a class="reference internal"
+                                                                      href="iobjectspy.html#module-iobjectspy">Module
+                                                contents</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../changes.html">版本更新</a></li>
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+        <nav class="wy-nav-top" aria-label="top navigation">
+
+            <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+            <a href="../index.html">iobjectspy</a>
+
+        </nav>
+
+
+        <div class="wy-nav-content">
+
+            <div class="rst-content">
+
+
+                <div role="navigation" aria-label="breadcrumbs navigation">
+
+                    <ul class="wy-breadcrumbs">
+
+                        <li><a href="../index.html">Docs</a> &raquo;</li>
+
+                        <li><a href="api.html">api</a> &raquo;</li>
+
+                        <li><a href="modules.html">iobjectspy</a> &raquo;</li>
+
+                        <li><a href="iobjectspy.html">iobjectspy package</a> &raquo;</li>
+
+                        <li><a href="iobjectspy.ml.html">iobjectspy.ml package</a> &raquo;</li>
+
+                        <li>iobjectspy.ml.vision package</li>
+
+
+                        <li class="wy-breadcrumbs-aside">
+
+
+                            <a href="../_sources/api/iobjectspy.ml.vision.rst.txt" rel="nofollow"> View page source</a>
+
+
+                        </li>
+
+                    </ul>
+
+
+                    <hr/>
+                </div>
+                <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                    <div itemprop="articleBody">
+
+                        <div class="section" id="iobjectspy-ml-vision-package">
+                            <h1>iobjectspy.ml.vision package<a class="headerlink" href="#iobjectspy-ml-vision-package"
+                                                               title="永久链接至标题">¶</a></h1>
+                            <div class="section" id="module-iobjectspy.ml.vision">
+                                <span id="module-contents"></span>
+                                <h2>Module contents<a class="headerlink" href="#module-iobjectspy.ml.vision"
+                                                      title="永久链接至标题">¶</a></h2>
+                                <dl class="class">
+                                    <dt id="iobjectspy.ml.vision.DataPreparation">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.ml.vision.</code><code
+                                            class="descname">DataPreparation</code><a class="headerlink"
+                                                                                      href="#iobjectspy.ml.vision.DataPreparation"
+                                                                                      title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span
+                                            class="pre">object</span></code></p>
+                                        <p>图像数据准备流程入口</p>
+                                        <dl class="staticmethod">
+                                            <dt id="iobjectspy.ml.vision.DataPreparation.create_training_data">
+                                                <em class="property">static </em><code class="descname">create_training_data</code><span
+                                                    class="sig-paren">(</span><em>input_data</em>, <em>input_label</em>,
+                                                <em>label_class_field</em>, <em>output_path</em>, <em>output_name</em>,
+                                                <em>training_data_format</em>, <em>tile_format='jpg'</em>, <em>tile_size_x=1024</em>,
+                                                <em>tile_size_y=1024</em>, <em>tile_offset_x=512</em>, <em>tile_offset_y=512</em>,
+                                                <em>tile_start_index=0</em>, <em>save_nolabel_tiles=False</em>, <em>**kwargs</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.ml.vision.DataPreparation.create_training_data"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd><p>训练数据生成</p>
+                                                <div class="line-block">
+                                                    <div class="line">将整幅影像数据和与其匹配的矢量标注数据切分为指定大小的瓦片，用于深度学习训练。</div>
+                                                    <div class="line">生成的训练数据一般包括图片、标注、以及相关元信息，其中切分后的图片和标注文件名一一对应。</div>
+                                                </div>
+                                                <table class="docutils field-list" frame="void" rules="none">
+                                                    <col class="field-name"/>
+                                                    <col class="field-body"/>
+                                                    <tbody valign="top">
+                                                    <tr class="field-odd field">
+                                                        <th class="field-name">参数:</th>
+                                                        <td class="field-body">
+                                                            <ul class="first simple">
+                                                                <li><strong>input_data</strong> (<em>str</em>) --
+                                                                    输入的影像数据，支持影像文件
+                                                                </li>
+                                                                <li><strong>input_label</strong> (<em>str ot
+                                                                    DatasetVector</em>) -- 输入的矢量标注数据，支持矢量数据集
+                                                                </li>
+                                                                <li><strong>label_class_field</strong> (<em>str</em><em>
+                                                                    or </em><em>None</em>) --
+                                                                    矢量标注数据的类型字段，如指定None则认定全部标注为同一类型
+                                                                </li>
+                                                                <li><strong>output_path</strong> (<em>str</em>) --
+                                                                    输出的训练数据存储路径
+                                                                </li>
+                                                                <li><strong>training_data_format</strong> (<em>str</em>)
+                                                                    -- 输出的训练数据格式，支持 VOC, MULTI_C, BINARY_C, SCENE_C
+                                                                </li>
+                                                                <li><strong>tile_format</strong> (<em>str</em>) --
+                                                                    影像瓦片格式，支持 tif, jpg, png, origin
+                                                                </li>
+                                                                <li><strong>tile_size_x</strong> (<em>int</em>) --
+                                                                    x方向瓦片大小
+                                                                </li>
+                                                                <li><strong>tile_size_y</strong> (<em>int</em>) --
+                                                                    y方向瓦片大小
+                                                                </li>
+                                                                <li><strong>tile_offset_x</strong> (<em>int</em>) --
+                                                                    x方向瓦片偏移量
+                                                                </li>
+                                                                <li><strong>tile_offset_y</strong> (<em>int</em>) --
+                                                                    y方向瓦片偏移量
+                                                                </li>
+                                                                <li><strong>tile_start_index</strong> (<em>int</em>) --
+                                                                    瓦片命名起始索引值，默认为0，当调用该接口处理多幅影像时可设置为-1
+                                                                </li>
+                                                                <li><strong>save_nolabel_tiles</strong> (<em>bool</em>)
+                                                                    -- 是否保存无标签覆盖的瓦片
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="field-even field">
+                                                        <th class="field-name">返回:</th>
+                                                        <td class="field-body"><p class="first last">None</p>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                                <dl class="docutils">
+                                                    <dt>VOC格式：</dt>
+                                                    <dd>
+                                                        <div class="first last line-block">
+                                                            <div class="line">./VOC</div>
+                                                            <div class="line">./VOC/Annotations/000000001.xml 标签瓦片</div>
+                                                            <div class="line">./VOC/Images/000000001.jpg 影像瓦片</div>
+                                                            <div class="line">./VOC/ImageSets/Main/train.txt, val.txt,
+                                                                test.txt, trainval.txt
+                                                                训练集瓦片名称、验证集瓦片名称、测试集瓦片名称、训练集与验证集瓦片名称
+                                                            </div>
+                                                            <div class="line">./VOC/VOC.sda 训练数据配置文件</div>
+                                                        </div>
+                                                    </dd>
+                                                    <dt>MULTI_C格式：</dt>
+                                                    <dd>
+                                                        <div class="first last line-block">
+                                                            <div class="line">./MULTI_C</div>
+                                                            <div class="line">./MULTI_C/Images/00000000.tif 影像瓦片</div>
+                                                            <div class="line">./MULTI_C/Masks/00000000.png 标签瓦片</div>
+                                                            <div class="line">./MULTI_C/MULTI_C.sda 训练数据配置文件</div>
+                                                        </div>
+                                                    </dd>
+                                                    <dt>BINARY_C格式：</dt>
+                                                    <dd>
+                                                        <div class="first last line-block">
+                                                            <div class="line">./BINARY_C</div>
+                                                            <div class="line">./BINARY_C/Images/00000000.tif 影像瓦片</div>
+                                                            <div class="line">./BINARY_C/Masks/00000000.png 标签瓦片</div>
+                                                            <div class="line">./BINARY_C/BINARY_C.sda 训练数据配置文件</div>
+                                                        </div>
+                                                    </dd>
+                                                    <dt>SCENE_C格式：</dt>
+                                                    <dd>
+                                                        <div class="first last line-block">
+                                                            <div class="line">./SCENE_C</div>
+                                                            <div class="line">./SCENE_C/0/00000000.tif 影像瓦片</div>
+                                                            <div class="line">./SCENE_C/1/00000000.png 影像瓦片</div>
+                                                            <div class="line">./SCENE_C/2/00000000.tif 影像瓦片</div>
+                                                            <div class="line">....</div>
+                                                            <div class="line">./SCENE_C/scene_classification.csv
+                                                                保存影像文件路径与类别映射关系
+                                                            </div>
+                                                            <div class="line">./SCENE_C/SCENE_C.sda 训练数据配置文件</div>
+                                                        </div>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.ml.vision.Trainer">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.ml.vision.</code><code
+                                            class="descname">Trainer</code><span class="sig-paren">(</span><em>train_data_path</em>,
+                                        <em>config</em>, <em>epoch</em>, <em>batch_size</em>, <em>lr</em>, <em>output_model_path</em>,
+                                        <em>output_model_name</em>, <em>backbone_name</em>, <em>backbone_weight_path=None</em>,
+                                        <em>log_path='./'</em>, <em>reload_model=False</em>, <em>pretrained_model_path=None</em>,
+                                        <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink"
+                                                                                            href="#iobjectspy.ml.vision.Trainer"
+                                                                                            title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span
+                                            class="pre">object</span></code></p>
+                                        <p>图像数据模型训练功能入口，</p>
+                                        <table class="docutils field-list" frame="void" rules="none">
+                                            <col class="field-name"/>
+                                            <col class="field-body"/>
+                                            <tbody valign="top">
+                                            <tr class="field-odd field">
+                                                <th class="field-name">参数:</th>
+                                                <td class="field-body">
+                                                    <ul class="first last simple">
+                                                        <li><strong>train_data_path</strong> (<em>str</em>) -- 训练数据路径
+                                                        </li>
+                                                        <li><strong>config</strong> (<em>str</em>) -- 配置文件路径</li>
+                                                        <li><strong>epoch</strong> (<em>int</em>) -- 迭代次数</li>
+                                                        <li><strong>batch_size</strong> (<em>int</em>) -- 批数据大小</li>
+                                                        <li><strong>lr</strong> (<em>float</em>) -- 学习率</li>
+                                                        <li><strong>output_model_path</strong> (<em>str</em>) --
+                                                            输出模型文件路径
+                                                        </li>
+                                                        <li><strong>output_model_name</strong> (<em>str</em>) --
+                                                            输出模型的文件名
+                                                        </li>
+                                                        <li><strong>backbone_name</strong> (<em>str</em>) -- 主干网络名</li>
+                                                        <li><strong>backbone_weight_path</strong> (<em>str</em><em>
+                                                            or </em><em>None</em>) -- 主干网络模型文件路径，若为None则随机初始化模型权重
+                                                        </li>
+                                                        <li><strong>log_path</strong> (<em>str</em>) --
+                                                            日志及checkpoint输出路径
+                                                        </li>
+                                                        <li><strong>reload_model</strong> (<em>bool</em>) --
+                                                            是否重载之前训练的checkpoint模型
+                                                        </li>
+                                                        <li><strong>pretrained_model_path</strong> (<em>str</em><em>
+                                                            or </em><em>None</em>) -- 预训练模型路径（可选）
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.ml.vision.Trainer.binary_classify_train">
+                                                <code class="descname">binary_classify_train</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.ml.vision.Trainer.binary_classify_train"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd><p>二元分类模型训练功能</p>
+                                                <p>生成模型将存储在输入的 ‘output_model_path’ 路径下</p>
+                                                <table class="docutils field-list" frame="void" rules="none">
+                                                    <col class="field-name"/>
+                                                    <col class="field-body"/>
+                                                    <tbody valign="top">
+                                                    <tr class="field-odd field">
+                                                        <th class="field-name">返回:</th>
+                                                        <td class="field-body">None</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.ml.vision.Trainer.image_classify_train">
+                                                <code class="descname">image_classify_train</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.ml.vision.Trainer.image_classify_train"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd><p>图片分类训练功能</p>
+                                                <p>生成模型将存储在输入的 ‘output_model_path’ 路径下</p>
+                                                <table class="docutils field-list" frame="void" rules="none">
+                                                    <col class="field-name"/>
+                                                    <col class="field-body"/>
+                                                    <tbody valign="top">
+                                                    <tr class="field-odd field">
+                                                        <th class="field-name">返回:</th>
+                                                        <td class="field-body">None</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.ml.vision.Trainer.multi_classify_train">
+                                                <code class="descname">multi_classify_train</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.ml.vision.Trainer.multi_classify_train"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd><p>地物分类训练功能</p>
+                                                <p>生成模型将存储在输入的 ‘output_model_path’ 路径下</p>
+                                                <table class="docutils field-list" frame="void" rules="none">
+                                                    <col class="field-name"/>
+                                                    <col class="field-body"/>
+                                                    <tbody valign="top">
+                                                    <tr class="field-odd field">
+                                                        <th class="field-name">返回:</th>
+                                                        <td class="field-body">None</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.ml.vision.Trainer.object_detect_train">
+                                                <code class="descname">object_detect_train</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.ml.vision.Trainer.object_detect_train"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd><p>目标检测模型训练功能</p>
+                                                <p>生成模型将存储在输入的 ‘output_model_path’ 路径下</p>
+                                                <table class="docutils field-list" frame="void" rules="none">
+                                                    <col class="field-name"/>
+                                                    <col class="field-body"/>
+                                                    <tbody valign="top">
+                                                    <tr class="field-odd field">
+                                                        <th class="field-name">返回:</th>
+                                                        <td class="field-body">None</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.ml.vision.Trainer.object_extract_train">
+                                                <code class="descname">object_extract_train</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.ml.vision.Trainer.object_extract_train"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd><p>对象提取训练功能</p>
+                                                <p>生成模型将存储在输入的 ‘output_model_path’ 路径下</p>
+                                                <table class="docutils field-list" frame="void" rules="none">
+                                                    <col class="field-name"/>
+                                                    <col class="field-body"/>
+                                                    <tbody valign="top">
+                                                    <tr class="field-odd field">
+                                                        <th class="field-name">返回:</th>
+                                                        <td class="field-body">None</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.ml.vision.Trainer.scene_classify_train">
+                                                <code class="descname">scene_classify_train</code><span
+                                                    class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.ml.vision.Trainer.scene_classify_train"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd><p>场景分类训练功能</p>
+                                                <p>生成模型将存储在输入的 ‘output_model_path’ 路径下</p>
+                                                <table class="docutils field-list" frame="void" rules="none">
+                                                    <col class="field-name"/>
+                                                    <col class="field-body"/>
+                                                    <tbody valign="top">
+                                                    <tr class="field-odd field">
+                                                        <th class="field-name">返回:</th>
+                                                        <td class="field-body">None</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="class">
+                                    <dt id="iobjectspy.ml.vision.Inference">
+                                        <em class="property">class </em><code class="descclassname">iobjectspy.ml.vision.</code><code
+                                            class="descname">Inference</code><span class="sig-paren">(</span><em>input_data</em>,
+                                        <em>model_path</em>, <em>out_data</em>, <em>out_dataset_name</em><span
+                                            class="sig-paren">)</span><a class="headerlink"
+                                                                         href="#iobjectspy.ml.vision.Inference"
+                                                                         title="永久链接至目标">¶</a></dt>
+                                    <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span
+                                            class="pre">object</span></code></p>
+                                        <p>图像数据模型推理功能入口</p>
+                                        <table class="docutils field-list" frame="void" rules="none">
+                                            <col class="field-name"/>
+                                            <col class="field-body"/>
+                                            <tbody valign="top">
+                                            <tr class="field-odd field">
+                                                <th class="field-name">参数:</th>
+                                                <td class="field-body">
+                                                    <ul class="first last simple">
+                                                        <li><strong>input_data</strong> (<em>str</em><em> or </em><a
+                                                                class="reference internal"
+                                                                href="iobjectspy.html#iobjectspy.data.Dataset"
+                                                                title="iobjectspy.data.Dataset"><em>Dataset</em></a>) --
+                                                            待推理的数据
+                                                        </li>
+                                                        <li><strong>model_path</strong> (<em>str</em>) -- 模型存储路径</li>
+                                                        <li><strong>out_data</strong> (<em>str</em><em> or </em><a
+                                                                class="reference internal"
+                                                                href="iobjectspy.html#iobjectspy.data.Datasource"
+                                                                title="iobjectspy.data.Datasource"><em>Datasource</em></a><em>
+                                                            or </em><a class="reference internal"
+                                                                       href="iobjectspy.html#iobjectspy.data.DatasourceConnectionInfo"
+                                                                       title="iobjectspy.data.DatasourceConnectionInfo"><em>DatasourceConnectionInfo</em></a>)
+                                                            -- 输出文件(或数据源)路径
+                                                        </li>
+                                                        <li><strong>out_dataset_name</strong> (<em>str</em>) --
+                                                            输出文件(或数据集)名称
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <dl class="method">
+                                            <dt id="iobjectspy.ml.vision.Inference.binary_classify_infer">
+                                                <code class="descname">binary_classify_infer</code><span
+                                                    class="sig-paren">(</span><em>offset</em>, <em>result_type</em>,
+                                                <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink"
+                                                                                                    href="#iobjectspy.ml.vision.Inference.binary_classify_infer"
+                                                                                                    title="永久链接至目标">¶</a>
+                                            </dt>
+                                            <dd><p>遥感影像数据二元分类
+                                                支持 tif、img(Erdas Image)等影像文件，以及 jpg、png等图像文件，分类结果为二值栅格或矢量文件
+                                                支持SuperMap SDX下的影像数据集，分类结果为矢量或栅格数据集</p>
+                                                <p>可添加关键字参数：'dsm_dataset' 输入与影像相匹配的DSM数据，实现基于DOM和DSM提取建筑物面。
+                                                    其中影像和DSM可以使用SuperMap iDesktop 桌面基于倾斜摄影数据提取：</p>
+                                                <blockquote>
+                                                    <div>打开三维场景，使用 三维分析-&gt;生成DOM 三维分析-&gt;生成DSM，分辨率建议选择0.1m</div>
+                                                </blockquote>
+                                                <table class="docutils field-list" frame="void" rules="none">
+                                                    <col class="field-name"/>
+                                                    <col class="field-body"/>
+                                                    <tbody valign="top">
+                                                    <tr class="field-odd field">
+                                                        <th class="field-name">参数:</th>
+                                                        <td class="field-body">
+                                                            <ul class="first simple">
+                                                                <li><strong>offset</strong> (<em>int</em>) --
+                                                                    图像分块偏移，大幅图像需分块预测，其值为分块间重叠部分大小，以提高图像块边缘预测结果
+                                                                </li>
+                                                                <li><strong>result_type</strong> (<em>str</em>) --
+                                                                    结果返回类型，支持矢量面和栅格: 'region' or 'grid'
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="field-even field">
+                                                        <th class="field-name">返回:</th>
+                                                        <td class="field-body"><p class="first last">数据集名字</p>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.ml.vision.Inference.image_classify_infer">
+                                                <code class="descname">image_classify_infer</code><span
+                                                    class="sig-paren">(</span><em>**kwargs</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.ml.vision.Inference.image_classify_infer"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd><p>image分类
+                                                支持 tif、img(Erdas Image)等影像文件，以及 jpg、png等图像文件，分类结果为二值栅格或矢量文件
+                                                支持SuperMap SDX下的影像数据集，分类结果为矢量或栅格数据集</p>
+                                                <table class="docutils field-list" frame="void" rules="none">
+                                                    <col class="field-name"/>
+                                                    <col class="field-body"/>
+                                                    <tbody valign="top">
+                                                    <tr class="field-odd field">
+                                                        <th class="field-name">参数:</th>
+                                                        <td class="field-body"><strong>result_type</strong>
+                                                            (<em>str</em>) -- 结果返回类型，支持矢量面和栅格: 'region' or 'grid'
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="field-even field">
+                                                        <th class="field-name">返回:</th>
+                                                        <td class="field-body">数据集名字</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.ml.vision.Inference.multi_classify_infer">
+                                                <code class="descname">multi_classify_infer</code><span
+                                                    class="sig-paren">(</span><em>offset</em>, <em>result_type</em>,
+                                                <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink"
+                                                                                                    href="#iobjectspy.ml.vision.Inference.multi_classify_infer"
+                                                                                                    title="永久链接至目标">¶</a>
+                                            </dt>
+                                            <dd><p>遥感影像数据多分类，地物分类
+                                                支持 tif、img(Erdas Image)等影像文件，以及 jpg、png等图像文件，分类结果为多值栅格或矢量文件
+                                                支持SuperMap SDX下的影像数据集，分类结果为矢量或栅格数据集</p>
+                                                <table class="docutils field-list" frame="void" rules="none">
+                                                    <col class="field-name"/>
+                                                    <col class="field-body"/>
+                                                    <tbody valign="top">
+                                                    <tr class="field-odd field">
+                                                        <th class="field-name">参数:</th>
+                                                        <td class="field-body">
+                                                            <ul class="first simple">
+                                                                <li><strong>offset</strong> (<em>int</em>) --
+                                                                    图像分块偏移，大幅图像需分块预测，其值为分块间重叠部分大小，以提高图像块边缘预测结果
+                                                                </li>
+                                                                <li><strong>result_type</strong> (<em>str</em>) --
+                                                                    结果返回类型，支持矢量面和栅格: 'region' or 'grid'
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="field-even field">
+                                                        <th class="field-name">返回:</th>
+                                                        <td class="field-body"><p class="first last">数据集名字</p>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.ml.vision.Inference.object_detect_infer">
+                                                <code class="descname">object_detect_infer</code><span
+                                                    class="sig-paren">(</span><em>category_name</em>,
+                                                <em>nms_thresh=0.3</em>, <em>score_thresh=0.5</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.ml.vision.Inference.object_detect_infer"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd><p>影像数据目标检测</p>
+                                                <div class="line-block">
+                                                    <div class="line">支持 tif、img(Erdas Image)等影像文件，以及
+                                                        jpg、png等图像文件，检测结果为矢量面数据集
+                                                    </div>
+                                                </div>
+                                                <dl class="docutils">
+                                                    <dt>需要注意:</dt>
+                                                    <dd>
+                                                        <ul class="first last simple">
+                                                            <li>当 input_data 为待检测文件时，out_data
+                                                                为输出数据源路径(或数据源对象)，out_dataset_name 为数据集名
+                                                            </li>
+                                                            <li>当 input_data 为待路径时，out_data
+                                                                为输出数据源路径(或数据源对象)，out_dataset_name
+                                                                不生效，dataset_name从input_data文件列表中获取
+                                                            </li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                                <table class="docutils field-list" frame="void" rules="none">
+                                                    <col class="field-name"/>
+                                                    <col class="field-body"/>
+                                                    <tbody valign="top">
+                                                    <tr class="field-odd field">
+                                                        <th class="field-name">参数:</th>
+                                                        <td class="field-body">
+                                                            <ul class="first simple">
+                                                                <li><strong>category_name</strong>
+                                                                    (<em>list</em><em>[</em><em>str</em><em>]
+                                                                        or </em><em>str</em>) -- 目标检测类别，支持多类别检测
+                                                                </li>
+                                                                <li><strong>nms_thresh</strong> (<em>float</em>) --
+                                                                    nms的阈值
+                                                                </li>
+                                                                <li><strong>score_thresh</strong> (<em>float</em>) --
+                                                                    类别分数的阈值
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="field-even field">
+                                                        <th class="field-name">返回:</th>
+                                                        <td class="field-body"><p class="first last">None</p>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.ml.vision.Inference.object_detect_pic_infer">
+                                                <code class="descname">object_detect_pic_infer</code><span
+                                                    class="sig-paren">(</span><em>category_name</em>,
+                                                <em>nms_thresh=0.3</em>, <em>score_thresh=0.5</em><span
+                                                    class="sig-paren">)</span><a class="headerlink"
+                                                                                 href="#iobjectspy.ml.vision.Inference.object_detect_pic_infer"
+                                                                                 title="永久链接至目标">¶</a></dt>
+                                            <dd><p>图片目标检测</p>
+                                                <div class="line-block">
+                                                    <div class="line">支持 jpg、png等图像文件，检测结果为xml</div>
+                                                </div>
+                                                <dl class="docutils">
+                                                    <dt>需要注意:</dt>
+                                                    <dd>
+                                                        <ul class="first last simple">
+                                                            <li>当 input_data 为待检测文件时，out_data 为输出路径，out_dataset_name
+                                                                文件名
+                                                            </li>
+                                                            <li>当 input_data 为待路径时，out_data
+                                                                为输出路径，out_dataset_name不生效，dataset_name从input_data文件列表中获取
+                                                            </li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                                <table class="docutils field-list" frame="void" rules="none">
+                                                    <col class="field-name"/>
+                                                    <col class="field-body"/>
+                                                    <tbody valign="top">
+                                                    <tr class="field-odd field">
+                                                        <th class="field-name">参数:</th>
+                                                        <td class="field-body">
+                                                            <ul class="first simple">
+                                                                <li><strong>category_name</strong>
+                                                                    (<em>list</em><em>[</em><em>str</em><em>]
+                                                                        or </em><em>str</em>) -- 目标检测类别，支持多类别检测
+                                                                </li>
+                                                                <li><strong>nms_thresh</strong> (<em>float</em>) --
+                                                                    nms的阈值
+                                                                </li>
+                                                                <li><strong>score_thresh</strong> (<em>float</em>) --
+                                                                    类别分数的阈值
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="field-even field">
+                                                        <th class="field-name">返回:</th>
+                                                        <td class="field-body"><p class="first last">None</p>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.ml.vision.Inference.object_extract_infer">
+                                                <code class="descname">object_extract_infer</code><span
+                                                    class="sig-paren">(</span><em>score_thresh=0.5</em>, <em>nms_thresh=0.3</em>,
+                                                <em>return_bbox=False</em><span class="sig-paren">)</span><a
+                                                    class="headerlink"
+                                                    href="#iobjectspy.ml.vision.Inference.object_extract_infer"
+                                                    title="永久链接至目标">¶</a></dt>
+                                            <dd><p>遥感影像数据对象提取
+                                                支持 tif、img(Erdas Image)等影像文件，以及 jpg、png等图像文件，分类结果为矢量文件
+                                                支持SuperMap SDX下的影像数据集，分类结果为矢量</p>
+                                                <table class="docutils field-list" frame="void" rules="none">
+                                                    <col class="field-name"/>
+                                                    <col class="field-body"/>
+                                                    <tbody valign="top">
+                                                    <tr class="field-odd field">
+                                                        <th class="field-name">参数:</th>
+                                                        <td class="field-body">
+                                                            <ul class="first simple">
+                                                                <li><strong>score_thresh</strong> (<em>float</em>) --
+                                                                    类别分数的阈值
+                                                                </li>
+                                                                <li><strong>nms_thresh</strong> (<em>float</em>) --
+                                                                    nms的阈值
+                                                                </li>
+                                                                <li><strong>return_bbox</strong> (<em>bool</em>) --
+                                                                    是否返回对象的最小外接矩形
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="field-even field">
+                                                        <th class="field-name">返回:</th>
+                                                        <td class="field-body"><p class="first last">数据集名称</p>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="method">
+                                            <dt id="iobjectspy.ml.vision.Inference.scene_classify_infer">
+                                                <code class="descname">scene_classify_infer</code><span
+                                                    class="sig-paren">(</span><em>result_type</em>,
+                                                <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink"
+                                                                                                    href="#iobjectspy.ml.vision.Inference.scene_classify_infer"
+                                                                                                    title="永久链接至目标">¶</a>
+                                            </dt>
+                                            <dd><p>遥感影像数据场景分类
+                                                支持 tif、img(Erdas Image)等影像文件，以及 jpg、png等图像文件，分类结果为二值栅格或矢量文件
+                                                支持SuperMap SDX下的影像数据集，分类结果为矢量或栅格数据集</p>
+                                                <table class="docutils field-list" frame="void" rules="none">
+                                                    <col class="field-name"/>
+                                                    <col class="field-body"/>
+                                                    <tbody valign="top">
+                                                    <tr class="field-odd field">
+                                                        <th class="field-name">参数:</th>
+                                                        <td class="field-body"><strong>result_type</strong>
+                                                            (<em>str</em>) -- 结果返回类型，支持矢量面和栅格: 'region' or 'grid'
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="field-even field">
+                                                        <th class="field-name">返回:</th>
+                                                        <td class="field-body">数据集名字</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </dd>
+                                        </dl>
+
+                                    </dd>
+                                </dl>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <footer>
+
+                    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+
+                        <a href="iobjectspy.rpc.html" class="btn btn-neutral float-right" title="iobjectspy.rpc package"
+                           accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+
+
+                        <a href="iobjectspy.ml.toolkit.html" class="btn btn-neutral"
+                           title="iobjectspy.ml.toolkit package" accesskey="p" rel="prev"><span
+                                class="fa fa-arrow-circle-left"></span> Previous</a>
+
+                    </div>
+
+
+                    <hr/>
+
+                    <div role="contentinfo">
+                        <p>
+                            &copy; Copyright 2020, SuperMap.
+
+                        </p>
+                    </div>
+                    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a
+                        href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a
+                        href="https://readthedocs.org">Read the Docs</a>.
+
+                </footer>
+
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+
+<script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT: '../',
+        VERSION: '10.1.0.0',
+        LANGUAGE: 'zh',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE: true,
+        SOURCELINK_SUFFIX: '.txt'
+    };
+</script>
+<script type="text/javascript" src="../_static/jquery.js"></script>
+<script type="text/javascript" src="../_static/underscore.js"></script>
+<script type="text/javascript" src="../_static/doctools.js"></script>
+
+
+<script type="text/javascript" src="../_static/js/theme.js"></script>
+
+<script type="text/javascript">
+    jQuery(function () {
+        SphinxRtdTheme.Navigation.enable(true);
+    });
+</script>
+
+</body>
+</html>
