@@ -1,0 +1,142 @@
+# uncompyle6 version 3.9.1
+# Python bytecode version base 3.7.0 (3394)
+# Decompiled from: Python 3.8.19 (default, Mar 20 2024, 19:55:45) [MSC v.1916 64 bit (AMD64)]
+# Embedded file name: D:\BuildAgent\work\test/iobjectspy/rpc\protos\processInfoMessage_pb2.py
+# Compiled at: 2020-09-28 17:51:21
+# Size of source mod 2**32: 5037 bytes
+import sys
+_b = sys.version_info[0] < 3 and (lambda x: x) or (lambda x: x.encode("latin1"))
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import message as _message
+from google.protobuf import reflection as _reflection
+from google.protobuf import symbol_database as _symbol_database
+_sym_db = _symbol_database.Default()
+DESCRIPTOR = _descriptor.FileDescriptor(name="processInfoMessage.proto",
+  package="com.supermap.jsuperpy.protos",
+  syntax="proto3",
+  serialized_options=None,
+  serialized_pb=(_b('\n\x18processInfoMessage.proto\x12\x1ccom.supermap.jsuperpy.protos"³\x01\n\x10ProtoProcessInfo\x12\x0e\n\x06pyCode\x18\x01 \x01(\t\x12\x14\n\x0cpyEntryClass\x18\x02 \x01(\t\x12J\n\x06kvargs\x18\x03 \x03(\x0b2:.com.supermap.jsuperpy.protos.ProtoProcessInfo.KvargsEntry\x1a-\n\x0bKvargsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x0c:\x028\x01b\x06proto3')))
+_PROTOPROCESSINFO_KVARGSENTRY = _descriptor.Descriptor(name="KvargsEntry",
+  full_name="com.supermap.jsuperpy.protos.ProtoProcessInfo.KvargsEntry",
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+ _descriptor.FieldDescriptor(name="key",
+   full_name="com.supermap.jsuperpy.protos.ProtoProcessInfo.KvargsEntry.key",
+   index=0,
+   number=1,
+   type=9,
+   cpp_type=9,
+   label=1,
+   has_default_value=False,
+   default_value=(_b("").decode("utf-8")),
+   message_type=None,
+   enum_type=None,
+   containing_type=None,
+   is_extension=False,
+   extension_scope=None,
+   serialized_options=None,
+   file=DESCRIPTOR),
+ _descriptor.FieldDescriptor(name="value",
+   full_name="com.supermap.jsuperpy.protos.ProtoProcessInfo.KvargsEntry.value",
+   index=1,
+   number=2,
+   type=12,
+   cpp_type=9,
+   label=1,
+   has_default_value=False,
+   default_value=(_b("")),
+   message_type=None,
+   enum_type=None,
+   containing_type=None,
+   is_extension=False,
+   extension_scope=None,
+   serialized_options=None,
+   file=DESCRIPTOR)],
+  extensions=[],
+  nested_types=[],
+  enum_types=[],
+  serialized_options=(_b("8\x01")),
+  is_extendable=False,
+  syntax="proto3",
+  extension_ranges=[],
+  oneofs=[],
+  serialized_start=193,
+  serialized_end=238)
+_PROTOPROCESSINFO = _descriptor.Descriptor(name="ProtoProcessInfo",
+  full_name="com.supermap.jsuperpy.protos.ProtoProcessInfo",
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+ _descriptor.FieldDescriptor(name="pyCode",
+   full_name="com.supermap.jsuperpy.protos.ProtoProcessInfo.pyCode",
+   index=0,
+   number=1,
+   type=9,
+   cpp_type=9,
+   label=1,
+   has_default_value=False,
+   default_value=(_b("").decode("utf-8")),
+   message_type=None,
+   enum_type=None,
+   containing_type=None,
+   is_extension=False,
+   extension_scope=None,
+   serialized_options=None,
+   file=DESCRIPTOR),
+ _descriptor.FieldDescriptor(name="pyEntryClass",
+   full_name="com.supermap.jsuperpy.protos.ProtoProcessInfo.pyEntryClass",
+   index=1,
+   number=2,
+   type=9,
+   cpp_type=9,
+   label=1,
+   has_default_value=False,
+   default_value=(_b("").decode("utf-8")),
+   message_type=None,
+   enum_type=None,
+   containing_type=None,
+   is_extension=False,
+   extension_scope=None,
+   serialized_options=None,
+   file=DESCRIPTOR),
+ _descriptor.FieldDescriptor(name="kvargs",
+   full_name="com.supermap.jsuperpy.protos.ProtoProcessInfo.kvargs",
+   index=2,
+   number=3,
+   type=11,
+   cpp_type=10,
+   label=3,
+   has_default_value=False,
+   default_value=[],
+   message_type=None,
+   enum_type=None,
+   containing_type=None,
+   is_extension=False,
+   extension_scope=None,
+   serialized_options=None,
+   file=DESCRIPTOR)],
+  extensions=[],
+  nested_types=[
+ _PROTOPROCESSINFO_KVARGSENTRY],
+  enum_types=[],
+  serialized_options=None,
+  is_extendable=False,
+  syntax="proto3",
+  extension_ranges=[],
+  oneofs=[],
+  serialized_start=59,
+  serialized_end=238)
+_PROTOPROCESSINFO_KVARGSENTRY.containing_type = _PROTOPROCESSINFO
+_PROTOPROCESSINFO.fields_by_name["kvargs"].message_type = _PROTOPROCESSINFO_KVARGSENTRY
+DESCRIPTOR.message_types_by_name["ProtoProcessInfo"] = _PROTOPROCESSINFO
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
+ProtoProcessInfo = _reflection.GeneratedProtocolMessageType("ProtoProcessInfo", (_message.Message,), dict(KvargsEntry=(_reflection.GeneratedProtocolMessageType("KvargsEntry", (_message.Message,), dict(DESCRIPTOR=_PROTOPROCESSINFO_KVARGSENTRY,
+  __module__="processInfoMessage_pb2"))),
+  DESCRIPTOR=_PROTOPROCESSINFO,
+  __module__="processInfoMessage_pb2"))
+_sym_db.RegisterMessage(ProtoProcessInfo)
+_sym_db.RegisterMessage(ProtoProcessInfo.KvargsEntry)
+_PROTOPROCESSINFO_KVARGSENTRY._options = None
