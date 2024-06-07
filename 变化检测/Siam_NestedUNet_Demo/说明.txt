@@ -1,0 +1,37 @@
+
+变化检测：
+
+
+过程文件路径：
+    # 变化前分割影像路径
+    seg_a_path = './Data/test/A'
+    # 变化后分割影像路径
+    seg_b_path = './Data/test/B'
+    # 网络输出
+    out_path = './output_img'
+
+网络模型：'./weights/checkpoint_epoch_90.pt'
+网络参数：'./metadata.json'
+网络参考文献：S. Fang, K. Li, J. Shao and Z. Li, "SNUNet-CD: A Densely Connected Siamese Network for Change Detection of VHR Images," in IEEE Geoscience and Remote Sensing Letters, vol. 19, pp. 1-5, 2022, Art no. 8007805, doi: 10.1109/LGRS.2021.3056416.
+
+
+
+错误：
+RuntimeError :moudle complied against api Verion oxe but this version of numpy is oxd
+gdal的版本和numpy版本没对应导致readasarray出错了
+
+变化监测算法：
+是将原图（按照256的倍数外扩，不够的用黑色填充）裁切成256*256的小图，然后对每个小图（首期末期）进行变化检测，生成变化结果小图二值图（256*256）
+最后对这些变化检测结果小二值图再合并成大二值图，利用numpy方法
+将大的二值图，生成tif，利用gdal方法
+将tif转换为矢量shp,利用gdal 方法
+
+
+下一步工作:
+需要考虑同一地物被256*256小图裁断后的接边问题
+
+
+容器同步D:\work\AI\AI训练测试\ai_program\变化检测\service\bnu\NestedUNet=/ai/change_detect_service/bnu/NestedUNet
+
+
+

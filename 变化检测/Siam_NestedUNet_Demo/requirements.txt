@@ -1,0 +1,8 @@
+numpy==1.22.4
+opencv-python==4.5.5.62
+loguru==0.6.0
+GDAL==3.4.3
+tqdm==4.60.0
+torch==2.0.1+cu118
+torchvision==0.15.2+cu118
+Pillow==9.3.0
