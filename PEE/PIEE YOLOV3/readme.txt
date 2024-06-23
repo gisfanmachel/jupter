@@ -10,3 +10,9 @@
                             nets文件夹（用户上传私有网络结构文件夹）
 2.network.json：网络结构描述示例 
 3.1.tif：模型预测数据，供模型预测及调用预测使用。
+
+
+数据见
+链接：https://pan.baidu.com/s/1S_s3TFKXuPG0usJC5ZyfJg?pwd=fv4h
+提取码：fv4h
+--来自百度网盘超级会员V9的分享
