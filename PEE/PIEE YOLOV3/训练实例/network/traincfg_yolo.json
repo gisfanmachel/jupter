@@ -1,0 +1,14 @@
+{
+	"training_id": "632f05ee-ab53-4a93-94a3-dbba5129b68e",
+	"network": "{\"model_name\": \"yolov3\",\"weight_name\": \"yolov3.th\", \"transformers\": [{\"name\": \"randomVerticleFlip\", \"params\": {\"random\": 0.5}}, {\"name\": \"randomRotate90\", \"params\": {\"random\": 0.5}}, {\"name\": \"Normalization\",  \"params\": {\"region\": [0, 1]}}], \"input\": [-1, -1, 3], \"freeze\": 10, \"loss\": \"yolo_loss\", \"metrics\": [\"loss\", \"precision\", \"recall\", \"AP\"], \"optimizer\": {\"name\": \"Adam\", \"params\": {\"weight_decay\": 0.0005}}, \"scheduler\": {\"name\": \"CosineAnnealingLR\", \"params\": {\"T_max\": 5, \"eta_min\": 0.000001}}, \"middle_results\": {\"name\": \"each_epoch_error\", \"count\": 3}}",
+	"type": 2,
+	"resume_path": "",
+	"dataset_id": "caf7abcf-6c61-40bc-a368-ef7ffd674cec",
+	"label": "[{\"class_number\":128,\"class_name\":\"oiltank\",\"class_value\":1,\"class_title\":\"储油罐\",\"class_color\":\"255,0,0\"}]",
+	"batch_size": 4,
+	"epochs": 10,
+	"gpu_num": 1,
+	"load_size": "1024,1024",
+	"learning_rate": 3.0E-4,
+	"auto_termination": 1
+}

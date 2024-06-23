@@ -1,0 +1,226 @@
+{
+	"description": "网络结构名称和类型",
+	"type": "detection",
+	"name": "yolov3",
+	"input": {
+		"width": -1,
+		"height": -1,
+		"bands": -1
+	},
+	"framework": {
+		"name": "pytorch",
+		"version": "1.7.1",
+		"image": "262870713489.dkr.ecr.cn-northwest-1.amazonaws.com.cn/engineai-pytorch-devel:1.7.1"
+	},
+	"script": [{
+			"name": "network_path",
+			"path": "/yolov3.py"
+		}, {
+			"name": "backbone_path",
+			"path": "/pie/network/backbones/pytorch/darknet.py"
+		}
+	],
+	"net": [{
+			"name": "weight_name",
+			"title": "权重名称",
+			"tips": "权重文件名称",
+			"default_value": "yolov3.th",
+			"limit": "not empty"
+		}
+	],
+	"description2": "模型相关配置",
+	"trains": [{
+			"title": "数据处理",
+			"name": "transformers",
+			"tips": "数据增强方式及数据预处理方式",
+			"default_value": ["randomHueSaturationValue", "randomHorizontalFlip", "randomVerticleFlip", "randomRotate90"],
+			"options": [{
+					"name": "randomHueSaturationValue",
+					"title": "对比度变化",
+					"tips": "图像的HSV颜色空间，改变H，S和V亮度分量，增加光照变化",
+					"params": [{
+							"name": "random",
+							"default_value": 0.5,
+							"type": "float",
+							"limit": [0, 1]
+						}
+					]
+				}, {
+					"name": "randomShiftScaleRotate",
+					"title": "透视变化",
+					"tips": "随机应用仿射变换：平移，缩放和旋转输入",
+					"params": [{
+							"name": "random",
+							"default_value": 0.5,
+							"type": "float",
+							"limit": [0, 1]
+						}
+					]
+				}, {
+					"name": "randomHorizontalFlip",
+					"title": "水平翻转",
+					"tips": "随机应用水平反转图片",
+					"params": [{
+							"name": "random",
+							"default_value": 0.5,
+							"type": "float",
+							"limit": [0, 1]
+						}
+					]
+				}, {
+					"name": "randomVerticleFlip",
+					"title": "垂直翻转",
+					"tips": "随机应用垂直反转图片",
+					"params": [{
+							"name": "random",
+							"default_value": 0.5,
+							"type": "float",
+							"limit": [0, 1]
+						}
+					]
+				}, {
+					"name": "randomRotate90",
+					"title": "90度旋转",
+					"tips": "随机应用90度旋转图片",
+					"params": [{
+							"name": "random",
+							"default_value": 0.5,
+							"type": "float",
+							"limit": [0, 1]
+						}
+					]
+				}, {
+					"name": "Normalization",
+					"title": "归一化",
+					"tips": "数据归一化处理",
+					"params": [{
+							"name": "region",
+							"default_value": [0, 1],
+							"type": "list",
+							"limit": [0, 1]
+						}
+					]
+				}
+			]
+		}, {
+			"title": "损失函数",
+			"name": "loss",
+			"tips": "损失函数方法名",
+			"default_value": "yolo_loss",
+			"options": [{
+					"name": "yolo_loss",
+					"title": "yolo损失方法",
+					"tips": "像素级网络结构损失计算方法"
+				}
+			]
+		}, {
+			"name": "optimizer",
+			"title": "优化器",
+			"tips": "梯度下降法",
+			"options": [{
+					"name": "Adam",
+					"title": "自适应矩估计",
+					"tips": "自适应学习率梯度下降算法",
+					"params": [{
+							"name": "betas",
+							"default_value": [0.9, 0.999],
+							"type": "list",
+							"limit": [0, 1],
+							"tips": "用于计算梯度以及梯度平方的运行平均值的系数"
+						}, {
+							"name": "eps",
+							"default_value": 1e-8,
+							"type": "float",
+							"limit": [0, 1],
+							"tips": "为了增加数值计算的稳定性而加到分母里的项"
+						}
+					]
+				}, {
+					"name": "StepLR",
+					"title": "等间隔调整学习率",
+					"params": [{
+							"name": "momentum",
+							"default_value": 0.2,
+							"type": "float",
+							"limit": "<1"
+						}, {
+							"name": "weight_decay",
+							"default_value": 5e-4,
+							"type": "float",
+							"limit": "<1"
+						}
+					]
+				}
+			]
+		}, {
+			"name": "scheduler",
+			"title": "学习率衰减策略",
+			"options": [{
+					"name": "MultiStepLR",
+					"params": [{
+							"name": "milestones",
+							"default_value": [25, 35, 45],
+							"type": "list",
+							"limit": "1~maxepoch"
+						}, {
+							"name": "gamma",
+							"default_value": 0.1,
+							"type": "float",
+							"limit": ">0"
+						}
+					]
+				}, {
+					"name": "StepLR",
+					"params": [{
+							"name": "step_size",
+							"default_value": 1,
+							"type": "float",
+							"limit": ">0"
+						}, {
+							"name": "gamma",
+							"default_value": 0.1,
+							"type": "float",
+							"limit": ">0"
+						}
+					]
+				}
+			]
+		}
+	],
+	"show": [{
+			"name": "middle_results",
+			"title": "输出策略",
+			"tips": "中间输出图片策略及输出图片个数",
+			"options": [{
+					"name": "each_epoch_error",
+					"title": "每个批次错检率"
+				}, {
+					"name": "each_epoch_miss",
+					"title": "每个批次漏检率"
+				}
+			]
+		}, {
+			"name": "metrics",
+			"title": "指标说明",
+			"tips": "模型训练生成评价指标在前端展示列表名",
+			"default_value": ["precision", "recall"],
+			"options": [{
+					"name": "precision",
+					"title": "精确度"
+				}, {
+					"name": "recall",
+					"title": "召回率"
+				}, {
+					"name": "mAP",
+					"title": "平均精确率"
+				}, {
+					"name": "score",
+					"title": "得分"
+				},{
+					"name": "loss",
+					"title": "损失率"
+				}
+			]
+		}
+	]
+}
