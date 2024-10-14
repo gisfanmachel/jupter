@@ -16,8 +16,12 @@ import os
 # 如果直接通过vpn上网，不用设置代理
 os.environ['HTTP_PROXY'] = 'http://127.0.0.1:10809'
 os.environ['HTTPS_PROXY'] = 'http://127.0.0.1:10809'
+import ee
+# ee.Initialize()
+service_account = 'gisfanmachel@ee-gisfanmachel.iam.gserviceaccount.com'
+credentials = ee.ServiceAccountCredentials(service_account, 'private-key.json')
+ee.Initialize(credentials)
 
-ee.Initialize()
 image1 = ee.Image('srtm90_v4')
 path = image1.getDownloadUrl({
     'scale': 30,
