@@ -367,15 +367,15 @@ print('Wrote: {} patches.').format(total_patches)
 
 """With our TFRecords in hand, we're ready to ingest them into Earth Engine. Lets get authorized!"""
 
-!pip install earthengine-api
-!earthengine authenticate --quiet
+# !pip install earthengine-api
+# !earthengine authenticate --quiet
 
 """Be sure to replace *YOUR AUTH HERE* with your auth code!"""
 
-!earthengine authenticate --frontend=http://localhost:8080 --authorization-code=4/UADoP7aQAIrx8pShKZIlhIQXlHpUsBPpTPRJDbX-YZyf9lpJ18ky8yA
+# !earthengine authenticate --frontend=http://localhost:8080 --authorization-code=4/UADoP7aQAIrx8pShKZIlhIQXlHpUsBPpTPRJDbX-YZyf9lpJ18ky8yA
 
 """We'll now start the ingestion. If you intend on running this yourself, you'll have to replace `cfb-batch-export` with your cloud bucket and provide your own asset id. We'll also need to pass the mixer file we ignored earlier so Earth Engine knows where our labeled patches came from."""
 
-!earthengine upload image --asset_id=users/cfb/badge gs://cfb-batch-export/test_help/tile3_23-00000.tfrecord gs://cfb-batch-export/test_help/tile3_23-00001.tfrecord gs://cfb-batch-export/test_help/tile3_23-00002.tfrecord gs://cfb-batch-export/test_help/tile3_23-00003.tfrecord  gs://cfb-batch-export/test_help/tile3_23-mixer.json
+# !earthengine upload image --asset_id=users/cfb/badge gs://cfb-batch-export/test_help/tile3_23-00000.tfrecord gs://cfb-batch-export/test_help/tile3_23-00001.tfrecord gs://cfb-batch-export/test_help/tile3_23-00002.tfrecord gs://cfb-batch-export/test_help/tile3_23-00003.tfrecord  gs://cfb-batch-export/test_help/tile3_23-mixer.json
 
 """Now that we have some predictions, lets use Earth Engine's powerful image processing to extract a bounding rectangle for each car. Our strategy will be to compute the connect components of the `class_id` band, then reduce the components to vectors from which we can produce a bounding box. [See it done here!](https://code.earthengine.google.com/6da5d95ff658f69a3e2bb645ad9ab11b)"""

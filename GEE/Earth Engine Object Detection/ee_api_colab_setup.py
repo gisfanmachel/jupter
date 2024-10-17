@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/github/google/earthengine-api/blob/master/python/examples/ipynb/ee-api-colab-setup.ipynb
 """
 
-#@title Copyright 2019 Google LLC. { display-mode: "form" }
+# @title Copyright 2019 Google LLC. { display-mode: "form" }
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -80,9 +80,9 @@ of the global elevation model.
 from IPython.display import Image
 
 # Display a thumbnail of global elevation.
-Image(url = dem.updateMask(dem.gt(0))
-  .getThumbURL({'min': 0, 'max': 4000, 'dimensions': 512,
-                'palette': ['006633', 'E5FFCC', '662A00', 'D8D8D8', 'F5F5F5']}))
+Image(url=dem.updateMask(dem.gt(0))
+      .getThumbURL({'min': 0, 'max': 4000, 'dimensions': 512,
+                    'palette': ['006633', 'E5FFCC', '662A00', 'D8D8D8', 'F5F5F5']}))
 
 """### Interactive map
 
@@ -99,25 +99,27 @@ tiles and using it to display an elevation model to a Leaflet map.
 # Import the Folium library.
 import folium
 
+
 # Define a method for displaying Earth Engine image tiles to folium map.
 def add_ee_layer(self, ee_image_object, vis_params, name):
-  map_id_dict = ee.Image(ee_image_object).getMapId(vis_params)
-  folium.raster_layers.TileLayer(
-    tiles = map_id_dict['tile_fetcher'].url_format,
-    attr = 'Map Data &copy; <a href="https://earthengine.google.com/">Google Earth Engine</a>',
-    name = name,
-    overlay = True,
-    control = True
-  ).add_to(self)
+    map_id_dict = ee.Image(ee_image_object).getMapId(vis_params)
+    folium.raster_layers.TileLayer(
+        tiles=map_id_dict['tile_fetcher'].url_format,
+        attr='Map Data &copy; <a href="https://earthengine.google.com/">Google Earth Engine</a>',
+        name=name,
+        overlay=True,
+        control=True
+    ).add_to(self)
+
 
 # Add EE drawing method to folium.
 folium.Map.add_ee_layer = add_ee_layer
 
 # Set visualization parameters.
 vis_params = {
-  'min': 0,
-  'max': 4000,
-  'palette': ['006633', 'E5FFCC', '662A00', 'D8D8D8', 'F5F5F5']}
+    'min': 0,
+    'max': 4000,
+    'palette': ['006633', 'E5FFCC', '662A00', 'D8D8D8', 'F5F5F5']}
 
 # Create a folium map object.
 my_map = folium.Map(location=[20, 0], zoom_start=3, height=500)
@@ -147,7 +149,7 @@ import matplotlib.pyplot as plt
 img = ee.Image('LANDSAT/LT05/C01/T1_SR/LT05_034033_20000913')
 
 # Select Red and NIR bands, scale them, and sample 500 points.
-samp_fc = img.select(['B3','B4']).divide(10000).sample(scale=30, numPixels=500)
+samp_fc = img.select(['B3', 'B4']).divide(10000).sample(scale=30, numPixels=500)
 
 # Arrange the sample as a list of lists.
 samp_dict = samp_fc.reduceColumns(ee.Reducer.toList().repeat(2), ['B3', 'B4'])
