@@ -25,11 +25,12 @@ if platformType == "windows":
 else:
     os.environ['HTTP_PROXY'] = 'http://127.0.0.1:7890'
     os.environ['HTTPS_PROXY'] = 'http://127.0.0.1:7890'
-
+key_path = "C:/license/private-key.json"
 # ee.Initialize()
 # 通过gloud的服务账号认证
+# 这里的认证是python环境的认证
 service_account = 'gisfanmachel@ee-gisfanmachel.iam.gserviceaccount.com'
-credentials = ee.ServiceAccountCredentials(service_account, 'private-key.json')
+credentials = ee.ServiceAccountCredentials(service_account, key_path)
 ee.Initialize(credentials)
 
 
